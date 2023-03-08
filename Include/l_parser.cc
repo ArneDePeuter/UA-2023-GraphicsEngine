@@ -501,13 +501,11 @@ std::string const& LParser::LSystem::get_replacement(char c) const
     const std::vector<std::pair<std::string,int>> &rules = replacementrules.find(c)->second;
     int guess = rand()%101;
     int min = 0;
-    int i = 0;
     for (const std::pair<std::string,int>& probrule : rules) {
         min += probrule.second;
-        if (guess<min) {
+        if (guess<=min) {
             return probrule.first;
         }
-        i++;
     }
     std::string *noReplacement = new std::string(1,c);
     return *noReplacement;
