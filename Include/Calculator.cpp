@@ -71,7 +71,7 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
     m(1,2) = -cos(theta)*cos(phi);
     m(1,3) = cos(theta)*sin(phi);
     m(2,1) = cos(theta);
-    m(2,2) = -sin(theta)*cos(theta);
+    m(2,2) = -sin(theta)*cos(phi);
     m(2,3) = sin(theta)*sin(phi);
     m(3,2) = sin(phi);
     m(3,3) = cos(phi);
