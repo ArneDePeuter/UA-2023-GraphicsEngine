@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine
+# Install script for directory: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,18 +39,18 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/engine.exe")
+   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine" TYPE EXECUTABLE FILES "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/cmake-build-debug/engine.exe")
-  if(EXISTS "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/engine.exe" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/engine.exe")
+  file(INSTALL DESTINATION "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine" TYPE EXECUTABLE FILES "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/engine.exe")
+  if(EXISTS "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/MinGW/bin/strip.exe" "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/engine.exe")
+      execute_process(COMMAND "C:/MinGW/bin/strip.exe" "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
     endif()
   endif()
 endif()
@@ -63,5 +63,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/engine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
