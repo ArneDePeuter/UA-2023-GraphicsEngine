@@ -29,7 +29,7 @@ img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> 
     //2. Calculate size of image
     double imageX = size * (xRange / max(xRange, yRange));
     double imageY = size * (yRange / max(xRange, yRange));
-    img::EasyImage image(imageX, imageY, backgroundcolor);
+    img::EasyImage image(lround(imageX), lround(imageY), backgroundcolor);
 
     //3. Scale
     double d = 0.95 * (imageX / xRange);
