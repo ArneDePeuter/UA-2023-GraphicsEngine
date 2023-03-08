@@ -22,8 +22,8 @@
 #include <iomanip>
 #include <cctype>
 #include <sstream>
-
-
+#include <cstdlib>
+#include <ctime>
 
 namespace
 {
@@ -341,7 +341,7 @@ namespace
 		}
 		return num_parenthesis == 0;
 	}
-	void parse_rules(std::set<char> const& alphabet, std::map<char, std::string>& rules, stream_parser& parser, bool parse2D)
+	void parse_rules(std::set<char> const& alphabet, std::map<char, std::vector<std::pair<std::string,int>>>& rules, stream_parser& parser, bool parse2D)
 	{
 		parser.skip_comments_and_whitespace();
 		parser.assertChars("Rules");
@@ -367,11 +367,23 @@ namespace
 			std::string rule = parser.readQuotedString();
 			if (!isValidRule(alphabet, rule, parse2D))
 				throw LParser::ParserException(std::string("Invalid rule specification for entry '") + alphabet_char + "' in rule specification", parser.getLine(), parser.getCol());
-			rules[alphabet_char] = rule;
 			parser.skip_comments_and_whitespace();
-			c = parser.getChar();
-			if (c == '}')
+
+            int probability;
+            c = parser.getChar();
+            if (c == '%') {
+                probability = parser.readInt();
+                parser.skip_comments_and_whitespace();
+                c = parser.getChar();
+            } else {
+                probability = 100;
+            }
+
+            rules[alphabet_char].push_back({rule, probability});
+
+			if (c == '}') {
 				break;
+            }
 			else if (c != ',')
 				throw LParser::ParserException("Expected ','", parser.getLine(), parser.getCol());
 			parser.skip_comments_and_whitespace();
@@ -450,6 +462,7 @@ const char* LParser::ParserException::what() const throw ()
 LParser::LSystem::LSystem() :
 	alphabet(), drawfunction(), initiator(""), angle(0.0), replacementrules(), nrIterations(0)
 {
+    srand(time(NULL));
 }
 
 LParser::LSystem::LSystem(LSystem const&system) :
@@ -484,8 +497,20 @@ bool LParser::LSystem::draw(char c) const
 }
 std::string const& LParser::LSystem::get_replacement(char c) const
 {
-	assert(get_alphabet().find(c) != get_alphabet().end());
-	return replacementrules.find(c)->second;
+    assert(get_alphabet().find(c) != get_alphabet().end());
+    const std::vector<std::pair<std::string,int>> &rules = replacementrules.find(c)->second;
+    int guess = rand()%101;
+    int min = 0;
+    int i = 0;
+    for (const std::pair<std::string,int>& probrule : rules) {
+        min += probrule.second;
+        if (guess<min) {
+            return probrule.first;
+        }
+        i++;
+    }
+    std::string *noReplacement = new std::string(1,c);
+    return *noReplacement;
 }
 double LParser::LSystem::get_angle() const
 {
