@@ -256,8 +256,8 @@ namespace
 		{
 			if (!std::isalpha(c))
 				throw LParser::ParserException("Invalid Alphabet character", parser.getLine(), parser.getCol());
-			if (alphabet.find(c) != alphabet.end())
-				throw LParser::ParserException(std::string("Double entry '") + c + "' in alphabet specification", parser.getLine(), parser.getCol());
+//			if (alphabet.find(c) != alphabet.end())
+//				throw LParser::ParserException(std::string("Double entry '") + c + "' in alphabet specification", parser.getLine(), parser.getCol());
 			alphabet.insert(c);
 			parser.skip_comments_and_whitespace();
 			c = parser.getChar();
@@ -287,8 +287,8 @@ namespace
 				throw LParser::ParserException("Invalid Alphabet character", parser.getLine(), parser.getCol());
 			if (alphabet.find(c) == alphabet.end())
 				throw LParser::ParserException("Draw function specified for char which is not part of the alphabet.", parser.getLine(), parser.getCol());
-			if (draw.find(c) != draw.end())
-				throw LParser::ParserException(std::string("Double entry '") + c + "' in draw specification", parser.getLine(), parser.getCol());
+//			if (draw.find(c) != draw.end())
+//				throw LParser::ParserException(std::string("Double entry '") + c + "' in draw specification", parser.getLine(), parser.getCol());
 			char alphabet_char = c;
 			parser.skip_comments_and_whitespace();
 			parser.assertChars("->");
@@ -358,8 +358,8 @@ namespace
 				throw LParser::ParserException("Invalid Alphabet character", parser.getLine(), parser.getCol());
 			if (alphabet.find(c) == alphabet.end())
 				throw LParser::ParserException(std::string("Replacement rule specified for char '") + c + "' which is not part of the alphabet. ", parser.getLine(), parser.getCol());
-			if (rules.find(c) != rules.end())
-				throw LParser::ParserException(std::string("Double entry '") + c + "' in rules specification ", parser.getLine(), parser.getCol());
+//			if (rules.find(c) != rules.end())
+//				throw LParser::ParserException(std::string("Double entry '") + c + "' in rules specification ", parser.getLine(), parser.getCol());
 			char alphabet_char = c;
 			parser.skip_comments_and_whitespace();
 			parser.assertChars("->");
