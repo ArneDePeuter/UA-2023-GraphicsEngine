@@ -1,5 +1,5 @@
 #include "Object3D.h"
-#include "../Include/Calculator.h"
+#include "Calculator.h"
 
 Object3D::Object3D(ini::Section &objsec) {
     int rotateX = objsec["rotateX"].as_int_or_die();

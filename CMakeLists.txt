@@ -27,7 +27,7 @@ set(engine_sources
         Objects/Wireframe.cpp Objects/Wireframe.h
         Objects/Camera.h
         Objects/Line2D.h Objects/Point2D.h
-        Objects/LSystem2D.cpp Include/Calculator.cpp Include/Calculator.h)
+        Objects/LSystem2D.cpp Objects/Calculator.cpp Objects/Calculator.h)
 
 ############################################################
 # Create an executable

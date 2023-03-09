@@ -1,7 +1,7 @@
 #ifndef ENGINE_CALCULATOR_H
 #define ENGINE_CALCULATOR_H
 
-#include "vector3d.h"
+#include "../Include/vector3d.h"
 
 class Calculator {
 public:

@@ -1,6 +1,6 @@
 #include <fstream>
 #include "LSystem2D.h"
-#include "../Include/Calculator.h"
+#include "Calculator.h"
 #include <cmath>
 
 LSystem2D::LSystem2D(ini::Configuration &configuration) {

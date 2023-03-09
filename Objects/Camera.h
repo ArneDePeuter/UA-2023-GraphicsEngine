@@ -1,7 +1,7 @@
 #ifndef ENGINE_CAMERA_H
 #define ENGINE_CAMERA_H
 
-#include "../Include/Calculator.h"
+#include "Calculator.h"
 #include "../Include/ini_configuration.h"
 #include "../Include/vector3d.h"
 #include "Object3D.h"
