@@ -341,7 +341,7 @@ namespace
 		}
 		return num_parenthesis == 0;
 	}
-	void parse_rules(std::set<char> const& alphabet, std::map<char, std::vector<std::pair<std::string,int>>>& rules, stream_parser& parser, bool parse2D)
+	void parse_rules(std::set<char> const& alphabet, std::map<char, std::vector<std::pair<std::string,double>>>& rules, stream_parser& parser, bool parse2D)
 	{
 		parser.skip_comments_and_whitespace();
 		parser.assertChars("Rules");
@@ -369,10 +369,10 @@ namespace
 				throw LParser::ParserException(std::string("Invalid rule specification for entry '") + alphabet_char + "' in rule specification", parser.getLine(), parser.getCol());
 			parser.skip_comments_and_whitespace();
 
-            int probability;
+            double probability;
             c = parser.getChar();
             if (c == '%') {
-                probability = parser.readInt();
+                probability = parser.readDouble();
                 parser.skip_comments_and_whitespace();
                 c = parser.getChar();
             } else {
@@ -498,10 +498,10 @@ bool LParser::LSystem::draw(char c) const
 std::string const& LParser::LSystem::get_replacement(char c) const
 {
     assert(get_alphabet().find(c) != get_alphabet().end());
-    const std::vector<std::pair<std::string,int>> &rules = replacementrules.find(c)->second;
-    int guess = rand()%101;
-    int min = 0;
-    for (const std::pair<std::string,int>& probrule : rules) {
+    const std::vector<std::pair<std::string,double>> &rules = replacementrules.find(c)->second;
+    double guess = (rand()%10000)/100;
+    double min = 0;
+    for (const std::pair<std::string,double>& probrule : rules) {
         min += probrule.second;
         if (guess<=min) {
             return probrule.first;
