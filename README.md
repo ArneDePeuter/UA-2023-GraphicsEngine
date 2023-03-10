@@ -9,10 +9,10 @@
 
 
 <p align="center">
-  <a href="#2D Lsystems">2D Lsystems</a> •
+  <a href="#2D LSystems">2D LSystems</a> •
 </p>
 
-## 2D Lsystems
+## 2D LSystems
 ___
 
 <h1 align="center">
