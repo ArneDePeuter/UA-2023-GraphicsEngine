@@ -28,6 +28,10 @@ ___
 ## () rule LSystems
 ___
 
+<h1 align="center">
+<a href="./readmeFiles/l2dstack.png"><img src="./readmeFiles/l2dstack.png" alt="l2d" width="500"></a>
+</h1>
+
 ## Stochaic 2D LSystems
 ___
 <h4><u>Usage</u></h4>
