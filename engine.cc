@@ -10,25 +10,22 @@
 #include "Objects/Wireframe.h"
 #include "Objects/Line2D.h"
 
-#define max(x,y) (x>y ? x : y)
-#define min(x,y) (x<y ? x : y)
-
 img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size) {
     //1. Determine xmin, xmax, ymin, ymax
     double xMin = INT_MAX, xMax = INT_MIN, yMin = INT_MAX, yMax = INT_MIN;
     for (const Line2D& l : lines) {
-        double lMinX = min(l.p1.x, l.p2.x), lMaxX = max(l.p1.x, l.p2.x);
-        double lMinY = min(l.p1.y, l.p2.y), lMaxY = max(l.p1.y, l.p2.y);
-        xMin = min(xMin, lMinX);
-        xMax = max(xMax, lMaxX);
-        yMin = min(yMin, lMinY);
-        yMax = max(yMax, lMaxY);
+        double lMinX = std::min(l.p1.x, l.p2.x), lMaxX = std::max(l.p1.x, l.p2.x);
+        double lMinY = std::min(l.p1.y, l.p2.y), lMaxY = std::max(l.p1.y, l.p2.y);
+        xMin = std::min(xMin, lMinX);
+        xMax = std::max(xMax, lMaxX);
+        yMin = std::min(yMin, lMinY);
+        yMax = std::max(yMax, lMaxY);
     }
     double xRange = xMax - xMin, yRange = yMax - yMin;
 
     //2. Calculate size of image
-    double imageX = size * (xRange / max(xRange, yRange));
-    double imageY = size * (yRange / max(xRange, yRange));
+    double imageX = size * (xRange / std::max(xRange, yRange));
+    double imageY = size * (yRange / std::max(xRange, yRange));
     img::EasyImage image(lround(imageX), lround(imageY), backgroundcolor);
 
     //3. Scale
