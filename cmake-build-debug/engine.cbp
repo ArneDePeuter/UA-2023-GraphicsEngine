@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="engine"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine">
+				<Option output="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/engine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine/fast">
+				<Option output="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/engine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/easy_image.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/easy_image.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Calculator.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Calculator.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Camera.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem2D.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem2D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Line2D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Point2D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
