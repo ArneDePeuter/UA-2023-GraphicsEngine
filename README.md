@@ -33,6 +33,14 @@ ___
 </h1>
 
 ### Stochaic 2D LSystems
+<h1 align="center">
+<a href="./readmeFiles/stochaic1.png"><img src="./readmeFiles/stochaic1.png" alt="stochaic" width="166" height="166"></a>
+<a href="./readmeFiles/stochaic2.png"><img src="./readmeFiles/stochaic2.png" alt="stochaic" width="166" height="166"></a>
+<a href="./readmeFiles/stochaic3.png"><img src="./readmeFiles/stochaic3.png" alt="stochaic" width="166" height="166"></a>
+</h1>
+<h1 align="center">
+<a href="./readmeFiles/stochaicrules.png"><img src="./readmeFiles/stochaicrules.png" alt="stochaic" width="500"></a>
+</h1>
   - Put %x behind a rule
     - x is a double with "." as decimal point (always type a decimal point)
   - If you don't use %x, then the percentage of this rule is 100% automatically
@@ -46,14 +54,7 @@ ___
       - Eg: Rules: F -> "F+F" %10, F->"F-F"   | The chance fo "F-F" is actually 90%
       - Eg: Rules: F-> "F+F", F->"F-F" %70 | The chance for "F-F" is actually 0% not 70%
 
-<h1 align="center">
-<a href="./readmeFiles/stochaic1.png"><img src="./readmeFiles/stochaic1.png" alt="stochaic" width="166" height="166"></a>
-<a href="./readmeFiles/stochaic2.png"><img src="./readmeFiles/stochaic2.png" alt="stochaic" width="166" height="166"></a>
-<a href="./readmeFiles/stochaic3.png"><img src="./readmeFiles/stochaic3.png" alt="stochaic" width="166" height="166"></a>
-</h1>
-<h1 align="center">
-<a href="./readmeFiles/stochaicrules.png"><img src="./readmeFiles/stochaicrules.png" alt="stochaic" width="500"></a>
-</h1>
+
 
 ## 3D Lines
 
