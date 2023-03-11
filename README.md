@@ -7,12 +7,13 @@
   <br>
 </h1>
 
+[2D Lsystems](##2D-LSystems)
 <p align="center">
-  <a href="##2D LSystems">2D LSystems</a> •
+  <a href="##2D-LSystems">2D LSystems</a> •
   <a href="##3D Lines">3D Lines</a>
 </p>
 
-## 2D LSystems
+## 2D-LSystems
 ___
 
 <h1 align="center">
