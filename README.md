@@ -33,6 +33,7 @@ ___
 </h1>
 
 ## Stochaic 2D LSystems
+<h5><u>Rules</u></h5>
 ___
   - Put %x behind a rule
     - x is a double with "." as decimal point (always type a decimal point)
