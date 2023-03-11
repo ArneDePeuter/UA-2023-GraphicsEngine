@@ -47,16 +47,19 @@ ___
       - Eg: Rules: F-> "F+F", F->"F-F" %70 | The chance for "F-F" is actually 0% not 70%
 
 <h1 align="center">
-<a href="./readmeFiles/stochaic1.png"><img src="./readmeFiles/stochaic1.png" alt="l2d" width="166" height="166"></a>
-<a href="./readmeFiles/stochaic2.png"><img src="./readmeFiles/stochaic2.png" alt="l2d" width="166" height="166"></a>
-<a href="./readmeFiles/stochaic3.png"><img src="./readmeFiles/stochaic3.png" alt="l2d" width="166" height="166"></a>
+<a href="./readmeFiles/stochaic1.png"><img src="./readmeFiles/stochaic1.png" alt="stochaic" width="166" height="166"></a>
+<a href="./readmeFiles/stochaic2.png"><img src="./readmeFiles/stochaic2.png" alt="stochaic" width="166" height="166"></a>
+<a href="./readmeFiles/stochaic3.png"><img src="./readmeFiles/stochaic3.png" alt="stochaic" width="166" height="166"></a>
 </h1>
 <h1 align="center">
-<a href="./readmeFiles/stochaicrules.png"><img src="./readmeFiles/stochaicrules.png" alt="l2d" width="500"></a>
+<a href="./readmeFiles/stochaicrules.png"><img src="./readmeFiles/stochaicrules.png" alt="stochaic" width="500"></a>
 </h1>
 
 ## 3D Lines
 
+<h1 align="center">
+<a href="./readmeFiles/3dLines.png"><img src="./readmeFiles/3dLines.png" alt="3dl" width="500"></a>
+</h1>
 
 ## License
 
