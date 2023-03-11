@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="#2D-LSystems">2D LSystems</a> •
-  <a href="#3D Lines">3D Lines</a>
+  <a href="#3D-Lines">3D Lines</a>
 </p>
 
 ## 2D LSystems
@@ -20,8 +20,8 @@ ___
 </h1>
 
 <p align="center">
-  <a href="###() rule LSystems">() rule LSystems</a> •
-  <a href="###Stochaic 2D LSystems">Stochaic 2D LSystems</a>
+  <a href="###()-rule-LSystems">() rule LSystems</a> •
+  <a href="###Stochaic-2D-LSystems">Stochaic 2D LSystems</a>
 </p>
 
 
