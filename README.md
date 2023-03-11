@@ -7,9 +7,9 @@
   <br>
 </h1>
 
-
 <p align="center">
-  <a href="#2D LSystems">2D LSystems</a> •
+  <a href="##2D LSystems">2D LSystems</a> •
+  <a href="##3D Lines">3D Lines</a>
 </p>
 
 ## 2D LSystems
@@ -20,19 +20,19 @@ ___
 </h1>
 
 <p align="center">
-  <a href="#() rule LSystems">() rule LSystems</a> •
-  <a href="#Stochaic 2D LSystems">Stochaic 2D LSystems</a>
+  <a href="###() rule LSystems">() rule LSystems</a> •
+  <a href="###Stochaic 2D LSystems">Stochaic 2D LSystems</a>
 </p>
 
 
-## () rule LSystems
+### () rule LSystems
 ___
 
 <h1 align="center">
 <a href="./readmeFiles/l2dstack.png"><img src="./readmeFiles/l2dstack.png" alt="l2d" width="500"></a>
 </h1>
 
-## Stochaic 2D LSystems
+### Stochaic 2D LSystems
   - Put %x behind a rule
     - x is a double with "." as decimal point (always type a decimal point)
   - If you don't use %x, then the percentage of this rule is 100% automatically
