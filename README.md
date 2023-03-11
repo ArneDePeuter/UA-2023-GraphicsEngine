@@ -35,13 +35,13 @@ ___
 ### Stochaic 2D LSystems
   - Put %x behind a rule
     - x is a double with "." as decimal point (always type a decimal point)
-  - If you don't use %x, then the percentage of this rule is 100% automatically
-  - The percentages get added inorder
-  - What if the sum is under 100?
+  - If you don't use %x, then the probability of this rule is automatically 100% 
+  - The percentages get added in order
+  - What if the sum is under 100:
     - The resting percentage get filled with a "do not replace" rule
       - Eg: Rules: F -> "F+F" %50, G->"F-(F+F)" | Now there is a 50% chance F->"F"
-  - What if the sum is above 100?
-    - This wil not cause an error internally, it will only result in weird outcomes
+  - What if the sum is above 100:
+    - This wil not cause an error internally, it will only result in unexpected outcomes
       - Eg: Rules: F -> "F+F" %70, F->"F-F" %50 | The chance for "F-F" is actually 30% not 50%
       - Eg: Rules: F -> "F+F" %10, F->"F-F"   | The chance fo "F-F" is actually 90%
       - Eg: Rules: F-> "F+F", F->"F-F" %70 | The chance for "F-F" is actually 0% not 70%
