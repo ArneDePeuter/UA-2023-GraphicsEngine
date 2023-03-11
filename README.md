@@ -20,12 +20,12 @@ ___
 </h1>
 
 <p align="center">
-  <a href="#()-rule-LSystems">() rule LSystems</a> •
+  <a href="#LSystems-with-brackets">LSystems with brackets</a> •
   <a href="#Stochaic-2D-LSystems">Stochaic 2D LSystems</a>
 </p>
 
 
-### () rule LSystems
+### LSystems with brackets
 ___
 
 <h1 align="center">
