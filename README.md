@@ -20,8 +20,8 @@ ___
 </h1>
 
 <p align="center">
-  <a href="###()-rule-LSystems">() rule LSystems</a> •
-  <a href="###Stochaic-2D-LSystems">Stochaic 2D LSystems</a>
+  <a href="#()-rule-LSystems">() rule LSystems</a> •
+  <a href="#Stochaic-2D-LSystems">Stochaic 2D LSystems</a>
 </p>
 
 
