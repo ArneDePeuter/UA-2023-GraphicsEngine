@@ -34,7 +34,6 @@ ___
 
 ## Stochaic 2D LSystems
 ___
-<h4><u>Usage</u></h4>
   - Put %x behind a rule
     - x is a double with "." as decimal point (always type a decimal point)
   - If you don't use %x, then the percentage of this rule is 100% automatically
