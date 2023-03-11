@@ -16,7 +16,7 @@
 ___
 
 <h1 align="center">
-<a href="./readmeFiles/l2d.png"><img src="./readmeFiles/l2d.png" alt="l2d" width="500" height="500"></a>
+<a href="./readmeFiles/l2d.png"><img src="./readmeFiles/l2d.png" alt="l2d" width="500"></a>
 </h1>
 
 <p align="center">
