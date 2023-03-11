@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="#2D LSystems">2D LSystems</a> •
+  <a href="#2D-LSystems">2D LSystems</a> •
   <a href="#3D Lines">3D Lines</a>
 </p>
 
