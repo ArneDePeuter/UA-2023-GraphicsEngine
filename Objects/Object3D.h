@@ -11,11 +11,26 @@
 class Object3D {
 public:
     explicit Object3D(ini::Section &objsec);
+    Object3D();
+
     std::vector<Vector3D> vertexes;
     std::vector<Face> faces;
 
-    void initTransform(double scale, int rotateX, int rotateY, int rotateZ);
     void applyTransformation(const Matrix &m);
+    void applyPoints(const std::vector<double> &v);
+    void applyFaces(const std::vector<int> &v, const int &faces, const int &points);
+
+    void createLineDrawing(ini::Section &objsec);
+    void createCube();
+    void createTetrahedron();
+    std::vector<double> getIcoSahedronPoints();
+    void createIcosahedron();
+    void createDodecahedron();
+    void createOctahedron();
+    void createCylinder();
+    void createCone();
+    void createSphere(const int n);
+    void createTorus();
 
     Vector3D center;
     img::Color color;
