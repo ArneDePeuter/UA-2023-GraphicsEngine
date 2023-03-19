@@ -140,6 +140,12 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/obj_parser.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/obj_parser.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.cc">
 			<Option target="engine"/>
 		</Unit>
@@ -153,6 +159,9 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Camera.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.cpp">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.h">

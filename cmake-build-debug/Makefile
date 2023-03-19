@@ -245,6 +245,30 @@ Include/l_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Include/l_parser.cc.s
 .PHONY : Include/l_parser.cc.s
 
+Include/obj_parser.obj: Include/obj_parser.cc.obj
+.PHONY : Include/obj_parser.obj
+
+# target to build an object file
+Include/obj_parser.cc.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Include/obj_parser.cc.obj
+.PHONY : Include/obj_parser.cc.obj
+
+Include/obj_parser.i: Include/obj_parser.cc.i
+.PHONY : Include/obj_parser.i
+
+# target to preprocess a source file
+Include/obj_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Include/obj_parser.cc.i
+.PHONY : Include/obj_parser.cc.i
+
+Include/obj_parser.s: Include/obj_parser.cc.s
+.PHONY : Include/obj_parser.s
+
+# target to generate assembly for a file
+Include/obj_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Include/obj_parser.cc.s
+.PHONY : Include/obj_parser.cc.s
+
 Include/vector3d.obj: Include/vector3d.cc.obj
 .PHONY : Include/vector3d.obj
 
@@ -292,6 +316,30 @@ Objects/Calculator.s: Objects/Calculator.cpp.s
 Objects/Calculator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Calculator.cpp.s
 .PHONY : Objects/Calculator.cpp.s
+
+Objects/Face.obj: Objects/Face.cpp.obj
+.PHONY : Objects/Face.obj
+
+# target to build an object file
+Objects/Face.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.obj
+.PHONY : Objects/Face.cpp.obj
+
+Objects/Face.i: Objects/Face.cpp.i
+.PHONY : Objects/Face.i
+
+# target to preprocess a source file
+Objects/Face.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.i
+.PHONY : Objects/Face.cpp.i
+
+Objects/Face.s: Objects/Face.cpp.s
+.PHONY : Objects/Face.s
+
+# target to generate assembly for a file
+Objects/Face.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.s
+.PHONY : Objects/Face.cpp.s
 
 Objects/LSystem2D.obj: Objects/LSystem2D.cpp.obj
 .PHONY : Objects/LSystem2D.obj
@@ -411,12 +459,18 @@ help:
 	@echo ... Include/l_parser.obj
 	@echo ... Include/l_parser.i
 	@echo ... Include/l_parser.s
+	@echo ... Include/obj_parser.obj
+	@echo ... Include/obj_parser.i
+	@echo ... Include/obj_parser.s
 	@echo ... Include/vector3d.obj
 	@echo ... Include/vector3d.i
 	@echo ... Include/vector3d.s
 	@echo ... Objects/Calculator.obj
 	@echo ... Objects/Calculator.i
 	@echo ... Objects/Calculator.s
+	@echo ... Objects/Face.obj
+	@echo ... Objects/Face.i
+	@echo ... Objects/Face.s
 	@echo ... Objects/LSystem2D.obj
 	@echo ... Objects/LSystem2D.i
 	@echo ... Objects/LSystem2D.s

@@ -21,13 +21,16 @@ set(engine_sources
         Include/ini_configuration.cc
         Include/vector3d.cc Include/vector3d.h
         Include/l_parser.cc
+        Include/obj_parser.cc
 
         Objects/Face.h
         Objects/Object3D.cpp Objects/Object3D.h
         Objects/Wireframe.cpp Objects/Wireframe.h
         Objects/Camera.h
         Objects/Line2D.h Objects/Point2D.h
-        Objects/LSystem2D.cpp Objects/Calculator.cpp Objects/Calculator.h)
+        Objects/LSystem2D.cpp
+        Objects/Calculator.cpp Objects/Calculator.h
+        Objects/Face.cpp )
 
 ############################################################
 # Create an executable

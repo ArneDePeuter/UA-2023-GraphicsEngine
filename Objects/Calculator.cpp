@@ -59,8 +59,8 @@ void Calculator::calcPolar(const Vector3D &point, double &theta, double &phi, do
     phi = std::acos(z/r);
 }
 
-Matrix Calculator::superMatrix(const double s, const int rx, const int ry, const int rz) {
-    return scale(s) * rotate_x(rx) * rotate_y(ry) * rotate_z(rz);
+Matrix Calculator::superMatrix(const double s, const int rx, const int ry, const int rz, const Vector3D move) {
+    return scale(s) * rotate_x(rx) * rotate_y(ry) * rotate_z(rz) * translate(move);
 }
 
 Matrix Calculator::eyePointMatrix(const Vector3D &eye) {

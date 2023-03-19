@@ -22,7 +22,6 @@ img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> 
         yMax = std::max(yMax, lMaxY);
     }
     double xRange = xMax - xMin, yRange = yMax - yMin;
-
     //2. Calculate size of image
     double imageX = size * (xRange / std::max(xRange, yRange));
     double imageY = size * (yRange / std::max(xRange, yRange));

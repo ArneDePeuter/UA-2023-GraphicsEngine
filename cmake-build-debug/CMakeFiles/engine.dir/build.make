@@ -138,10 +138,24 @@ CMakeFiles/engine.dir/Include/l_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Include/l_parser.cc.s"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Include\l_parser.cc -o CMakeFiles\engine.dir\Include\l_parser.cc.s
 
+CMakeFiles/engine.dir/Include/obj_parser.cc.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Include/obj_parser.cc.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/obj_parser.cc
+CMakeFiles/engine.dir/Include/obj_parser.cc.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/engine.dir/Include/obj_parser.cc.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Include/obj_parser.cc.obj -MF CMakeFiles\engine.dir\Include\obj_parser.cc.obj.d -o CMakeFiles\engine.dir\Include\obj_parser.cc.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Include\obj_parser.cc
+
+CMakeFiles/engine.dir/Include/obj_parser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Include/obj_parser.cc.i"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Include\obj_parser.cc > CMakeFiles\engine.dir\Include\obj_parser.cc.i
+
+CMakeFiles/engine.dir/Include/obj_parser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Include/obj_parser.cc.s"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Include\obj_parser.cc -o CMakeFiles\engine.dir\Include\obj_parser.cc.s
+
 CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.cpp
 CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/engine.dir/Objects/Object3D.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/engine.dir/Objects/Object3D.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Object3D.cpp.obj -MF CMakeFiles\engine.dir\Objects\Object3D.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Object3D.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Object3D.cpp
 
 CMakeFiles/engine.dir/Objects/Object3D.cpp.i: cmake_force
@@ -155,7 +169,7 @@ CMakeFiles/engine.dir/Objects/Object3D.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.cpp
 CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj -MF CMakeFiles\engine.dir\Objects\Wireframe.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Wireframe.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Wireframe.cpp
 
 CMakeFiles/engine.dir/Objects/Wireframe.cpp.i: cmake_force
@@ -169,7 +183,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem2D.cpp
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj -MF CMakeFiles\engine.dir\Objects\LSystem2D.cpp.obj.d -o CMakeFiles\engine.dir\Objects\LSystem2D.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\LSystem2D.cpp
 
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.i: cmake_force
@@ -183,7 +197,7 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Calculator.cpp
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Calculator.cpp.obj -MF CMakeFiles\engine.dir\Objects\Calculator.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Calculator.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.cpp
 
 CMakeFiles/engine.dir/Objects/Calculator.cpp.i: cmake_force
@@ -194,6 +208,20 @@ CMakeFiles/engine.dir/Objects/Calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Calculator.cpp.s"
 	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.cpp -o CMakeFiles\engine.dir\Objects\Calculator.cpp.s
 
+CMakeFiles/engine.dir/Objects/Face.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/Face.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.cpp
+CMakeFiles/engine.dir/Objects/Face.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/engine.dir/Objects/Face.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Face.cpp.obj -MF CMakeFiles\engine.dir\Objects\Face.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Face.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Face.cpp
+
+CMakeFiles/engine.dir/Objects/Face.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Face.cpp.i"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Face.cpp > CMakeFiles\engine.dir\Objects\Face.cpp.i
+
+CMakeFiles/engine.dir/Objects/Face.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Face.cpp.s"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Face.cpp -o CMakeFiles\engine.dir\Objects\Face.cpp.s
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/engine.cc.obj" \
@@ -201,10 +229,12 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/Include/ini_configuration.cc.obj" \
 "CMakeFiles/engine.dir/Include/vector3d.cc.obj" \
 "CMakeFiles/engine.dir/Include/l_parser.cc.obj" \
+"CMakeFiles/engine.dir/Include/obj_parser.cc.obj" \
 "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
+"CMakeFiles/engine.dir/Objects/Calculator.cpp.obj" \
+"CMakeFiles/engine.dir/Objects/Face.cpp.obj"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -214,15 +244,17 @@ engine.exe: CMakeFiles/engine.dir/Include/easy_image.cc.obj
 engine.exe: CMakeFiles/engine.dir/Include/ini_configuration.cc.obj
 engine.exe: CMakeFiles/engine.dir/Include/vector3d.cc.obj
 engine.exe: CMakeFiles/engine.dir/Include/l_parser.cc.obj
+engine.exe: CMakeFiles/engine.dir/Include/obj_parser.cc.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Object3D.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Calculator.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/Face.cpp.obj
 engine.exe: CMakeFiles/engine.dir/build.make
 engine.exe: CMakeFiles/engine.dir/linklibs.rsp
 engine.exe: CMakeFiles/engine.dir/objects1.rsp
 engine.exe: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable engine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable engine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\engine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
