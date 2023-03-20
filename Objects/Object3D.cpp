@@ -161,7 +161,7 @@ Object3D Object3D::createDodecahedron() {
     return dodecahedron;
 }
 
-Object3D Object3D::createSphere(const int n) {
+Object3D Object3D::createSphere(const int &n) {
     Object3D sphere = createIcosahedron();
     for (int i = 0; i < n; i++) {
         std::vector<Face> newFaces;
@@ -176,7 +176,7 @@ Object3D Object3D::createSphere(const int n) {
     return sphere;
 }
 
-Object3D Object3D::createTorus(const double r, const double R, const int n, const int m) {
+Object3D Object3D::createTorus(const double &r, const double &R, const int &n, const int &m) {
     Object3D torus;
     double v, u;
     double x, y, z;
@@ -194,7 +194,7 @@ Object3D Object3D::createTorus(const double r, const double R, const int n, cons
     return torus;
 }
 
-Object3D Object3D::createCylinder(const int n, const double h) {
+Object3D Object3D::createCylinder(const int &n, const double &h) {
     Object3D cylinder;
 
     for (int i = 0; i <= n; i++) {
@@ -218,7 +218,7 @@ Object3D Object3D::createCylinder(const int n, const double h) {
     return cylinder;
 }
 
-Object3D Object3D::createCone(const int n, const double h) {
+Object3D Object3D::createCone(const int &n, const double &h) {
     Object3D cone;
 
     Vector3D pn = Vector3D::point(0, 0,h);
