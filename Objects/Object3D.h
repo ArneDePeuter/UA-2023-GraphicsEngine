@@ -10,7 +10,6 @@
 
 class Object3D {
 public:
-    explicit Object3D(ini::Section &objsec);
     Object3D();
 
     std::vector<Vector3D> vertexes;

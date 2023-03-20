@@ -6,9 +6,6 @@
 #include <string>
 #include <climits>
 #include <cmath>
-#include "Objects/LSystem2D.h"
-#include "Objects/Wireframe.h"
-#include "Objects/Line2D.h"
 #include "Objects/IniLoader.h"
 
 img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size) {

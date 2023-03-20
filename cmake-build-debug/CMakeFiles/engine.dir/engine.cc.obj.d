@@ -123,31 +123,28 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\climits \
  c:\mingw\include\limits.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem2D.h \
- c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\ini_configuration.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/IniLoader.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Object3D.h \
  c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\easy_image.h \
- c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\l_parser.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\set \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_set.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multiset.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Line2D.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Point2D.h \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\ini_configuration.h \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\vector3d.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Face.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\list \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_list.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\allocated_ptr.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\list.tcc \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Wireframe.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Line2D.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Point2D.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Camera.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Calculator.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem2D.h \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\l_parser.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\set \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_set.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multiset.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stack \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\deque \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\deque.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_stack.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Wireframe.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Object3D.h \
- c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\vector3d.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Face.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Camera.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Calculator.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Line2D.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/IniLoader.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Wireframe.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem2D.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_stack.h
