@@ -80,7 +80,7 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
 }
 
 //https://computergraphics.stackexchange.com/questions/2399/3d-rotation-matrix-around-vector
-Vector3D Calculator::rotateVecOnVec(const Vector3D &a, const Vector3D &b, const double &degAngle) {
+Vector3D Calculator::rotateVecOnVec(Vector3D &a, const Vector3D &b, const double &degAngle) {
     Vector3D C = Vector3D::cross(a,b);
     Vector3D B = Vector3D::cross(a,C);
 

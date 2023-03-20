@@ -56,12 +56,12 @@ void LSystem3D::create() {
 void LSystem3D::handleSign(const char &c) {
     switch (c) {
         case '+':
-            H = Calculator::rotateVecOnVec(H, U, alpha);
-            L = Calculator::rotateVecOnVec(L, U, alpha);
+            Calculator::rotateVecOnVec(H, U, alpha);
+            Calculator::rotateVecOnVec(L, U, alpha);
             break;
         case '-':
-            H = Calculator::rotateVecOnVec(H, U, -alpha);
-            L = Calculator::rotateVecOnVec(L, U, -alpha);
+            Calculator::rotateVecOnVec(H, U, -alpha);
+            Calculator::rotateVecOnVec(L, U, -alpha);
             break;
         case '(':
             HStack.push(H);
@@ -80,24 +80,24 @@ void LSystem3D::handleSign(const char &c) {
             posStack.pop();
             break;
         case '^':
-            H = Calculator::rotateVecOnVec(H, L, -alpha);
-            U = Calculator::rotateVecOnVec(U, L, -alpha);
+            Calculator::rotateVecOnVec(H, L, -alpha);
+            Calculator::rotateVecOnVec(U, L, -alpha);
             break;
         case '\\':
-            L = Calculator::rotateVecOnVec(L, H, -alpha);
-            U = Calculator::rotateVecOnVec(U, H, -alpha);
+            Calculator::rotateVecOnVec(L, H, -alpha);
+            Calculator::rotateVecOnVec(U, H, -alpha);
             break;
         case '/':
-            L = Calculator::rotateVecOnVec(L, H, alpha);
-            U = Calculator::rotateVecOnVec(U, H, alpha);
+            Calculator::rotateVecOnVec(L, H, alpha);
+            Calculator::rotateVecOnVec(U, H, alpha);
             break;
         case '&':
-            H = Calculator::rotateVecOnVec(H, L, alpha);
-            U = Calculator::rotateVecOnVec(U, L, alpha);
+            Calculator::rotateVecOnVec(H, L, alpha);
+            Calculator::rotateVecOnVec(U, L, alpha);
             break;
         case '|':
-            H = Calculator::rotateVecOnVec(H, U, 180);
-            L = Calculator::rotateVecOnVec(L, U, 180);
+            Calculator::rotateVecOnVec(H, U, 180);
+            Calculator::rotateVecOnVec(L, U, 180);
             break;
         default:
             break;
