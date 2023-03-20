@@ -250,13 +250,19 @@ Object3D Object3D::loadObj(const std::string &filename) {
     std::vector<std::vector<double>> vectVertexes = object.get_vertexes();
     for (std::vector<double> vertex:vectVertexes) {
         if (vertex.size()==3){
-            obj.vertexes.push_back(Vector3D::point(vertex[0], vertex[1], vertex[3]));
+            obj.vertexes.push_back(Vector3D::point(vertex[0], vertex[1], vertex[2]));
         }
     }
     std::vector<obj::Polygon> polygons = object.get_polygons();
     for (obj::Polygon p:polygons){
-        obj.faces.push_back(Face(p.get_indexes()));
+        std::vector<int> indexes{};
+        //my face indexes start from 0
+        for (int i : p.get_indexes()) {
+            indexes.push_back(i-1);
+        }
+        obj.faces.push_back(Face(indexes));
     }
+    return obj;
 }
 
 Object3D Object3D::createLineDrawing(const ini::Section &objsec) {
