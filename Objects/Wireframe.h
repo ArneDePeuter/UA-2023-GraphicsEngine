@@ -11,6 +11,11 @@
 class Wireframe {
 public:
     explicit Wireframe(ini::Configuration &config);
+
+    Wireframe(const Camera &camera, const std::vector<Object3D> &objects);
+
+    Wireframe();
+
     Lines2D project(const double d);
     static Point2D point3dto2d(Vector3D & point, const double d);
 

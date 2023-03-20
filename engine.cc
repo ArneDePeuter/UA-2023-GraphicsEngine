@@ -9,6 +9,7 @@
 #include "Objects/LSystem2D.h"
 #include "Objects/Wireframe.h"
 #include "Objects/Line2D.h"
+#include "Objects/IniLoader.h"
 
 img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size) {
     //1. Determine xmin, xmax, ymin, ymax
@@ -62,15 +63,11 @@ img::EasyImage generate_image(ini::Configuration &configuration)
 
     std::string type = configuration["General"]["type"].as_string_or_die();
     if (type == "2DLSystem") {
-        LSystem2D lSys(configuration);
+        LSystem2D lSys = IniLoader::loadLSystem2D(configuration, size, backgroundcolor);
         lines = lSys.lines;
-        backgroundcolor = lSys.backgroundcolor;
-        size = lSys.size;
     } else if (type == "Wireframe") {
-        Wireframe wf(configuration);
+        Wireframe wf = IniLoader::loadWireFrame(configuration, size, backgroundcolor);
         lines = wf.project(1);
-        backgroundcolor = wf.backgroundColor;
-        size = wf.size;
     } else {
         return img::EasyImage(0,0, img::Color(0,0,0));
     }

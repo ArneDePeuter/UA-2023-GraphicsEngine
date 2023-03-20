@@ -11,7 +11,7 @@
 
 class LSystem2D {
 public:
-    explicit LSystem2D(ini::Configuration &configuration);
+    LSystem2D(const std::string &inputfile, img::Color color);
     void parse(const std::string &inputfile);
     void iterate();
     void setLines();

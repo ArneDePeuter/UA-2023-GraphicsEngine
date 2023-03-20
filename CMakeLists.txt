@@ -30,7 +30,7 @@ set(engine_sources
         Objects/Line2D.h Objects/Point2D.h
         Objects/LSystem2D.cpp
         Objects/Calculator.cpp Objects/Calculator.h
-        Objects/Face.cpp )
+        Objects/Face.cpp Objects/IniLoader.cpp Objects/IniLoader.h)
 
 ############################################################
 # Create an executable

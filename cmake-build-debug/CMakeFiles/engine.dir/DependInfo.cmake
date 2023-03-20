@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.cc" "CMakeFiles/engine.dir/Include/vector3d.cc.obj" "gcc" "CMakeFiles/engine.dir/Include/vector3d.cc.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Calculator.cpp" "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.cpp" "CMakeFiles/engine.dir/Objects/Face.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Face.cpp.obj.d"
+  "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/IniLoader.cpp" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem2D.cpp" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.cpp" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.cpp" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"

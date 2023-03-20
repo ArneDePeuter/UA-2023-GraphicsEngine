@@ -11,7 +11,7 @@
 class Object3D {
 public:
     explicit Object3D(ini::Section &objsec);
-    Object3D(const int &rotateX, const int &rotateY, const int &rotateZ, const double &scale, const Vector3D &center, const img::Color &color);
+    Object3D();
 
     std::vector<Vector3D> vertexes;
     std::vector<Face> faces;
@@ -20,29 +20,24 @@ public:
     void applyPoints(const std::vector<double> &v);
     void applyFaces(const std::vector<int> &v, const int &faces, const int &points);
 
-    void createLineDrawing(ini::Section &objsec);
-    void createTetrahedron();
-    std::vector<double> getIcoSahedronPoints();
-    void createCube();
-    void createIcosahedron();
-    void createDodecahedron();
-    void createOctahedron();
-    void createCylinder(const int n, const double h);
-    void createCone(const int n, const double h);
-    void createSphere(const int n);
-    void createTorus(const double r, const double R, const int n, const int m);
-    void loadObj(const std::string &filename);
+    static std::vector<double> getIcoSahedronPoints();
+
+    static Object3D createLineDrawing(const ini::Section &objsec);
+    static Object3D createTetrahedron();
+    static Object3D createCube();
+    static Object3D createIcosahedron();
+    static Object3D createDodecahedron();
+    static Object3D createOctahedron();
+    static Object3D createCylinder(const int n, const double h);
+    static Object3D createCone(const int n, const double h);
+    static Object3D createSphere(const int n);
+    static Object3D createTorus(const double r, const double R, const int n, const int m);
+    static Object3D loadObj(const std::string &filename);
 
     Vector3D center;
     img::Color color;
 };
 
 typedef std::list<Object3D> Objects3D;
-
-class Cube : public Object3D {
-public:
-    Cube(const int &rotateX, const int &rotateY, const int &rotateZ, const double &scale, const Vector3D &center,
-         const img::Color &color);
-};
 
 #endif //ENGINE_OBJECT3D_H

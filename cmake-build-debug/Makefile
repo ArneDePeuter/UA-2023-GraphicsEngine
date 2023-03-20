@@ -341,6 +341,30 @@ Objects/Face.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.s
 .PHONY : Objects/Face.cpp.s
 
+Objects/IniLoader.obj: Objects/IniLoader.cpp.obj
+.PHONY : Objects/IniLoader.obj
+
+# target to build an object file
+Objects/IniLoader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj
+.PHONY : Objects/IniLoader.cpp.obj
+
+Objects/IniLoader.i: Objects/IniLoader.cpp.i
+.PHONY : Objects/IniLoader.i
+
+# target to preprocess a source file
+Objects/IniLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/IniLoader.cpp.i
+.PHONY : Objects/IniLoader.cpp.i
+
+Objects/IniLoader.s: Objects/IniLoader.cpp.s
+.PHONY : Objects/IniLoader.s
+
+# target to generate assembly for a file
+Objects/IniLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/IniLoader.cpp.s
+.PHONY : Objects/IniLoader.cpp.s
+
 Objects/LSystem2D.obj: Objects/LSystem2D.cpp.obj
 .PHONY : Objects/LSystem2D.obj
 
@@ -471,6 +495,9 @@ help:
 	@echo ... Objects/Face.obj
 	@echo ... Objects/Face.i
 	@echo ... Objects/Face.s
+	@echo ... Objects/IniLoader.obj
+	@echo ... Objects/IniLoader.i
+	@echo ... Objects/IniLoader.s
 	@echo ... Objects/LSystem2D.obj
 	@echo ... Objects/LSystem2D.i
 	@echo ... Objects/LSystem2D.s

@@ -147,4 +147,7 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Face.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Camera.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Calculator.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Line2D.h
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Line2D.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/IniLoader.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Wireframe.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem2D.h
