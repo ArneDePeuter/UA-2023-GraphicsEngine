@@ -71,6 +71,8 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     }
     else if (type == "ObjFile") {
         obj = Object3D::loadObj(section["file"].as_string_or_die());
+    } else if (type == "3DLSystem") {
+        obj = LSystem3D(section["inputfile"].as_string_or_die());
     }
 
     int rotateX = section["rotateX"].as_double_or_die();

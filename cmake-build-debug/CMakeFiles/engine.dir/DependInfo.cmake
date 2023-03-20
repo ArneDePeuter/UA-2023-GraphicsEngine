@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.cpp" "CMakeFiles/engine.dir/Objects/Face.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Face.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/IniLoader.cpp" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem2D.cpp" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
+  "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem3D.cpp" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.cpp" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.cpp" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.cc" "CMakeFiles/engine.dir/engine.cc.obj" "gcc" "CMakeFiles/engine.dir/engine.cc.obj.d"

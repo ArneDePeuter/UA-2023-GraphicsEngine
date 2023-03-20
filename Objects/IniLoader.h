@@ -6,6 +6,7 @@
 #include "LSystem2D.h"
 #include "Camera.h"
 #include "../Include/ini_configuration.h"
+#include "LSystem3D.h"
 
 class IniLoader {
 public:

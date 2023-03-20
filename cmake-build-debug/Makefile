@@ -389,6 +389,30 @@ Objects/LSystem2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem2D.cpp.s
 .PHONY : Objects/LSystem2D.cpp.s
 
+Objects/LSystem3D.obj: Objects/LSystem3D.cpp.obj
+.PHONY : Objects/LSystem3D.obj
+
+# target to build an object file
+Objects/LSystem3D.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj
+.PHONY : Objects/LSystem3D.cpp.obj
+
+Objects/LSystem3D.i: Objects/LSystem3D.cpp.i
+.PHONY : Objects/LSystem3D.i
+
+# target to preprocess a source file
+Objects/LSystem3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.i
+.PHONY : Objects/LSystem3D.cpp.i
+
+Objects/LSystem3D.s: Objects/LSystem3D.cpp.s
+.PHONY : Objects/LSystem3D.s
+
+# target to generate assembly for a file
+Objects/LSystem3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.s
+.PHONY : Objects/LSystem3D.cpp.s
+
 Objects/Object3D.obj: Objects/Object3D.cpp.obj
 .PHONY : Objects/Object3D.obj
 
@@ -501,6 +525,9 @@ help:
 	@echo ... Objects/LSystem2D.obj
 	@echo ... Objects/LSystem2D.i
 	@echo ... Objects/LSystem2D.s
+	@echo ... Objects/LSystem3D.obj
+	@echo ... Objects/LSystem3D.i
+	@echo ... Objects/LSystem3D.s
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s

@@ -59,7 +59,7 @@ void Calculator::calcPolar(const Vector3D &point, double &theta, double &phi, do
     phi = std::acos(z/r);
 }
 
-Matrix Calculator::superMatrix(const double s, const int rx, const int ry, const int rz, const Vector3D move) {
+Matrix Calculator::superMatrix(const double &s, const int &rx, const int &ry, const int &rz, const Vector3D &move) {
     return scale(s) * rotate_x(rx) * rotate_y(ry) * rotate_z(rz) * translate(move);
 }
 
@@ -79,4 +79,16 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
     return m;
 }
 
+//https://computergraphics.stackexchange.com/questions/2399/3d-rotation-matrix-around-vector
+Vector3D Calculator::rotateVecOnVec(const Vector3D &a, const Vector3D &b, const double &degAngle) {
+    Vector3D C = Vector3D::cross(a,b);
+    Vector3D B = Vector3D::cross(a,C);
 
+    Vector3D::normalise(a);
+    Vector3D::normalise(B);
+    Vector3D::normalise(C);
+
+    Matrix T = translate(a)* translate(B)* translate(C);
+
+    return a * Matrix::inv(T) * rotate_x(degAngle) * T;
+}

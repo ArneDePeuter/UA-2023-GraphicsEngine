@@ -12,8 +12,9 @@ public:
     static Matrix rotate_z(const double &angle);
     static Matrix translate(const Vector3D &vector);
     static void calcPolar(const Vector3D &point, double &theta, double &phi, double &r);
-    static Matrix superMatrix(const double s, const int rx, const int ry, const int rz, const Vector3D move);
+    static Matrix superMatrix(const double &s, const int &rx, const int &ry, const int &rz, const Vector3D &move);
     static Matrix eyePointMatrix(const Vector3D &eye);
+    static Vector3D rotateVecOnVec(const Vector3D &vec, const Vector3D &rotAxis, const double &degAngle);
 };
 
 
