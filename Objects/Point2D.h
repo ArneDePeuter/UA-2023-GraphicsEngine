@@ -3,11 +3,12 @@
 
 class Point2D {
 public:
-    Point2D(double x, double y) : x(x), y(y) {}
-    Point2D() {}
+    Point2D(const double &x, const double &y) : x(x), y(y), z(0) {}
+    Point2D(const double &x, const double &y, const double &z) : x(x), y(y), z(z) {}
 
     double x;
     double y;
+    double z;
 };
 
 

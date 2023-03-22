@@ -20,6 +20,10 @@
 #include <stdint.h>
 #include <vector>
 #include <iostream>
+#include "../Objects/ZBuffer.h"
+
+class Line2D;
+
 /**
  * \brief The namespace of the EasyImage class
  */
@@ -220,7 +224,10 @@ namespace img
 			 */
 			void draw_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, Color color);
 
-		private:
+        void draw_zbuf_line(const Line2D &line, Color color, ZBuffer &buffer);
+
+
+    private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);
 			/**
 			 * \brief the width of the image
@@ -234,7 +241,8 @@ namespace img
 			 * \brief the vector containing all pixels
 			 */
 			std::vector<Color> bitmap;
-	};
+
+    };
 
 	/**
 	 * \brief Writes an img::EasyImage to an output stream in the BMP file format

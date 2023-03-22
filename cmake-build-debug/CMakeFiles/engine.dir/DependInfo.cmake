@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem3D.cpp" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.cpp" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.cpp" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"
+  "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.cpp" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.cc" "CMakeFiles/engine.dir/engine.cc.obj" "gcc" "CMakeFiles/engine.dir/engine.cc.obj.d"
   )
 

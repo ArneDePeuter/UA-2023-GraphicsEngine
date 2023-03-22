@@ -461,6 +461,30 @@ Objects/Wireframe.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.s
 .PHONY : Objects/Wireframe.cpp.s
 
+Objects/ZBuffer.obj: Objects/ZBuffer.cpp.obj
+.PHONY : Objects/ZBuffer.obj
+
+# target to build an object file
+Objects/ZBuffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj
+.PHONY : Objects/ZBuffer.cpp.obj
+
+Objects/ZBuffer.i: Objects/ZBuffer.cpp.i
+.PHONY : Objects/ZBuffer.i
+
+# target to preprocess a source file
+Objects/ZBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ZBuffer.cpp.i
+.PHONY : Objects/ZBuffer.cpp.i
+
+Objects/ZBuffer.s: Objects/ZBuffer.cpp.s
+.PHONY : Objects/ZBuffer.s
+
+# target to generate assembly for a file
+Objects/ZBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s
+.PHONY : Objects/ZBuffer.cpp.s
+
 engine.obj: engine.cc.obj
 .PHONY : engine.obj
 
@@ -534,6 +558,9 @@ help:
 	@echo ... Objects/Wireframe.obj
 	@echo ... Objects/Wireframe.i
 	@echo ... Objects/Wireframe.s
+	@echo ... Objects/ZBuffer.obj
+	@echo ... Objects/ZBuffer.i
+	@echo ... Objects/ZBuffer.s
 	@echo ... engine.obj
 	@echo ... engine.i
 	@echo ... engine.s

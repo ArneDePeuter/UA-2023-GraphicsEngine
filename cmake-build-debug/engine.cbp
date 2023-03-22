@@ -203,6 +203,12 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Wireframe.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.cc">
 			<Option target="engine"/>
 		</Unit>
