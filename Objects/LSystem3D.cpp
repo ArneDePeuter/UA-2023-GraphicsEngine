@@ -11,7 +11,6 @@ void LSystem3D::parse(const std::string &inputfile) {
     std::ifstream input_stream(inputfile);
     input_stream >> lSys;
     input_stream.close();
-
     alpha = lSys.get_angle();
 }
 
@@ -54,14 +53,21 @@ void LSystem3D::create() {
 }
 
 void LSystem3D::handleSign(const char &c) {
+    Vector3D newH;
+    Vector3D newL;
+    Vector3D newU;
     switch (c) {
         case '+':
-            Calculator::rotateVecOnVec(H, U, alpha);
-            Calculator::rotateVecOnVec(L, U, alpha);
+            newH = H*cos(Calculator::degToRad(alpha)) + L*sin(Calculator::degToRad(alpha));
+            newL = -H*sin(Calculator::degToRad(alpha)) + L*cos(Calculator::degToRad(alpha));
+            H = newH;
+            L = newL;
             break;
         case '-':
-            Calculator::rotateVecOnVec(H, U, -alpha);
-            Calculator::rotateVecOnVec(L, U, -alpha);
+            newH = H*cos(Calculator::degToRad(-alpha)) + L*sin(Calculator::degToRad(-alpha));
+            newL = -H*sin(Calculator::degToRad(-alpha)) + L*cos(Calculator::degToRad(-alpha));
+            H = newH;
+            L = newL;
             break;
         case '(':
             HStack.push(H);
@@ -80,24 +86,32 @@ void LSystem3D::handleSign(const char &c) {
             posStack.pop();
             break;
         case '^':
-            Calculator::rotateVecOnVec(H, L, -alpha);
-            Calculator::rotateVecOnVec(U, L, -alpha);
-            break;
-        case '\\':
-            Calculator::rotateVecOnVec(L, H, -alpha);
-            Calculator::rotateVecOnVec(U, H, -alpha);
-            break;
-        case '/':
-            Calculator::rotateVecOnVec(L, H, alpha);
-            Calculator::rotateVecOnVec(U, H, alpha);
+            newH = H*cos(Calculator::degToRad(-alpha)) + U*sin(Calculator::degToRad(-alpha));
+            newU = -H*sin(Calculator::degToRad(-alpha)) + U*cos(Calculator::degToRad(-alpha));
+            U = newU;
+            H = newH;
             break;
         case '&':
-            Calculator::rotateVecOnVec(H, L, alpha);
-            Calculator::rotateVecOnVec(U, L, alpha);
+            newH = H*cos(Calculator::degToRad(alpha)) + U*sin(Calculator::degToRad(alpha));
+            newU = -H*sin(Calculator::degToRad(alpha)) + U*cos(Calculator::degToRad(alpha));
+            U = newU;
+            H = newH;
+            break;
+        case '\\':
+            newU = L*sin(Calculator::degToRad(-alpha)) + U*cos(Calculator::degToRad(-alpha));
+            newL = L*cos(Calculator::degToRad(-alpha)) - U*sin(Calculator::degToRad(-alpha));
+            L = newL;
+            U = newU;
+            break;
+        case '/':
+            newU = L*sin(Calculator::degToRad(alpha)) + U*cos(Calculator::degToRad(alpha));
+            newL = L*cos(Calculator::degToRad(alpha)) - U*sin(Calculator::degToRad(alpha));
+            L = newL;
+            U = newU;
             break;
         case '|':
-            Calculator::rotateVecOnVec(H, U, 180);
-            Calculator::rotateVecOnVec(L, U, 180);
+            H = -H;
+            L = -L;
             break;
         default:
             break;

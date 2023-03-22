@@ -25,8 +25,6 @@ Lines2D Wireframe::project(const double d) {
 }
 
 Point2D Wireframe::point3dto2d(Vector3D &point, const double d) {
-    Point2D p;
-    p.x = (d*point.x)/-point.z;
-    p.y = (d*point.y)/-point.z;
+    Point2D p((d*point.x)/-point.z, (d*point.y)/-point.z, point.z);
     return p;
 }

@@ -121,6 +121,8 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
  c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\easy_image.h \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\objects\zbuffer.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
  c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\l_parser.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\set \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_set.h \
@@ -131,6 +133,7 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_list.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\allocated_ptr.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\list.tcc \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stack \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\deque \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h \

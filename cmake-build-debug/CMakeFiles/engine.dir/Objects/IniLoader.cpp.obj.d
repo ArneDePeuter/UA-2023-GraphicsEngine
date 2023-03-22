@@ -106,6 +106,8 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\objects\zbuffer.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
  c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\ini_configuration.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\map \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tree.h \
@@ -126,6 +128,7 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Wireframe.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Line2D.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Point2D.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Camera.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\LSystem2D.h \

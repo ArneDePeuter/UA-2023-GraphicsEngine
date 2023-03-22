@@ -7,8 +7,9 @@
 #include <climits>
 #include <cmath>
 #include "Objects/IniLoader.h"
+#include "Objects/ZBuffer.h"
 
-img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size) {
+img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size, const bool &zbuf) {
     //1. Determine xmin, xmax, ymin, ymax
     double xMin = INT_MAX, xMax = INT_MIN, yMin = INT_MAX, yMax = INT_MIN;
     for (const Line2D& l : lines) {
@@ -45,8 +46,16 @@ img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> 
     }
 
     //6. draw
-    for (const Line2D& l : lines) {
-        l.draw(&image);
+    if (zbuf) {
+        ZBuffer buffer(lround(imageX),lround(imageY));
+        for (const Line2D& l : lines) {
+            l.drawBuf(&image, buffer);
+        }
+    } else {
+        for (const Line2D& l : lines) {
+            l.draw(&image);
+        }
+        return image;
     }
     return image;
 }
@@ -57,18 +66,24 @@ img::EasyImage generate_image(ini::Configuration &configuration)
     Lines2D lines;
     img::Color backgroundcolor;
     int size;
+    bool zbuf = false;
 
     std::string type = configuration["General"]["type"].as_string_or_die();
     if (type == "2DLSystem") {
         LSystem2D lSys = IniLoader::loadLSystem2D(configuration, size, backgroundcolor);
         lines = lSys.lines;
-    } else if (type == "Wireframe") {
+    } else if (type == "Wireframe"||type=="Wirefram") {
         Wireframe wf = IniLoader::loadWireFrame(configuration, size, backgroundcolor);
         lines = wf.project(1);
-    } else {
+    } else if (type == "ZBufferedWireframe") {
+        Wireframe wf = IniLoader::loadWireFrame(configuration, size, backgroundcolor);
+        lines = wf.project(1);
+        zbuf=true;
+    }else {
         return img::EasyImage(0,0, img::Color(0,0,0));
     }
-    return draw2DLines(backgroundcolor, lines, size);
+
+    return draw2DLines(backgroundcolor, lines, size, zbuf);
 }
 
 int main(int argc, char const* argv[])

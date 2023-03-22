@@ -16,6 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "easy_image.h"
+#include "../Objects/ZBuffer.h"
+#include "../Objects/Line2D.h"
 #include <algorithm>
 #include <assert.h>
 #include <math.h>
@@ -262,6 +264,94 @@ void img::EasyImage::draw_line(unsigned int x0, unsigned int y0, unsigned int x1
 		}
 	}
 }
+void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &buffer)
+{
+    int x0 = lround(line.p1.x);
+    int y0 = lround(line.p1.y);
+    double zA = line.p1.z;
+
+    int x1 = lround(line.p2.x);
+    int y1 = lround(line.p2.y);
+    double zB = line.p2.z;
+
+    int a=std::max(abs(x1-x0), abs(y1-y0));
+    int j=a;
+
+    if (a==0) {
+        (*this)(x0,y0) = color;
+        return;
+    }
+
+    if (x0 >= this->width || y0 >= this->height || x1 >= this->width || y1 > this->height) {
+        std::stringstream ss;
+        ss << "Drawing line from (" << x0 << "," << y0 << ") to (" << x1 << "," << y1 << ") in image of width "
+           << this->width << " and height " << this->height;
+        throw std::runtime_error(ss.str());
+    }
+    if (x0 == x1)
+    {
+        //special case for x0 == x1
+        for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++)
+        {
+            int x = x0;
+            int y = i;
+            if (buffer.apply(x, y, zA, zB, a, j))
+            (*this)(x, y) = color;
+        }
+    }
+    else if (y0 == y1)
+    {
+        //special case for y0 == y1
+        for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++)
+        {
+            int x = i;
+            int y = y0;
+            if (buffer.apply(x, y, zA, zB, a, j))
+            (*this)(x, y) = color;
+        }
+    }
+    else
+    {
+        if (x0 > x1)
+        {
+            //flip points if x1>x0: we want x0 to have the lowest value
+            std::swap(x0, x1);
+            std::swap(y0, y1);
+        }
+        double m = ((double) y1 - (double) y0) / ((double) x1 - (double) x0);
+        if (-1.0 <= m && m <= 1.0)
+        {
+            for (unsigned int i = 0; i <= (x1 - x0); i++)
+            {
+                int x = x0 + i;
+                int y = lround(y0 + m * i);
+                if (buffer.apply(x, y, zA, zB, a, j))
+                (*this)(x, (unsigned int) y) = color;
+            }
+        }
+        else if (m > 1.0)
+        {
+            for (unsigned int i = 0; i <= (y1 - y0); i++)
+            {
+                int x = lround(x0 + (i / m));
+                int y = y0 + i;
+                if (buffer.apply(x, y, zA, zB, a, j))
+                (*this)((unsigned int) x, y) = color;
+            }
+        }
+        else if (m < -1.0)
+        {
+            for (unsigned int i = 0; i <= (y0 - y1); i++)
+            {
+                int x = lround(x0 - (i / m));
+                int y = y0 - i;
+                if (buffer.apply(x, y, zA, zB, a, j))
+                (*this)((unsigned int) x, y) = color;
+            }
+        }
+    }
+}
+
 std::ostream& img::operator<<(std::ostream& out, EasyImage const& image)
 {
 

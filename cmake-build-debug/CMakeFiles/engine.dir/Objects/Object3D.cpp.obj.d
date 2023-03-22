@@ -110,6 +110,8 @@ CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
+ c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\objects\zbuffer.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
  c:\users\arne\documents\2022-2023\s2\computergraphics\myengine\include\ini_configuration.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\map \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tree.h \
