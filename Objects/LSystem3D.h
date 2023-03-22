@@ -20,7 +20,7 @@ public:
     Vector3D pos = Vector3D::point(0,0,0);
     Vector3D H = Vector3D::vector(1,0,0);
     Vector3D L = Vector3D::vector(0,1,0);
-    Vector3D U = Vector3D::vector(0,0,1);
+    Vector3D U = -Vector3D::vector(0,0,1);
 
     LParser::LSystem3D lSys;
     std::string lString;

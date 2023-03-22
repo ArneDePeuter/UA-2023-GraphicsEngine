@@ -79,16 +79,7 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
     return m;
 }
 
-//https://computergraphics.stackexchange.com/questions/2399/3d-rotation-matrix-around-vector
-Vector3D Calculator::rotateVecOnVec(Vector3D &a, const Vector3D &b, const double &degAngle) {
-    Vector3D C = Vector3D::cross(a,b);
-    Vector3D B = Vector3D::cross(a,C);
-
-    Vector3D::normalise(a);
-    Vector3D::normalise(B);
-    Vector3D::normalise(C);
-
-    Matrix T = translate(a)* translate(B)* translate(C);
-
-    return a * Matrix::inv(T) * rotate_x(degAngle) * T;
+void Calculator::rotateVecOnVec(Vector3D &a, Vector3D &b, const double &degAngle) {
+    a = a*cos(degToRad(degAngle)) + b*sin(degToRad(degAngle));
+    b = -a*sin(degToRad(degAngle)) + b*cos(degToRad(degAngle));
 }
