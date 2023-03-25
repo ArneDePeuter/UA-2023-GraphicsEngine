@@ -80,8 +80,10 @@ ___
     -     static Object3D createTorus(const double &r, const double &R, const int &n, const int &m);
     -     static Object3D loadObj(const std::string &filename);
 
+<h1 align="center">
 <a href="./readmeFiles/torus.png"><img src="./readmeFiles/torus.png" alt="torus" width="250" height="250"></a>
 <a href="./readmeFiles/bear.png"><img src="./readmeFiles/bear.png" alt="bear" width="250" height="250"></a>
+</h1>
 ## License
 
 MIT
