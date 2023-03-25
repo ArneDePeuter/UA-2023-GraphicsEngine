@@ -10,6 +10,7 @@
 <p align="center">
   <a href="#2D-LSystems">2D LSystems</a> •
   <a href="#3D-Lines">3D Lines</a>
+  <a href="#3D-Figures">3D Figures</a>
 </p>
 
 ## 2D LSystems
@@ -61,6 +62,26 @@ ___
 <a href="./readmeFiles/3dLines.png"><img src="./readmeFiles/3dLines.png" alt="3dl" width="500"></a>
 </h1>
 
+## 3D Objects
+
+- Features:
+  - Possibilty to Create a 3D object with a .obj file that is compatible with the parser
+  - Z-Buffering (still has inaccuracies)
+  - Creating objects:
+    -     static Object3D createLineDrawing(const ini::Section &objsec);
+    -     static Object3D createTetrahedron();
+    -     static Object3D createCube();
+    -     static Object3D createIcosahedron();
+    -     static Object3D createDodecahedron();
+    -     static Object3D createOctahedron();
+    -     static Object3D createCylinder(const int &n, const double &h);
+    -     static Object3D createCone(const int &n, const double &h);
+    -     static Object3D createSphere(const int &n);
+    -     static Object3D createTorus(const double &r, const double &R, const int &n, const int &m);
+    -     static Object3D loadObj(const std::string &filename);
+
+<a href="./readmeFiles/torus.png"><img src="./readmeFiles/torus.png" alt="torus" width="250" height="250"></a>
+<a href="./readmeFiles/bear.png"><img src="./readmeFiles/bear.png" alt="bear" width="250" height="250"></a>
 ## License
 
 MIT
