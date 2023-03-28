@@ -224,8 +224,22 @@ namespace img
 			 */
 			void draw_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, Color color);
 
-        void draw_zbuf_line(const Line2D &line, Color color, ZBuffer &buffer);
-
+            /**
+            * \brief Draws a line from pixel (x0,y0) to pixel (x1,y1) in the specified color according to the buffer
+            *
+            * \param x0	the x coordinate of the first pixel
+            * \param y0	the y coordinate of the first pixel
+            * \param x1	the x coordinate of the second pixel
+            * \param y1	the y coordinate of the second pixel
+            * \param color	the color of the line
+            *
+            * These assertions apply:
+            *	assert(x0 < getWidth())
+            * 	assert(y0 < getHeight())
+            * 	assert(x1 < getWidth())
+            * 	assert(y1 < getHeight())
+            */
+            void draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int z0, unsigned int z1, Color color, ZBuffer &buffer);
 
     private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);

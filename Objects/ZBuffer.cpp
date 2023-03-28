@@ -11,7 +11,7 @@ ZBuffer::ZBuffer(const int &width, const int &heigth) {
     }
 }
 
-bool ZBuffer::apply(const int &x, const int &y, const double &zA, const double &zB, const int &a, int &i) {
+bool ZBuffer::apply(const unsigned int &x, const unsigned int &y, const double &zA, const double &zB, const unsigned int &a, unsigned int &i) {
     double bufVal = calculateVal(zA, zB, a, i);
     i--;
 
@@ -22,7 +22,7 @@ bool ZBuffer::apply(const int &x, const int &y, const double &zA, const double &
     return false;
 }
 
-double ZBuffer::calculateVal(const double &zA, const double &zB, const int &a, const int &i) {
-    double t = double(i)/a;
+double ZBuffer::calculateVal(const double &zA, const double &zB, const unsigned int &a, const unsigned int &i) {
+    double t = (double)i/(double)a;
     return t/zA + (1-t)/zB;
 }

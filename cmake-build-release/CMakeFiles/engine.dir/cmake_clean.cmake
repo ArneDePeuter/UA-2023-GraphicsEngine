@@ -1,0 +1,39 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/engine.dir/Include/easy_image.cc.obj"
+  "CMakeFiles/engine.dir/Include/easy_image.cc.obj.d"
+  "CMakeFiles/engine.dir/Include/ini_configuration.cc.obj"
+  "CMakeFiles/engine.dir/Include/ini_configuration.cc.obj.d"
+  "CMakeFiles/engine.dir/Include/l_parser.cc.obj"
+  "CMakeFiles/engine.dir/Include/l_parser.cc.obj.d"
+  "CMakeFiles/engine.dir/Include/obj_parser.cc.obj"
+  "CMakeFiles/engine.dir/Include/obj_parser.cc.obj.d"
+  "CMakeFiles/engine.dir/Include/vector3d.cc.obj"
+  "CMakeFiles/engine.dir/Include/vector3d.cc.obj.d"
+  "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Face.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Face.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
+  "CMakeFiles/engine.dir/engine.cc.obj"
+  "CMakeFiles/engine.dir/engine.cc.obj.d"
+  "engine.exe"
+  "engine.exe.manifest"
+  "engine.pdb"
+  "libengine.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/engine.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

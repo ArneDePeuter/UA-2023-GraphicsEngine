@@ -264,18 +264,13 @@ void img::EasyImage::draw_line(unsigned int x0, unsigned int y0, unsigned int x1
 		}
 	}
 }
-void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &buffer)
+void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int z0, unsigned int z1, Color color, ZBuffer &buffer)
 {
-    int x0 = lround(line.p1.x);
-    int y0 = lround(line.p1.y);
-    double zA = line.p1.z;
+    unsigned int a = (unsigned int) std::max(abs((int) x1- (int)x0), abs((int) y1- (int) y0));
+    unsigned int j = a;
 
-    int x1 = lround(line.p2.x);
-    int y1 = lround(line.p2.y);
-    double zB = line.p2.z;
-
-    int a=std::max(abs(x1-x0), abs(y1-y0));
-    int j=a;
+    unsigned int x;
+    unsigned int y;
 
     if (a==0) {
         (*this)(x0,y0) = color;
@@ -293,9 +288,9 @@ void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &bu
         //special case for x0 == x1
         for (unsigned int i = std::min(y0, y1); i <= std::max(y0, y1); i++)
         {
-            int x = x0;
-            int y = i;
-            if (buffer.apply(x, y, zA, zB, a, j))
+            x = x0;
+            y = i;
+            if (buffer.apply(x, y, z0, z1, a, j))
             (*this)(x, y) = color;
         }
     }
@@ -304,9 +299,9 @@ void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &bu
         //special case for y0 == y1
         for (unsigned int i = std::min(x0, x1); i <= std::max(x0, x1); i++)
         {
-            int x = i;
-            int y = y0;
-            if (buffer.apply(x, y, zA, zB, a, j))
+            x = i;
+            y = y0;
+            if (buffer.apply(x, y, z0, z1, a, j))
             (*this)(x, y) = color;
         }
     }
@@ -323,9 +318,9 @@ void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &bu
         {
             for (unsigned int i = 0; i <= (x1 - x0); i++)
             {
-                int x = x0 + i;
-                int y = lround(y0 + m * i);
-                if (buffer.apply(x, y, zA, zB, a, j))
+                x = x0 + i;
+                y = (unsigned int) round(y0 + m * i);
+                if (buffer.apply(x, y, z0, z1, a, j))
                 (*this)(x, (unsigned int) y) = color;
             }
         }
@@ -333,9 +328,9 @@ void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &bu
         {
             for (unsigned int i = 0; i <= (y1 - y0); i++)
             {
-                int x = lround(x0 + (i / m));
-                int y = y0 + i;
-                if (buffer.apply(x, y, zA, zB, a, j))
+                x = (unsigned int) round(x0 + (i / m));
+                y = y0 + i;
+                if (buffer.apply(x, y, z0, z1, a, j))
                 (*this)((unsigned int) x, y) = color;
             }
         }
@@ -343,9 +338,9 @@ void img::EasyImage::draw_zbuf_line(const Line2D &line, Color color, ZBuffer &bu
         {
             for (unsigned int i = 0; i <= (y0 - y1); i++)
             {
-                int x = lround(x0 - (i / m));
-                int y = y0 - i;
-                if (buffer.apply(x, y, zA, zB, a, j))
+                x = (unsigned int) round(x0 - (i / m));
+                y = y0 - i;
+                if (buffer.apply(x, y, z0, z1, a, j))
                 (*this)((unsigned int) x, y) = color;
             }
         }
