@@ -266,13 +266,14 @@ void img::EasyImage::draw_line(unsigned int x0, unsigned int y0, unsigned int x1
 }
 void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int z0, unsigned int z1, Color color, ZBuffer &buffer)
 {
-    unsigned int a = (unsigned int) std::max(abs((int) x1- (int)x0), abs((int) y1- (int) y0));
+    unsigned int a = (unsigned int) std::max(abs((int) x1- (int)x0), abs((int) y1 - (int) y0));
     unsigned int j = a;
 
     unsigned int x;
     unsigned int y;
 
     if (a==0) {
+        if (buffer.apply(x0, y0, z0, z1, a, j))
         (*this)(x0,y0) = color;
         return;
     }
