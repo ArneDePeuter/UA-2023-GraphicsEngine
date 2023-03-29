@@ -7,12 +7,14 @@
 #include "Camera.h"
 #include "../Include/ini_configuration.h"
 #include "LSystem3D.h"
+#include "Scene.h"
 
 class IniLoader {
 public:
     static LSystem2D loadLSystem2D(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
     static Wireframe loadWireFrame(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
     static Object3D loadObject3D(const ini::Section &section);
+    static Scene loadScene(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
 };
 
 #endif //ENGINE_INILOADER_H

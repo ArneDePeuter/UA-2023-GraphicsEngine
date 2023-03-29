@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Arne/Desktop/3dengine/Objects/LSystem2D.cpp" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengine/Objects/LSystem3D.cpp" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengine/Objects/Object3D.cpp" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
+  "C:/Users/Arne/Desktop/3dengine/Objects/Scene.cpp" "CMakeFiles/engine.dir/Objects/Scene.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Scene.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengine/Objects/Wireframe.cpp" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.cpp" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengine/engine.cc" "CMakeFiles/engine.dir/engine.cc.obj" "gcc" "CMakeFiles/engine.dir/engine.cc.obj.d"

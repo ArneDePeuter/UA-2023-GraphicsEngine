@@ -207,6 +207,12 @@
 		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/Zbuffering.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/Zbuffering.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/Arne/Desktop/3dengine/engine.cc">
 			<Option target="engine"/>
 		</Unit>

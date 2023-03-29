@@ -272,12 +272,6 @@ void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned i
     unsigned int x;
     unsigned int y;
 
-    if (a==0) {
-        if (buffer.apply(x0, y0, z0, z1, a, j))
-        (*this)(x0,y0) = color;
-        return;
-    }
-
     if (x0 >= this->width || y0 >= this->height || x1 >= this->width || y1 > this->height) {
         std::stringstream ss;
         ss << "Drawing line from (" << x0 << "," << y0 << ") to (" << x1 << "," << y1 << ") in image of width "
@@ -322,7 +316,7 @@ void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned i
                 x = x0 + i;
                 y = (unsigned int) round(y0 + m * i);
                 if (buffer.apply(x, y, z0, z1, a, j))
-                (*this)(x, (unsigned int) y) = color;
+                (*this)(x, y) = color;
             }
         }
         else if (m > 1.0)
@@ -332,7 +326,7 @@ void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned i
                 x = (unsigned int) round(x0 + (i / m));
                 y = y0 + i;
                 if (buffer.apply(x, y, z0, z1, a, j))
-                (*this)((unsigned int) x, y) = color;
+                (*this)(x, y) = color;
             }
         }
         else if (m < -1.0)
@@ -342,7 +336,7 @@ void img::EasyImage::draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned i
                 x = (unsigned int) round(x0 - (i / m));
                 y = y0 - i;
                 if (buffer.apply(x, y, z0, z1, a, j))
-                (*this)((unsigned int) x, y) = color;
+                (*this)(x, y) = color;
             }
         }
     }
@@ -475,4 +469,35 @@ std::istream& img::operator>>(std::istream& in, EasyImage & image)
 	}
 	//okay we're done
 	return in;
+}
+
+void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const Vector3D &B, const Vector3D &C, double d, double dx, double dy, img::Color color) {
+	Vector3D newA = Vector3D::point((d*A.x)/-A.z+dx, (d*A.y)/-A.z + dy, A.z);
+	Vector3D newB = Vector3D::point((d*B.x)/-B.z+dx, (d*B.y)/-B.z + dy, B.z);
+	Vector3D newC = Vector3D::point((d*C.x)/-C.z+dx, (d*C.y)/-C.z + dy, C.z);
+
+	std::vector<double> yVals = {newA.y, newB.y, newC.y};
+	int yMin = lround(*std::min_element(yVals.begin(), yVals.end())), yMax = lround(*std::max_element(yVals.begin(), yVals.end()));
+
+	double xG = (newA.x+newB.x+newC.x)/3;
+	double yG = (newA.y+newB.y+newC.y)/3;
+	double zGVal = 1/(3*newA.z) +  1/(3*newB.z) + 1/(3*newC.z);
+	double dzdx = 1;
+	double dzdy = 1;
+
+	for (int y = yMin; y <= yMax; y++) {
+		double xAB = newA.x + (y - newA.y) / (newB.y - newA.y) * (newB.x - newA.x);
+		double xAC = newA.x + (y - newA.y) / (newC.y - newA.y) * (newC.x - newA.x);
+		double xBC = newB.x + (y - newB.y) / (newC.y - newB.y) * (newC.x - newB.x);
+		std::vector<double> vec = {xAB, xAC, xBC};
+
+		int xL = lround(*std::min_element(vec.begin(), vec.end()) + 0.5);
+		int xR = lround(*std::max_element(vec.begin(), vec.end()) - 0.5);
+
+		for (int x = xL; x <= xR; x++) {
+			double bufVal = 1.0001 * zGVal + (x-xG)*dzdx + (y-yG)*dzdy;
+			if (buffer.apply(x,y, bufVal))
+			(*this)(x, y) = color;
+		}
+	}
 }

@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj"
   "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj.d"
   "CMakeFiles/engine.dir/engine.cc.obj"
   "CMakeFiles/engine.dir/engine.cc.obj.d"
   "engine.exe"

@@ -437,6 +437,30 @@ Objects/Object3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3D.cpp.s
 .PHONY : Objects/Object3D.cpp.s
 
+Objects/Scene.obj: Objects/Scene.cpp.obj
+.PHONY : Objects/Scene.obj
+
+# target to build an object file
+Objects/Scene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.obj
+.PHONY : Objects/Scene.cpp.obj
+
+Objects/Scene.i: Objects/Scene.cpp.i
+.PHONY : Objects/Scene.i
+
+# target to preprocess a source file
+Objects/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.i
+.PHONY : Objects/Scene.cpp.i
+
+Objects/Scene.s: Objects/Scene.cpp.s
+.PHONY : Objects/Scene.s
+
+# target to generate assembly for a file
+Objects/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.s
+.PHONY : Objects/Scene.cpp.s
+
 Objects/Wireframe.obj: Objects/Wireframe.cpp.obj
 .PHONY : Objects/Wireframe.obj
 
@@ -555,6 +579,9 @@ help:
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s
+	@echo ... Objects/Scene.obj
+	@echo ... Objects/Scene.i
+	@echo ... Objects/Scene.s
 	@echo ... Objects/Wireframe.obj
 	@echo ... Objects/Wireframe.i
 	@echo ... Objects/Wireframe.s

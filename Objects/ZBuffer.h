@@ -9,6 +9,7 @@ public:
     ZBuffer(const int &width, const int &heigth);
     static double calculateVal(const double &zA, const double &zB, const unsigned int &a, const unsigned int &i);
     bool apply(const unsigned int &x, const unsigned int &y, const double &zA, const double &zB, const unsigned int &a, int unsigned &i);
+    bool apply(const unsigned int &x, const unsigned int &y, const double &bufVal);
 };
 
 

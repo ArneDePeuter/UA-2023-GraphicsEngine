@@ -26,3 +26,11 @@ double ZBuffer::calculateVal(const double &zA, const double &zB, const unsigned 
     double t = (double)i/(double)a;
     return t/zA + (1-t)/zB;
 }
+
+bool ZBuffer::apply(const unsigned int &x, const unsigned int &y, const double &bufVal) {
+    if (bufVal < (*this)[y][x]) {
+        (*this)[y][x] = bufVal;
+        return true;
+    }
+    return false;
+}

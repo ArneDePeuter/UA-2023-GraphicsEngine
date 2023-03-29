@@ -284,6 +284,14 @@ Object3D Object3D::createLineDrawing(const ini::Section &objsec) {
     return linedrawing;
 }
 
+void Object3D::triangulate() {
+    std::vector<Face> newFaces;
+    for (Face f:faces) {
+        f.triangulate(newFaces);
+    }
+    faces = newFaces;
+}
+
 
 
 

@@ -485,6 +485,30 @@ Objects/ZBuffer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s
 .PHONY : Objects/ZBuffer.cpp.s
 
+Objects/Zbuffering.obj: Objects/Zbuffering.cpp.obj
+.PHONY : Objects/Zbuffering.obj
+
+# target to build an object file
+Objects/Zbuffering.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj
+.PHONY : Objects/Zbuffering.cpp.obj
+
+Objects/Zbuffering.i: Objects/Zbuffering.cpp.i
+.PHONY : Objects/Zbuffering.i
+
+# target to preprocess a source file
+Objects/Zbuffering.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.i
+.PHONY : Objects/Zbuffering.cpp.i
+
+Objects/Zbuffering.s: Objects/Zbuffering.cpp.s
+.PHONY : Objects/Zbuffering.s
+
+# target to generate assembly for a file
+Objects/Zbuffering.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.s
+.PHONY : Objects/Zbuffering.cpp.s
+
 engine.obj: engine.cc.obj
 .PHONY : engine.obj
 
@@ -561,6 +585,9 @@ help:
 	@echo ... Objects/ZBuffer.obj
 	@echo ... Objects/ZBuffer.i
 	@echo ... Objects/ZBuffer.s
+	@echo ... Objects/Zbuffering.obj
+	@echo ... Objects/Zbuffering.i
+	@echo ... Objects/Zbuffering.s
 	@echo ... engine.obj
 	@echo ... engine.i
 	@echo ... engine.s

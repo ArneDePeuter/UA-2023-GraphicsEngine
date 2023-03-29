@@ -18,6 +18,7 @@ public:
     void applyTransformation(const Matrix &m);
     void applyPoints(const std::vector<double> &v);
     void applyFaces(const std::vector<int> &v, const int &faces, const int &points);
+    void triangulate();
 
     static std::vector<double> getIcoSahedronPoints();
 

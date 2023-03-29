@@ -6,10 +6,11 @@
 #include <string>
 #include <climits>
 #include <cmath>
+#include <algorithm>
 #include "Objects/IniLoader.h"
 #include "Objects/ZBuffer.h"
 
-img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, int size, const bool &zbuf) {
+img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, const int &size, const bool &zbuf) {
     //1. Determine xmin, xmax, ymin, ymax
     double xMin = INT_MAX, xMax = INT_MIN, yMin = INT_MAX, yMax = INT_MIN;
     for (const Line2D& l : lines) {
@@ -60,6 +61,58 @@ img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> 
     return image;
 }
 
+img::EasyImage drawZBufTriangles(const img::Color &backgroundcolor, std::vector<std::vector<Vector3D>> triangles, const int &size) {
+    //1. Determine xmin, xmax, ymin, ymax
+    double xMin = INT_MAX, xMax = INT_MIN, yMin = INT_MAX, yMax = INT_MIN;
+    for (const std::vector<Vector3D> &triangle : triangles) {
+        Vector3D p1 = triangle[0];
+        Vector3D p2 = triangle[1];
+        Vector3D p3 = triangle[2];
+        std::vector<double> xvec = {p1.x, p2.x, p3.x};
+        std::vector<double> yvec = {p1.y, p2.y, p3.y};
+
+        double tMinX = *std::min_element(xvec.begin(), xvec.end()), tMaxX = *std::max_element(xvec.begin(), xvec.end());
+        double tMinY = *std::min_element(yvec.begin(), yvec.end()), tMaxY = *std::max_element(yvec.begin(), yvec.end());
+
+        xMin = std::min(xMin, tMinX);
+        xMax = std::max(xMax, tMaxX);
+        yMin = std::min(yMin, tMinY);
+        yMax = std::max(yMax, tMaxY);
+    }
+    double xRange = xMax - xMin, yRange = yMax - yMin;
+    //2. Calculate size of image
+    double imageX = size * (xRange / std::max(xRange, yRange));
+    double imageY = size * (yRange / std::max(xRange, yRange));
+    img::EasyImage image(lround(imageX), lround(imageY), backgroundcolor);
+
+    //3. Scale
+    double d = 0.95 * (imageX / xRange);
+    for (std::vector<Vector3D> &triangle : triangles) {
+        for (Vector3D &p : triangle) {
+            p.x *= d;
+            p.y *= d;
+            p.z *= d;
+        }
+    }
+
+    //4 and 5. Move
+    Point2D DC(d * ((xMin+xMax)/2), d * ((yMin+yMax)/2));
+    double dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
+    for (std::vector<Vector3D> &triangle : triangles) {
+        for (Vector3D &p : triangle) {
+            p.x = lround(p.x + dx);
+            p.y = lround(p.x + dy);
+        }
+    }
+
+    //6. draw
+    ZBuffer buffer(lround(imageX),lround(imageY));
+    for (const std::vector<Vector3D> &triangle : triangles) {
+        image.draw_zbuf_triag(buffer, triangle[0], triangle[1], triangle[2], 1, dx, dy,backgroundcolor);
+    }
+    return image;
+}
+
 // const removed for pass reference
 img::EasyImage generate_image(ini::Configuration &configuration)
 {
@@ -79,10 +132,10 @@ img::EasyImage generate_image(ini::Configuration &configuration)
         Wireframe wf = IniLoader::loadWireFrame(configuration, size, backgroundcolor);
         lines = wf.project(1);
         zbuf=true;
-    }else {
-        return img::EasyImage(0,0, img::Color(0,0,0));
+    }else if (type == "ZBuffering") {
+        Scene s = IniLoader::loadScene(configuration, size, backgroundcolor);
+        return drawZBufTriangles(backgroundcolor, s.getTriangles(), size);
     }
-
     return draw2DLines(backgroundcolor, lines, size, zbuf);
 }
 

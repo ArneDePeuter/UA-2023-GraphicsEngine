@@ -150,6 +150,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: \
  C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
  C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+ C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
  C:\Users\Arne\Desktop\3dengine\Objects\Object3D.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \

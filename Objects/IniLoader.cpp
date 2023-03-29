@@ -91,3 +91,23 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     return obj;
 }
 
+Scene IniLoader::loadScene(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor) {
+    Scene scene;
+
+    ini::Section general = configuration["General"];
+    size = general["size"].as_int_or_die();
+    ini::DoubleTuple colorTuple = general["backgroundcolor"].as_double_tuple_or_die();
+    backgroundcolor = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+    scene.camera = Camera(general["eye"]);
+
+    int nrFigures = general["nrFigures"];
+
+    for (int i = 0; i < nrFigures; i++) {
+        ini::Section section = configuration["Figure" + std::to_string(i)];
+        Object3D object = loadObject3D(section);
+        scene.objects3D.push_back(object);
+    }
+    scene.triangulate();
+    scene.camera.eyePointTransform(scene.objects3D);
+    return scene;
+}
