@@ -471,16 +471,21 @@ std::istream& img::operator>>(std::istream& in, EasyImage & image)
 	return in;
 }
 
-
-void findBounds(const Vector3D &P, const Vector3D &Q, const double &y, double& xL, double& xR) {
+void findBounds(const Vector3D &P, const Vector3D &Q, const double &y, double& xL, double& xR, bool &foundL, bool &foundR) {
     if ((y < P.y && y < Q.y) || (y > P.y && y > Q.y)) { return; }
     if (P.x == Q.x) {return;}
 
     double slope = (P.x - Q.x) / (P.y - Q.y);
     double x = Q.x + slope * (y - Q.y);
 
-    if (x < xL) { xL = x; }
-    if (x > xR) { xR = x; }
+    if (x < xL) {
+        foundL = true;
+        xL = x;
+    }
+    if (x > xR) {
+        foundR = true;
+        xR = x;
+    }
 }
 
 void calculateDZs(const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, double &dzdx, double &dzdy) {
@@ -515,11 +520,15 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
         xL = std::numeric_limits<double>::infinity();
         xR = -std::numeric_limits<double>::infinity();
 
-        findBounds(newA, newB, y, xL, xR);
-        findBounds(newA, newC, y, xL, xR);
-        findBounds(newB, newC, y, xL, xR);
+        bool foundR = false, foundL = false;
+        findBounds(newA, newB, y, xL, xR, foundL, foundR);
+        findBounds(newA, newC, y, xL, xR, foundL, foundR);
+        findBounds(newB, newC, y, xL, xR, foundL, foundR);
+        if (!foundL || !foundR) continue;
 
-        for (int x = std::floor(xL); x <= std::ceil(xR); x++) {
+        int xLint = (int) lround(xL+0.5);
+        int xRint = (int) lround(xR+0.5);
+        for (int x = xLint; x <= xRint; x++) {
             double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
             if (buffer.apply(x,y,bufVal))
             (*this)(x,y) = color;
