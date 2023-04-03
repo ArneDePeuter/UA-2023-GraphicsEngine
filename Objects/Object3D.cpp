@@ -125,7 +125,7 @@ Object3D Object3D::createIcosahedron() {
 }
 
 Object3D Object3D::createDodecahedron() {
-    Object3D dodecahedron = createIcosahedron();
+    Object3D temp = createIcosahedron();
     std::vector<double> v {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -134,9 +134,9 @@ Object3D Object3D::createDodecahedron() {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };
     for (int i = 0; i < 20; i++) {
-        Face f = dodecahedron.faces[i];
+        Face f = temp.faces[i];
         double x, y, z;
-        std::vector<Vector3D> vert = dodecahedron.vertexes;
+        std::vector<Vector3D> vert = temp.vertexes;
         x = vert[f.point_indexes[0]].x + vert[f.point_indexes[1]].x + vert[f.point_indexes[2]].x;
         x /= 3;
 
@@ -150,6 +150,8 @@ Object3D Object3D::createDodecahedron() {
         v[i+20] = y;
         v[i+20*2] = z;
     }
+
+    Object3D dodecahedron;
     dodecahedron.applyPoints(v);
     dodecahedron.applyFaces({
         0, 0,  1,  2,  3,  4, 19, 19, 18, 17, 16, 15,

@@ -530,8 +530,10 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
         int xRint = (int) lround(xR+0.5);
         for (int x = xLint; x <= xRint; x++) {
             double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
-            if (buffer.apply(x,y,bufVal))
-            (*this)(x,y) = color;
+            if (buffer.apply(x,y,bufVal)) {
+                (*this)(x,y) = color;
+            }
+
         }
     }
 }
