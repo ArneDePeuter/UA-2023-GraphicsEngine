@@ -6,17 +6,42 @@ void Scene::triangulate() {
     }
 }
 
-std::vector<std::vector<Vector3D>> Scene::getTriangles() {
-    std::vector<std::vector<Vector3D>> triangles;
+std::vector<Triangle> Scene::getTriangles() {
+    std::vector<Triangle> triangles;
     for (const Object3D &obj:objects3D) {
         for (const Face &f:obj.faces) {
-            std::vector<Vector3D> triangle = {
-                    obj.vertexes[f.point_indexes[0]],
-                    obj.vertexes[f.point_indexes[1]],
-                    obj.vertexes[f.point_indexes[2]]
-            };
-            triangles.push_back(triangle);
+            Triangle t;
+            t.A = obj.vertexes[f.point_indexes[0]];
+            t.B = obj.vertexes[f.point_indexes[1]];
+            t.C = obj.vertexes[f.point_indexes[2]];
+            t.color = obj.color;
+            triangles.push_back(t);
         }
     }
     return triangles;
+}
+
+Lines2D Scene::project(const double &d) {
+    Lines2D lines;
+    for (Object3D obj : objects3D) {
+        for (Face f : obj.faces) {
+            for (int i = 0; i < f.point_indexes.size()-1; i++) {
+                Vector3D p1 = obj.vertexes[f.point_indexes[i]];
+                Vector3D p2 = obj.vertexes[f.point_indexes[i+1]];
+
+                Line2D newLine(point3dto2d(p1,d), point3dto2d(p2, d), obj.color);
+                lines.push_back(newLine);
+            }
+            Vector3D p1 = obj.vertexes[f.point_indexes[0]];
+            Vector3D p2 = obj.vertexes[f.point_indexes[f.point_indexes.size()-1]];
+            Line2D newLine(point3dto2d(p1,d), point3dto2d(p2, d), obj.color);
+            lines.push_back(newLine);
+        }
+    }
+    return lines;
+}
+
+Point2D Scene::point3dto2d(Vector3D &point, const double d) {
+    Point2D p((d*point.x)/-point.z, (d*point.y)/-point.z, point.z);
+    return p;
 }

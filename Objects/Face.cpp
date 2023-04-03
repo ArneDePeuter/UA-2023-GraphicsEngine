@@ -34,9 +34,12 @@ void Face::subdivide(std::vector<Vector3D> &vertexes, std::vector<Face> &newFace
 }
 
 void Face::triangulate(std::vector<Face> &newFaces) {
-    if (point_indexes.size()==3) return;
+    if (point_indexes.size()==3) {
+        newFaces.push_back(*this);
+        return;
+    }
 
-    for (int i = 1; i < point_indexes.size()-2; i++) {
+    for (int i = 1; i <= point_indexes.size()-2; i++) {
         newFaces.push_back(Face({point_indexes[0], point_indexes[i], point_indexes[i+1]}));
     }
 }

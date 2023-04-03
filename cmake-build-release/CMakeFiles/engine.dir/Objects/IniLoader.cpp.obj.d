@@ -175,4 +175,5 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:\Users\Arne\Desktop\3dengine\Objects\LSystem3D.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
- C:\Users\Arne\Desktop\3dengine\Objects\Scene.h
+ C:\Users\Arne\Desktop\3dengine\Objects\Scene.h \
+ C:\Users\Arne\Desktop\3dengine\Objects\Triangle.h

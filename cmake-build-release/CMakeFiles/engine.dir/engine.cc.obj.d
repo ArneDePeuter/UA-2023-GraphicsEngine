@@ -190,4 +190,6 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_stack.h \
  C:\Users\Arne\Desktop\3dengine\Objects/LSystem3D.h \
  C:\Users\Arne\Desktop\3dengine\Objects/Scene.h \
- C:\Users\Arne\Desktop\3dengine\Objects/ZBuffer.h
+ C:\Users\Arne\Desktop\3dengine\Objects/Triangle.h \
+ C:\Users\Arne\Desktop\3dengine\Objects/ZBuffer.h \
+ C:\Users\Arne\Desktop\3dengine\Objects/Triangle.h

@@ -157,4 +157,8 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
- C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc
+ C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+ C:\Users\Arne\Desktop\3dengine\Objects\Triangle.h \
+ C:\Users\Arne\Desktop\3dengine\Objects\Line2D.h \
+ C:\Users\Arne\Desktop\3dengine\Objects\Point2D.h \
+ C:\Users\Arne\Desktop\3dengine\Objects\ZBuffer.h

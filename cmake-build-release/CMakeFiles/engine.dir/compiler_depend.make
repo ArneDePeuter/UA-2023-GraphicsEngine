@@ -137,6 +137,7 @@ CMakeFiles/engine.dir/Include/easy_image.cc.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Line2D.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Point2D.h \
   C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
@@ -1272,6 +1273,7 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Include/ini_configuration.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -1309,7 +1311,8 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Users/Arne/Desktop/3dengine/Objects/LSystem3D.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
-  C:/Users/Arne/Desktop/3dengine/Objects/Scene.h
+  C:/Users/Arne/Desktop/3dengine/Objects/Scene.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h
 
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/Arne/Desktop/3dengine/Objects/LSystem2D.cpp \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/fstream \
@@ -1465,6 +1468,7 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Include/l_parser.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/set \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_set.h \
@@ -1628,6 +1632,7 @@ CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Include/l_parser.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -1802,6 +1807,7 @@ CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: C:/Users/Arne/Desktop/3dengine/O
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Include/ini_configuration.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -1982,11 +1988,16 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/Arne/Desktop/3dengine/Obje
   C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Face.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
-  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
+  C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/Line2D.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/Point2D.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h
 
 CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: C:/Users/Arne/Desktop/3dengine/Objects/Wireframe.cpp \
   C:/Users/Arne/Desktop/3dengine/Objects/Face.h \
@@ -2139,6 +2150,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: C:/Users/Arne/Desktop/3dengine/
   C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Object3D.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/list \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
@@ -2422,6 +2434,7 @@ CMakeFiles/engine.dir/engine.cc.obj: C:/Users/Arne/Desktop/3dengine/engine.cc \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
   C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
+  C:/Users/Arne/Desktop/3dengine/Include/vector3d.h \
   C:/Users/Arne/Desktop/3dengine/Include/ini_configuration.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -2442,6 +2455,12 @@ CMakeFiles/engine.dir/engine.cc.obj: C:/Users/Arne/Desktop/3dengine/engine.cc \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/climits \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
   C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algo.h \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/algorithmfwd.h \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_heap.h \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tempbuf.h \
+  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
   C:/Users/Arne/Desktop/3dengine/Objects/IniLoader.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Object3D.h \
   C:/Users/Arne/Desktop/3dengine/Include/easy_image.h \
@@ -2470,7 +2489,9 @@ CMakeFiles/engine.dir/engine.cc.obj: C:/Users/Arne/Desktop/3dengine/engine.cc \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_stack.h \
   C:/Users/Arne/Desktop/3dengine/Objects/LSystem3D.h \
   C:/Users/Arne/Desktop/3dengine/Objects/Scene.h \
-  C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h
+  C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h \
+  C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h
 
 
 C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/locale:
@@ -2785,6 +2806,8 @@ C:/Users/Arne/Desktop/3dengine/Objects/ZBuffer.h:
 
 C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits:
 
+C:/Users/Arne/Desktop/3dengine/Include/vector3d.h:
+
 C:/Users/Arne/Desktop/3dengine/Objects/Line2D.h:
 
 C:/Users/Arne/Desktop/3dengine/Objects/Point2D.h:
@@ -2905,8 +2928,6 @@ C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream
 
 C:/Users/Arne/Desktop/3dengine/Include/vector3d.cc:
 
-C:/Users/Arne/Desktop/3dengine/Include/vector3d.h:
-
 C:/Users/Arne/Desktop/3dengine/Objects/Calculator.h:
 
 C:/Users/Arne/Desktop/3dengine/Objects/Face.cpp:
@@ -2930,6 +2951,8 @@ C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_de
 C:/Users/Arne/Desktop/3dengine/Objects/LSystem3D.h:
 
 C:/Users/Arne/Desktop/3dengine/Objects/Scene.h:
+
+C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h:
 
 C:/Users/Arne/Desktop/3dengine/Objects/LSystem2D.cpp:
 

@@ -32,7 +32,7 @@ set(engine_sources
         Objects/Calculator.cpp Objects/Calculator.h
 
         Objects/Face.cpp Objects/IniLoader.cpp Objects/IniLoader.h Objects/LSystem3D.cpp Objects/LSystem3D.h
-        Objects/ZBuffer.cpp Objects/Scene.cpp)
+        Objects/ZBuffer.cpp Objects/Scene.cpp Objects/Triangle.h)
 
 ############################################################
 # Create an executable

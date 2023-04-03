@@ -104,8 +104,7 @@ Scene IniLoader::loadScene(const ini::Configuration &configuration, int &size, i
 
     for (int i = 0; i < nrFigures; i++) {
         ini::Section section = configuration["Figure" + std::to_string(i)];
-        Object3D object = loadObject3D(section);
-        scene.objects3D.push_back(object);
+        scene.objects3D.push_back(loadObject3D(section));
     }
     scene.triangulate();
     scene.camera.eyePointTransform(scene.objects3D);

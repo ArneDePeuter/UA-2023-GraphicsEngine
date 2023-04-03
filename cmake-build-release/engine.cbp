@@ -201,6 +201,9 @@
 		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/Scene.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/Triangle.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/Arne/Desktop/3dengine/Objects/Wireframe.cpp">
 			<Option target="engine"/>
 		</Unit>

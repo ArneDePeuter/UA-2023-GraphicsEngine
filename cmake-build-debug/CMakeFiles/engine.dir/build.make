@@ -264,19 +264,19 @@ CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengine\Objects\ZBuffer.cpp -o CMakeFiles\engine.dir\Objects\ZBuffer.cpp.s
 
-CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj: C:/Users/Arne/Desktop/3dengine/Objects/Zbuffering.cpp
-CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj -MF CMakeFiles\engine.dir\Objects\Zbuffering.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Zbuffering.cpp.obj -c C:\Users\Arne\Desktop\3dengine\Objects\Zbuffering.cpp
+CMakeFiles/engine.dir/Objects/Scene.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/Arne/Desktop/3dengine/Objects/Scene.cpp
+CMakeFiles/engine.dir/Objects/Scene.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Scene.cpp.obj -MF CMakeFiles\engine.dir\Objects\Scene.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Scene.cpp.obj -c C:\Users\Arne\Desktop\3dengine\Objects\Scene.cpp
 
-CMakeFiles/engine.dir/Objects/Zbuffering.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Zbuffering.cpp.i"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arne\Desktop\3dengine\Objects\Zbuffering.cpp > CMakeFiles\engine.dir\Objects\Zbuffering.cpp.i
+CMakeFiles/engine.dir/Objects/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Scene.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arne\Desktop\3dengine\Objects\Scene.cpp > CMakeFiles\engine.dir\Objects\Scene.cpp.i
 
-CMakeFiles/engine.dir/Objects/Zbuffering.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Zbuffering.cpp.s"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengine\Objects\Zbuffering.cpp -o CMakeFiles\engine.dir\Objects\Zbuffering.cpp.s
+CMakeFiles/engine.dir/Objects/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Scene.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengine\Objects\Scene.cpp -o CMakeFiles\engine.dir\Objects\Scene.cpp.s
 
 # Object files for target engine
 engine_OBJECTS = \
@@ -294,7 +294,7 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj"
+"CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -313,7 +313,7 @@ engine.exe: CMakeFiles/engine.dir/Objects/Face.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj
-engine.exe: CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/Scene.cpp.obj
 engine.exe: CMakeFiles/engine.dir/build.make
 engine.exe: CMakeFiles/engine.dir/linklibs.rsp
 engine.exe: CMakeFiles/engine.dir/objects1.rsp

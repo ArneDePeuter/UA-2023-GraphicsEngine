@@ -242,7 +242,7 @@ namespace img
             */
             void draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int z0, unsigned int z1, Color color, ZBuffer &buffer);
 
-            void draw_zbuf_triag(ZBuffer &buffer, Vector3D const &A, Vector3D const &B, Vector3D const &C, double d, double dx, double dy, Color color);
+            void draw_zbuf_triag(ZBuffer &buffer, Vector3D const &A, Vector3D const &B, Vector3D const &C, const double &d, const double &dx, const double &dy, Color color);
 
     private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);

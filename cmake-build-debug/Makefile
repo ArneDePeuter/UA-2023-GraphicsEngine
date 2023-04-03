@@ -437,6 +437,30 @@ Objects/Object3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3D.cpp.s
 .PHONY : Objects/Object3D.cpp.s
 
+Objects/Scene.obj: Objects/Scene.cpp.obj
+.PHONY : Objects/Scene.obj
+
+# target to build an object file
+Objects/Scene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.obj
+.PHONY : Objects/Scene.cpp.obj
+
+Objects/Scene.i: Objects/Scene.cpp.i
+.PHONY : Objects/Scene.i
+
+# target to preprocess a source file
+Objects/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.i
+.PHONY : Objects/Scene.cpp.i
+
+Objects/Scene.s: Objects/Scene.cpp.s
+.PHONY : Objects/Scene.s
+
+# target to generate assembly for a file
+Objects/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.s
+.PHONY : Objects/Scene.cpp.s
+
 Objects/Wireframe.obj: Objects/Wireframe.cpp.obj
 .PHONY : Objects/Wireframe.obj
 
@@ -484,30 +508,6 @@ Objects/ZBuffer.s: Objects/ZBuffer.cpp.s
 Objects/ZBuffer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s
 .PHONY : Objects/ZBuffer.cpp.s
-
-Objects/Zbuffering.obj: Objects/Zbuffering.cpp.obj
-.PHONY : Objects/Zbuffering.obj
-
-# target to build an object file
-Objects/Zbuffering.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.obj
-.PHONY : Objects/Zbuffering.cpp.obj
-
-Objects/Zbuffering.i: Objects/Zbuffering.cpp.i
-.PHONY : Objects/Zbuffering.i
-
-# target to preprocess a source file
-Objects/Zbuffering.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.i
-.PHONY : Objects/Zbuffering.cpp.i
-
-Objects/Zbuffering.s: Objects/Zbuffering.cpp.s
-.PHONY : Objects/Zbuffering.s
-
-# target to generate assembly for a file
-Objects/Zbuffering.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Zbuffering.cpp.s
-.PHONY : Objects/Zbuffering.cpp.s
 
 engine.obj: engine.cc.obj
 .PHONY : engine.obj
@@ -579,15 +579,15 @@ help:
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s
+	@echo ... Objects/Scene.obj
+	@echo ... Objects/Scene.i
+	@echo ... Objects/Scene.s
 	@echo ... Objects/Wireframe.obj
 	@echo ... Objects/Wireframe.i
 	@echo ... Objects/Wireframe.s
 	@echo ... Objects/ZBuffer.obj
 	@echo ... Objects/ZBuffer.i
 	@echo ... Objects/ZBuffer.s
-	@echo ... Objects/Zbuffering.obj
-	@echo ... Objects/Zbuffering.i
-	@echo ... Objects/Zbuffering.s
 	@echo ... engine.obj
 	@echo ... engine.i
 	@echo ... engine.s
