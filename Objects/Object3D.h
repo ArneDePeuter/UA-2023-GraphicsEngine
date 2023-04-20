@@ -33,11 +33,13 @@ public:
     static Object3D createSphere(const int &n);
     static Object3D createTorus(const double &r, const double &R, const int &n, const int &m);
     static Object3D loadObj(const std::string &filename);
+
+    static Object3D fractalize(const int &fractalScale, const int &nrIterations, Object3D fractalObject);
     static Object3D createFractalCube(const int &fractalScale, const int &nrIterations);
-//    static Object3D createDodecahedron(const int &fractalScale, const int &nrIterations);
-//    static Object3D createIcosahedron(const int &fractalScale, const int &nrIterations);
-//    static Object3D createOctahedron(const int &fractalScale, const int &nrIterations);
-//    static Object3D createTetrahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D createFractalDodecahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D createFractalIcosahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D createFractalOctahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D createFractalTetrahedron(const int &fractalScale, const int &nrIterations);
 
     Vector3D center;
     img::Color color;

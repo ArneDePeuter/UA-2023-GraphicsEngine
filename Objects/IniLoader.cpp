@@ -73,10 +73,21 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
         obj = Object3D::loadObj(section["file"].as_string_or_die());
     } else if (type == "3DLSystem") {
         obj = LSystem3D(section["inputfile"].as_string_or_die());
-    } else if (type == "FractalCube") {
+    } else {
         int fractalScale = section["fractalScale"].as_int_or_die();
         int nrIterations = section["nrIterations"].as_int_or_die();
-        obj = Object3D::createFractalCube(fractalScale, nrIterations);
+        if (type == "FractalCube") {
+            obj = Object3D::createFractalCube(fractalScale, nrIterations);
+        }
+        else if (type == "FractalTetrahedron") {
+            obj = Object3D::createFractalTetrahedron(fractalScale, nrIterations);
+        }
+        else if (type == "FractalIcosahedron") {
+            obj = Object3D::createFractalIcosahedron(fractalScale, nrIterations);
+        }
+        else if (type == "FractalDodecahedron") {
+            obj = Object3D::createFractalDodecahedron(fractalScale, nrIterations);
+        }
     }
 
     int rotateX = section["rotateX"].as_double_or_die();

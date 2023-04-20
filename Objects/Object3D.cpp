@@ -294,32 +294,60 @@ void Object3D::triangulate() {
     faces = newFaces;
 }
 
-Object3D Object3D::createFractalCube(const int &fractalScale, const int &nrIterations) {
-    Object3D fractal = createCube();
-    int initVertexSize = (int)fractal.vertexes.size();
+Object3D Object3D::fractalize(const int &fractalScale, const int &nrIterations, Object3D fractalObject) {
+    Objects3D objects = {fractalObject};
+
     double currentScale = 1;
     for (int i = 0; i < nrIterations; i++) {
         currentScale /= fractalScale;
-        std::vector<Face> newFaces = {};
-        std::vector<Vector3D> newVertexes = {};
-        for (const Vector3D &point : fractal.vertexes) {
-            Object3D newCube = createCube();
-            newCube.applyTransformation(Calculator::superMatrix(currentScale, 0,0,0,point));
-            newVertexes.insert(newVertexes.end(), newCube.vertexes.begin(), newCube.vertexes.end());
-
-            int offset = (int)newVertexes.size()-initVertexSize;
-            for (Face &f : newCube.faces) {
-                for (int &point_id : f.point_indexes) {
-                    point_id += offset;
+        Objects3D newObjects;
+        for (const Object3D &object : objects) {
+            for (int vertexId = 0; vertexId < object.vertexes.size(); vertexId++) {
+                Object3D newObject = fractalObject;
+                newObject.applyTransformation(Calculator::scale(currentScale));
+                Vector3D translateVec = object.vertexes[vertexId]-newObject.vertexes[vertexId];
+                for (Vector3D &vertex:newObject.vertexes) {
+                    vertex += translateVec;
                 }
+                newObjects.push_back(newObject);
             }
-
-            newFaces.insert(newFaces.end(), newCube.faces.begin(), newCube.faces.end());
         }
-        fractal.faces = newFaces;
-        fractal.vertexes = newVertexes;
+        objects = newObjects;
+    }
+
+    Object3D fractal;
+    for (const Object3D &object:objects) {
+        int offset = (int)fractal.vertexes.size();
+        fractal.vertexes.insert(fractal.vertexes.begin(), object.vertexes.begin(), object.vertexes.end());
+        for (const Face &f : object.faces) {
+            std::vector<int> newVertexIds;
+            for (const int &point_id :f.point_indexes) {
+                newVertexIds.push_back(point_id+offset);
+            }
+            fractal.faces.push_back(Face(newVertexIds));
+        }
     }
     return fractal;
+}
+
+Object3D Object3D::createFractalCube(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createCube());
+}
+
+Object3D Object3D::createFractalDodecahedron(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createDodecahedron());
+}
+
+Object3D Object3D::createFractalIcosahedron(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createIcosahedron());
+}
+
+Object3D Object3D::createFractalOctahedron(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createOctahedron());
+}
+
+Object3D Object3D::createFractalTetrahedron(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createTetrahedron());
 }
 
 
