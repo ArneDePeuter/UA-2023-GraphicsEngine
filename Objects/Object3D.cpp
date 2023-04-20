@@ -294,6 +294,34 @@ void Object3D::triangulate() {
     faces = newFaces;
 }
 
+Object3D Object3D::createFractalCube(const int &fractalScale, const int &nrIterations) {
+    Object3D fractal = createCube();
+    int initVertexSize = (int)fractal.vertexes.size();
+    double currentScale = 1;
+    for (int i = 0; i < nrIterations; i++) {
+        currentScale /= fractalScale;
+        std::vector<Face> newFaces = {};
+        std::vector<Vector3D> newVertexes = {};
+        for (const Vector3D &point : fractal.vertexes) {
+            Object3D newCube = createCube();
+            newCube.applyTransformation(Calculator::superMatrix(currentScale, 0,0,0,point));
+            newVertexes.insert(newVertexes.end(), newCube.vertexes.begin(), newCube.vertexes.end());
+
+            int offset = (int)newVertexes.size()-initVertexSize;
+            for (Face &f : newCube.faces) {
+                for (int &point_id : f.point_indexes) {
+                    point_id += offset;
+                }
+            }
+
+            newFaces.insert(newFaces.end(), newCube.faces.begin(), newCube.faces.end());
+        }
+        fractal.faces = newFaces;
+        fractal.vertexes = newVertexes;
+    }
+    return fractal;
+}
+
 
 
 

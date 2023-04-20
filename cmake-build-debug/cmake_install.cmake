@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Arne/Desktop/3dengine
+# Install script for directory: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,23 +34,23 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Qt/Tools/mingw810_64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/Arne/Desktop/3dengine/engine.exe")
+   "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Users/Arne/Desktop/3dengine" TYPE EXECUTABLE FILES "C:/Users/Arne/Desktop/3dengine/cmake-build-debug/engine.exe")
-  if(EXISTS "$ENV{DESTDIR}/C:/Users/Arne/Desktop/3dengine/engine.exe" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/C:/Users/Arne/Desktop/3dengine/engine.exe")
+  file(INSTALL DESTINATION "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine" TYPE EXECUTABLE FILES "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/engine.exe")
+  if(EXISTS "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/Qt/Tools/mingw810_64/bin/strip.exe" "$ENV{DESTDIR}/C:/Users/Arne/Desktop/3dengine/engine.exe")
+      execute_process(COMMAND "C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/strip.exe" "$ENV{DESTDIR}/C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/engine.exe")
     endif()
   endif()
 endif()
@@ -63,5 +63,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Arne/Desktop/3dengine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

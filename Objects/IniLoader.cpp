@@ -73,6 +73,10 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
         obj = Object3D::loadObj(section["file"].as_string_or_die());
     } else if (type == "3DLSystem") {
         obj = LSystem3D(section["inputfile"].as_string_or_die());
+    } else if (type == "FractalCube") {
+        int fractalScale = section["fractalScale"].as_int_or_die();
+        int nrIterations = section["nrIterations"].as_int_or_die();
+        obj = Object3D::createFractalCube(fractalScale, nrIterations);
     }
 
     int rotateX = section["rotateX"].as_double_or_die();
