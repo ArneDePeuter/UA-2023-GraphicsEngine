@@ -40,6 +40,8 @@ public:
     static Object3D createFractalIcosahedron(const int &fractalScale, const int &nrIterations);
     static Object3D createFractalOctahedron(const int &fractalScale, const int &nrIterations);
     static Object3D createFractalTetrahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D createMenger(const int &nrIterations);
+    static Object3D createBuckyBall();
 
     Vector3D center;
     img::Color color;

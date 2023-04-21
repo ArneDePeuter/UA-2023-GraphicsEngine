@@ -11,10 +11,12 @@
 
 class IniLoader {
 public:
-    static LSystem2D loadLSystem2D(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
-    static Wireframe loadWireFrame(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
+    static img::EasyImage createImage(const ini::Configuration &configuration);
+    static std::pair<Lines2D,std::vector<Triangle>> parse(const ini::Configuration &configuration, img::Color &backgroundcolor, int &size, bool &zBuffering);
+    static LSystem2D loadLSystem2D(const ini::Configuration &configuration);
+    static Wireframe loadWireFrame(const ini::Configuration &configuration);
     static Object3D loadObject3D(const ini::Section &section);
-    static Scene loadScene(const ini::Configuration &configuration, int &size, img::Color &backgroundcolor);
+    static Scene loadScene(const ini::Configuration &configuration);
 };
 
 #endif //ENGINE_INILOADER_H

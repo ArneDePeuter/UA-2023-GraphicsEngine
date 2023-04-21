@@ -1,7 +1,3 @@
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/engine.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/rebuild_cache.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/list_install_components.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/install.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/install/local.dir
-C:/Users/Arne/Desktop/3dengine/cmake-build-release/CMakeFiles/install/strip.dir
+C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/engine.dir
+C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/rebuild_cache.dir

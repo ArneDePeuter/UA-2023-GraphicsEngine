@@ -16,27 +16,25 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${OWN_GXX_FLAGS}")
 ############################################################
 set(engine_sources
         engine.cc
+        ./Include/easy_image.cc
+        ./Include/ini_configuration.cc
+        ./Include/vector3d.cc ./Include/vector3d.h
+        ./Include/l_parser.cc
+        ./Include/obj_parser.cc
 
-        Include/easy_image.cc
-        Include/ini_configuration.cc
-        Include/vector3d.cc Include/vector3d.h
-        Include/l_parser.cc
-        Include/obj_parser.cc
+        ./Objects/Face.h
+        ./Objects/Object3D.cpp ./Objects/Object3D.h
+        ./Objects/Wireframe.cpp ./Objects/Wireframe.h
+        ./Objects/Camera.h
+        ./Objects/Line2D.h ./Objects/Point2D.h
+        ./Objects/LSystem2D.cpp
+        ./Objects/Calculator.cpp ./Objects/Calculator.h
 
-        Objects/Face.h
-        Objects/Object3D.cpp Objects/Object3D.h
-        Objects/Wireframe.cpp Objects/Wireframe.h
-        Objects/Camera.h
-        Objects/Line2D.h Objects/Point2D.h
-        Objects/LSystem2D.cpp
-        Objects/Calculator.cpp Objects/Calculator.h
-
-        Objects/Face.cpp Objects/IniLoader.cpp Objects/IniLoader.h Objects/LSystem3D.cpp Objects/LSystem3D.h
-        Objects/ZBuffer.cpp Objects/Scene.cpp Objects/Triangle.h)
+        ./Objects/Face.cpp ./Objects/IniLoader.cpp ./Objects/IniLoader.h ./Objects/LSystem3D.cpp ./Objects/LSystem3D.h
+        ./Objects/ZBuffer.cpp ./Objects/Scene.cpp ./Objects/Triangle.h Objects/Renderer.h Objects/Renderer.cpp)
 
 ############################################################
 # Create an executable
 ############################################################
 set(exe_name "engine")
 add_executable( ${exe_name} ${engine_sources} )
-install( TARGETS ${exe_name} DESTINATION ${PROJECT_SOURCE_DIR}/ )

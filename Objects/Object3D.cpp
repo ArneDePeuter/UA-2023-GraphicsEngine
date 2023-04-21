@@ -317,7 +317,7 @@ Object3D Object3D::fractalize(const int &fractalScale, const int &nrIterations, 
 
     Object3D fractal;
     for (const Object3D &object:objects) {
-        int offset = (int)fractal.vertexes.size();
+        int offset = fractal.vertexes.size();
         fractal.vertexes.insert(fractal.vertexes.begin(), object.vertexes.begin(), object.vertexes.end());
         for (const Face &f : object.faces) {
             std::vector<int> newVertexIds;
@@ -348,6 +348,52 @@ Object3D Object3D::createFractalOctahedron(const int &fractalScale, const int &n
 
 Object3D Object3D::createFractalTetrahedron(const int &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createTetrahedron());
+}
+
+Object3D Object3D::createMenger(const int &nrIterations) {
+    Object3D mengerCube = createCube();
+    //bottom cubes
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[0]+mengerCube.vertexes[4])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[0]+mengerCube.vertexes[5])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[5]+mengerCube.vertexes[1])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[1]+mengerCube.vertexes[4])/2));
+    //middle cubes
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[0]+mengerCube.vertexes[6])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[5]+mengerCube.vertexes[3])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[7]+mengerCube.vertexes[1])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[2]+mengerCube.vertexes[4])/2));
+    //top cubes
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[6]+mengerCube.vertexes[2])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[6]+mengerCube.vertexes[3])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[3]+mengerCube.vertexes[7])/2));
+    mengerCube.vertexes.push_back(Vector3D::point((mengerCube.vertexes[7]+mengerCube.vertexes[2])/2));
+
+    return fractalize(3, nrIterations, mengerCube);
+}
+
+Object3D Object3D::createBuckyBall() {
+    Object3D temp = createIcosahedron();
+    Object3D ball;
+
+    for (Face f:temp.faces) {
+        Vector3D A = temp.vertexes[f.point_indexes[0]];
+        Vector3D B = temp.vertexes[f.point_indexes[1]];
+        Vector3D C = temp.vertexes[f.point_indexes[2]];
+        //ceate hexagons
+        int offset = ball.vertexes.size();
+        ball.vertexes.push_back(A+Vector3D::normalise(B)*(1/3));
+        ball.vertexes.push_back(A+Vector3D::normalise(B)*(2/3));
+        ball.vertexes.push_back(B+Vector3D::normalise(C)*(1/3));
+        ball.vertexes.push_back(B+Vector3D::normalise(C)*(2/3));
+        ball.vertexes.push_back(A+Vector3D::normalise(C)*(1/3));
+        ball.vertexes.push_back(A+Vector3D::normalise(C)*(2/3));
+        std::vector<int> indexes;
+        for (int i = 0; i < 6; i++) {
+            indexes.push_back(offset+i);
+        }
+        ball.faces.push_back(Face(indexes));
+    }
+    return ball;
 }
 
 

@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj"
   "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
   "CMakeFiles/engine.dir/Objects/Scene.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj"
