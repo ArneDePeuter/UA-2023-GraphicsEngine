@@ -1,10 +1,12 @@
-CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\IniLoader.cpp \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\IniLoader.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Object3D.h \
- C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/easy_image.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Renderer.cpp \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
@@ -12,17 +14,27 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_abs.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdlib.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Renderer.h \
+ C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/easy_image.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functexcept.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numeric_traits.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_pair.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move.h \
@@ -61,7 +73,6 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
@@ -86,13 +97,9 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/process.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/limits.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/signal.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/time.h \
@@ -112,12 +119,6 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/string_conversions.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdlib \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdlib.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_abs.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdio \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cerrno \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/charconv.h \
@@ -143,44 +144,13 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
- C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
- C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Face.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Line2D.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Point2D.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Wireframe.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Line2D.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Point2D.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Camera.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\LSystem2D.h \
- C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_set.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multiset.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stack \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/deque \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_deque.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/deque.tcc \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_stack.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\LSystem3D.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Scene.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Triangle.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Renderer.h
+ C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h

@@ -181,6 +181,8 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/ZBuffer.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Camera.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Calculator.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem2D.h \
  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set \
@@ -192,8 +194,6 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/deque.tcc \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_stack.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/LSystem3D.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Scene.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/Triangle.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects/ZBuffer.h

@@ -23,16 +23,28 @@ std::pair<Lines2D, std::vector<Triangle>> IniLoader::parse(const ini::Configurat
 
     std::string type = configuration["General"]["type"].as_string_or_die();
 
+    bool clipping = configuration["General"]["clipping"].as_bool_or_default(false);
+    ini::DoubleTuple viewDirection;
+    int dNear,dFar, hfov;
+    double aspectRatio;
+    if (clipping) {
+        viewDirection = configuration["General"]["viewDirection"].as_double_tuple_or_die();
+        dNear = configuration["General"]["dNear"].as_int_or_die();
+        dFar = configuration["General"]["dFar"].as_int_or_die();
+        hfov = configuration["General"]["hfov"].as_int_or_die();
+        aspectRatio = configuration["General"]["aspectRatio"].as_double_or_die();
+    }
+
     zBuffering = false;
     if (type == "2DLSystem") {
         LSystem2D lSys = IniLoader::loadLSystem2D(configuration);
         return {lSys.lines,{}};
     } else if (type == "Wireframe" || type == "ZBufferedWireframe") {
         if (type == "ZBufferedWireframe") zBuffering = true;
-        Wireframe wf = IniLoader::loadWireFrame(configuration);
+        Wireframe wf = IniLoader::loadWireFrame(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
         return {wf.project(1),{}};
     }else if (type == "ZBuffering") {
-        Scene s = IniLoader::loadScene(configuration);
+        Scene s = IniLoader::loadScene(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
         zBuffering=true;
         return {s.project(1),s.getTriangles()};
     }
@@ -48,11 +60,12 @@ LSystem2D IniLoader::loadLSystem2D(const ini::Configuration &configuration) {
     return LSystem2D(inputfile, color);
 }
 
-Wireframe IniLoader::loadWireFrame(const ini::Configuration &configuration) {
+Wireframe IniLoader::loadWireFrame(const ini::Configuration &configuration, const bool &clipping_, const ini::DoubleTuple &viewDirection_,
+                                   const int &dNear_, const int &dFar_, const int &hfov_, const double &aspectRatio_) {
     Wireframe wf;
 
     ini::Section general = configuration["General"];
-    wf.camera = Camera(general["eye"]);
+    wf.camera = Camera(general["eye"], clipping_, viewDirection_, dNear_, dFar_, hfov_, aspectRatio_);
     int nrFigures = general["nrFigures"];
 
     for (int i = 0; i < nrFigures; i++) {
@@ -65,11 +78,12 @@ Wireframe IniLoader::loadWireFrame(const ini::Configuration &configuration) {
     return wf;
 }
 
-Scene IniLoader::loadScene(const ini::Configuration &configuration) {
+Scene IniLoader::loadScene(const ini::Configuration &configuration, const bool &clipping_, const ini::DoubleTuple &viewDirection_,
+                           const int &dNear_, const int &dFar_, const int &hfov_, const double &aspectRatio_) {
     Scene scene;
 
     ini::Section general = configuration["General"];
-    scene.camera = Camera(general["eye"]);
+    scene.camera = Camera(general["eye"], clipping_, viewDirection_, dNear_, dFar_, hfov_, aspectRatio_);
     int nrFigures = general["nrFigures"];
 
     for (int i = 0; i < nrFigures; i++) {

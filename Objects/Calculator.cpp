@@ -52,15 +52,29 @@ Matrix Calculator::translate(const Vector3D &vector) {
     return m;
 }
 
+Matrix Calculator::superMatrix(const double &s, const int &rx, const int &ry, const int &rz, const Vector3D &move) {
+    return scale(s) * rotate_x(rx) * rotate_y(ry) * rotate_z(rz) * translate(move);
+}
+
+Matrix Calculator::eyePointMatrix(const double &theta, const double &phi, const double &r) {
+    Matrix m;
+    m(1,1) = -sin(theta);
+    m(1,2) = -cos(theta)*cos(phi);
+    m(1,3) = cos(theta)*sin(phi);
+    m(2,1) = cos(theta);
+    m(2,2) = -sin(theta)*cos(phi);
+    m(2,3) = sin(theta)*sin(phi);
+    m(3,2) = sin(phi);
+    m(3,3) = cos(phi);
+    m(4,3) = -r;
+    return m;
+}
+
 void Calculator::calcPolar(const Vector3D &point, double &theta, double &phi, double &r) {
     double x = point.x, y = point.y, z = point.z;
     r = sqrt(pow(x,2)+pow(y,2)+pow(z,2));
     theta = std::atan2(y,x);
     phi = std::acos(z/r);
-}
-
-Matrix Calculator::superMatrix(const double &s, const int &rx, const int &ry, const int &rz, const Vector3D &move) {
-    return scale(s) * rotate_x(rx) * rotate_y(ry) * rotate_z(rz) * translate(move);
 }
 
 Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
