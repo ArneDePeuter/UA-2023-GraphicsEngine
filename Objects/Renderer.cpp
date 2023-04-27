@@ -53,7 +53,8 @@ Renderer::draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines
     return image;
 }
 
-img::EasyImage Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Triangle> triangles, const Lines2D &projectedLines, const int &size) {
+img::EasyImage
+Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Triangle> triangles, const Lines2D &projectedLines, const int &size, lights3D &lights) {
     double xMin = INT_MAX, xMax = INT_MIN, yMin = INT_MAX, yMax = INT_MIN;
     for (const Line2D& l : projectedLines) {
         double lMinX = std::min(l.p1.x, l.p2.x), lMaxX = std::max(l.p1.x, l.p2.x);
@@ -76,7 +77,8 @@ img::EasyImage Renderer::drawZBufTriangles(const img::Color &backgroundcolor, st
 
     ZBuffer buffer(lround(imageX),lround(imageY));
     for (const Triangle &triangle : triangles) {
-        image.draw_zbuf_triag(buffer, triangle.A, triangle.B, triangle.C, d, dx, dy, triangle.color);
+        image.draw_zbuf_triag(buffer, triangle.A, triangle.B, triangle.C, d, dx, dy,
+                              triangle.ambientReflection, triangle.diffuseReflection, triangle.specularReflection, triangle.reflectionCoefficient, lights);
     }
     return image;
 }

@@ -14,7 +14,10 @@ std::vector<Triangle> Scene::getTriangles() {
             t.A = obj.vertexes[f.point_indexes[0]];
             t.B = obj.vertexes[f.point_indexes[1]];
             t.C = obj.vertexes[f.point_indexes[2]];
-            t.color = obj.color;
+            t.ambientReflection = obj.ambientReflection;
+            t.reflectionCoefficient = obj.reflectionCoefficient;
+            t.specularReflection = obj.specularReflection;
+            t.diffuseReflection = obj.diffuseReflection;
             triangles.push_back(t);
         }
     }

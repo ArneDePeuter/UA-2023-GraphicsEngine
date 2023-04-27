@@ -45,6 +45,11 @@ public:
 
     Vector3D center;
     img::Color color;
+
+    img::Color ambientReflection;
+    img::Color diffuseReflection;
+    img::Color specularReflection;
+    double reflectionCoefficient;
 };
 
 typedef std::list<Object3D> Objects3D;

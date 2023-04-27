@@ -165,7 +165,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Line2D.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Point2D.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Camera.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
- C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h
+ C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Camera.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Calculator.h

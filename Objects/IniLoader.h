@@ -12,12 +12,14 @@
 class IniLoader {
 public:
     static img::EasyImage createImage(const ini::Configuration &configuration);
-    static std::pair<Lines2D,std::vector<Triangle>> parse(const ini::Configuration &configuration, img::Color &backgroundcolor, int &size, bool &zBuffering);
+    static img::EasyImage parse(const ini::Configuration &configuration);
     static LSystem2D loadLSystem2D(const ini::Configuration &configuration);
     static Object3D loadObject3D(const ini::Section &section);
     static Wireframe loadWireFrame(const ini::Configuration &configuration, const bool &clipping_, const ini::DoubleTuple &viewDirection_,
                                    const int &dNear_, const int &dFar_, const int &hfov_, const double &aspectRatio_);
     static Scene loadScene(const ini::Configuration &configuration, const bool &clipping_, const ini::DoubleTuple &viewDirection_,
+                           const int &dNear_, const int &dFar_, const int &hfov_, const double &aspectRatio_);
+    static Scene loadSceneWLights(const ini::Configuration &configuration, const bool &clipping_, const ini::DoubleTuple &viewDirection_,
                            const int &dNear_, const int &dFar_, const int &hfov_, const double &aspectRatio_);
 };
 

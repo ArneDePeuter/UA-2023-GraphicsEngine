@@ -5,6 +5,7 @@
 #include "../Include/easy_image.h"
 #include <list>
 #include "ZBuffer.h"
+#include <cmath>
 
 class Line2D {
 public:
@@ -16,10 +17,18 @@ public:
     img::Color color;
 
     void drawBuf(img::EasyImage *surface, ZBuffer &buffer) const {
-        surface->draw_zbuf_line(p1.x, p1.y, p2.x, p2.y, p1.z, p2.z, color, buffer);
+        surface->draw_zbuf_line(lround(p1.x),
+                                lround(p1.y),
+                                lround(p2.x),
+                                lround(p2.y),
+                                lround(p1.z),
+                                lround(p2.z), color, buffer);
     }
     void draw(img::EasyImage *surface) const {
-        surface->draw_line(p1.x, p1.y, p2.x, p2.y, color);
+        surface->draw_line(lround(p1.x),
+                           lround(p1.y),
+                           lround(p2.x),
+                           lround(p2.y), color);
     }
 };
 

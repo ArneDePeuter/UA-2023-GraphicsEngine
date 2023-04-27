@@ -169,4 +169,5 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Triangle.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Line2D.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Point2D.h \
- C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ZBuffer.h \
+ C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Light.h

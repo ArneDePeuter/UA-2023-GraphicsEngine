@@ -1,25 +1,16 @@
 #include "IniLoader.h"
 #include "Renderer.h"
+#include "Light.h"
 
 img::EasyImage IniLoader::createImage(const ini::Configuration &configuration) {
-    img::Color backgroundcolor;
-    int size;
-    bool zBuffering;
-    std::pair<Lines2D,std::vector<Triangle>> p = parse(configuration, backgroundcolor, size, zBuffering);
-    Lines2D lines = p.first;
-    std::vector<Triangle> triangles = p.second;
-    if (triangles.empty()) {
-        return Renderer::draw2DLines(backgroundcolor, lines, size, zBuffering);
-    } else {
-        return Renderer::drawZBufTriangles(backgroundcolor, triangles, lines, size);
-    }
+    return parse(configuration);
 }
 
-std::pair<Lines2D, std::vector<Triangle>> IniLoader::parse(const ini::Configuration &configuration, img::Color &backgroundcolor, int &size, bool &zBuffering) {
-    size = configuration["General"]["size"].as_int_or_die();
+img::EasyImage IniLoader::parse(const ini::Configuration &configuration) {
+    int size = configuration["General"]["size"].as_int_or_die();
 
     ini::DoubleTuple colorTuple = configuration["General"]["backgroundcolor"].as_double_tuple_or_die();
-    backgroundcolor = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+    img::Color backgroundcolor = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
 
     std::string type = configuration["General"]["type"].as_string_or_die();
 
@@ -35,20 +26,22 @@ std::pair<Lines2D, std::vector<Triangle>> IniLoader::parse(const ini::Configurat
         aspectRatio = configuration["General"]["aspectRatio"].as_double_or_die();
     }
 
-    zBuffering = false;
     if (type == "2DLSystem") {
         LSystem2D lSys = IniLoader::loadLSystem2D(configuration);
-        return {lSys.lines,{}};
+        return Renderer::draw2DLines(backgroundcolor, lSys.lines, size, false);
     } else if (type == "Wireframe" || type == "ZBufferedWireframe") {
-        if (type == "ZBufferedWireframe") zBuffering = true;
+        bool zBuf = false;
+        if (type == "ZBufferedWireframe") zBuf = true;
         Wireframe wf = IniLoader::loadWireFrame(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
-        return {wf.project(1),{}};
-    }else if (type == "ZBuffering") {
+        return Renderer::draw2DLines(backgroundcolor, wf.project(1), size, zBuf);
+    } else if (type == "ZBuffering") {
         Scene s = IniLoader::loadScene(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
-        zBuffering=true;
-        return {s.project(1),s.getTriangles()};
+        return Renderer::drawZBufTriangles(backgroundcolor, s.getTriangles(), s.project(1), size, s.lights);
+    } else if (type == "LightedZBuffering") {
+        Scene s = IniLoader::loadSceneWLights(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
+        return Renderer::drawZBufTriangles(backgroundcolor, s.getTriangles(), s.project(1), size, s.lights);
     }
-    return {{},{}};
+    return img::EasyImage();
 }
 
 LSystem2D IniLoader::loadLSystem2D(const ini::Configuration &configuration) {
@@ -171,11 +164,34 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     ini::DoubleTuple centertuple = section["center"].as_double_tuple_or_die();
     obj.center = Vector3D::point(centertuple[0], centertuple[1], centertuple[2]);
 
-    ini::DoubleTuple colorTuple = section["color"].as_double_tuple_or_die();
-    obj.color = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+    ini::DoubleTuple colorTuple;
+    bool colorExists = section["color"].as_double_tuple_if_exists(colorTuple);
+
+    if (!colorExists) {
+        ini::DoubleTuple ambientReflectionTuple = section["ambientReflection"].as_double_tuple_or_die();
+        obj.ambientReflection = img::Color(ambientReflectionTuple[0]*255, ambientReflectionTuple[1]*255, ambientReflectionTuple[2]*255);
+    } else {
+        obj.color = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+    }
 
     obj.applyTransformation(Calculator::superMatrix(scale, rotateX, rotateY, rotateZ, obj.center));
     return obj;
+}
+
+Scene IniLoader::loadSceneWLights(const ini::Configuration &configuration, const bool &clipping_,
+                                  const ini::DoubleTuple &viewDirection_, const int &dNear_, const int &dFar_,
+                                  const int &hfov_, const double &aspectRatio_) {
+    Scene s = loadScene(configuration, clipping_, viewDirection_, dNear_, dFar_, hfov_, aspectRatio_);
+    int nrLights = configuration["General"]["nrLights"].as_int_or_die();
+    for (int i = 0; i < nrLights; i++) {
+        Light l;
+        ini::Section section = configuration["Light" + std::to_string(i)];
+        ini::DoubleTuple lightTuple = section["ambientLight"];
+        img::Color ambientLight = img::Color(lightTuple[0]*255, lightTuple[1]*255, lightTuple[2]*255);
+        l.ambientLight = ambientLight;
+        s.lights.push_back(l);
+    }
+    return s;
 }
 
 

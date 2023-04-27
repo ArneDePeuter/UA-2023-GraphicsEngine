@@ -147,6 +147,9 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem3D.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Line2D.h">
 			<Option target="engine"/>
 		</Unit>

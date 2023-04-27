@@ -10,23 +10,11 @@ public:
     Vector3D A;
     Vector3D B;
     Vector3D C;
-    img::Color color;
 
-    void scale(const double &amount) {
-        A*=amount;
-        B*=amount;
-        C*=amount;
-    }
-
-    void move(const double &dx, const double &dy) {
-        A.x += dx;
-        B.x += dx;
-        C.x += dx;
-
-        A.y += dy;
-        B.y += dy;
-        C.y += dy;
-    }
+    img::Color ambientReflection;
+    img::Color diffuseReflection;
+    img::Color specularReflection;
+    double reflectionCoefficient;
 };
 
 

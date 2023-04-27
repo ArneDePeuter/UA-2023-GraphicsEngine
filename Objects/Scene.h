@@ -6,6 +6,7 @@
 #include "Object3D.h"
 #include "Triangle.h"
 #include "Line2D.h"
+#include "Light.h"
 
 class Scene {
 public:
@@ -15,6 +16,7 @@ public:
     Lines2D project(const double &d);
     std::vector<Triangle> getTriangles();
     Point2D point3dto2d(Vector3D &point, const double d);
+    std::vector<Light> lights;
 };
 
 

@@ -92,8 +92,3 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
     m(4,3) = -r;
     return m;
 }
-
-void Calculator::rotateVecOnVec(Vector3D &a, Vector3D &b, const double &degAngle) {
-    a = a*cos(degToRad(degAngle)) + b*sin(degToRad(degAngle));
-    b = -a*sin(degToRad(degAngle)) + b*cos(degToRad(degAngle));
-}
