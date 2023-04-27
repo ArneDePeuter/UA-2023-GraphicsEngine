@@ -502,7 +502,8 @@ void calculateDZs(const Vector3D &A, const Vector3D &B, const Vector3D &C, const
 }
 
 void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, const double &dx, const double &dy,
-                                     Color ambientReflection, Color diffuseReflection, Color specularReflection, double reflectionCoeff, lights3D &lights) {	Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
+                                     ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, lights3D &lights) {
+    Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
 	Vector3D newB = Vector3D::point(((d*B.x)/-B.z)+dx, ((d*B.y)/-B.z)+dy, B.z);
 	Vector3D newC = Vector3D::point(((d*C.x)/-C.z)+dx, ((d*C.y)/-C.z)+dy, C.z);
 
@@ -535,10 +536,13 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                 double rVal = 0;
                 double gVal = 0;
                 double bVal = 0;
-                for (const Light &light : lights) {
-                    rVal += ((double)ambientReflection.red/255) * ((double)light.ambientLight.red/255);
-                    gVal += ((double)ambientReflection.green/255) * ((double)light.ambientLight.green/255);
-                    bVal += ((double)ambientReflection.blue/255) * ((double)light.ambientLight.blue/255);
+                for (const Light *light : lights) {
+                    Vector3D u = B-A;
+                    Vector3D v = C-A;
+
+                    Vector3D w = Vector3D::cross(u,v);
+
+                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, w);
                 }
                 Color color(lround(rVal*255),lround(gVal*255),lround(bVal*255));
                 (*this)(x,y) = color;

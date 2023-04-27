@@ -157,6 +157,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: \
  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+ C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
  C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Object3D.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \

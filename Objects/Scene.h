@@ -10,13 +10,15 @@
 
 class Scene {
 public:
+    virtual ~Scene();
+
     Objects3D objects3D;
     Camera camera;
     void triangulate();
     Lines2D project(const double &d);
     std::vector<Triangle> getTriangles();
     Point2D point3dto2d(Vector3D &point, const double d);
-    std::vector<Light> lights;
+    lights3D lights;
 };
 
 

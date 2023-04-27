@@ -143,20 +143,30 @@ CMakeFiles/engine.dir/Include/easy_image.cc.obj: C:/Users/arne/Documents/2022-20
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Line2D.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Point2D.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/easy_image.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
-  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/math.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
-  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
-  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/algorithmfwd.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_heap.h \
@@ -167,7 +177,8 @@ CMakeFiles/engine.dir/Include/easy_image.cc.obj: C:/Users/arne/Documents/2022-20
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.h \
-  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h
 
 CMakeFiles/engine.dir/Include/ini_configuration.cc.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.cc \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
@@ -1310,6 +1321,7 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: C:/Users/arne/Documents/2022-20
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
@@ -1501,6 +1513,7 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/arne/Documents/2022-20
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_set.h \
@@ -1670,7 +1683,7 @@ CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: C:/Users/arne/Documents/2022-20
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
-  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
@@ -1683,6 +1696,7 @@ CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: C:/Users/arne/Documents/2022-20
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/l_parser.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_set.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multiset.h \
@@ -1864,6 +1878,7 @@ CMakeFiles/engine.dir/Objects/Object3D.cpp.obj: C:/Users/arne/Documents/2022-202
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
@@ -2024,17 +2039,30 @@ CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: C:/Users/arne/Documents/2022-202
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Line2D.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Point2D.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
-  C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Triangle.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
-  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.h
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h
 
 CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Scene.cpp \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Scene.h \
@@ -2196,6 +2224,7 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/arne/Documents/2022-2023/s
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Face.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
@@ -2367,6 +2396,7 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: C:/Users/arne/Documents/2022-20
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Object3D.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
@@ -2676,6 +2706,7 @@ CMakeFiles/engine.dir/engine.cc.obj: C:/Users/arne/Documents/2022-2023/s2/Comput
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+  C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/ini_configuration.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -3052,6 +3083,28 @@ C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ZBuffer.h
 
 C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h:
 
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map:
+
+C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/obj_parser.cc:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h:
+
+C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/IniLoader.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h:
+
 C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Point2D.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list:
@@ -3060,19 +3113,11 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h:
 
-C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/IniLoader.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/math.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_heap.h:
 
@@ -3087,20 +3132,6 @@ C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map:
-
-C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/obj_parser.cc:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tuple:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h:
-
-C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cassert:
 

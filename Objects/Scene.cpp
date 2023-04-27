@@ -48,3 +48,9 @@ Point2D Scene::point3dto2d(Vector3D &point, const double d) {
     Point2D p((d*point.x)/-point.z, (d*point.y)/-point.z, point.z);
     return p;
 }
+
+Scene::~Scene() {
+    for (Light *l:lights) {
+        delete l;
+    }
+}

@@ -165,13 +165,12 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     obj.center = Vector3D::point(centertuple[0], centertuple[1], centertuple[2]);
 
     ini::DoubleTuple colorTuple;
-    bool colorExists = section["color"].as_double_tuple_if_exists(colorTuple);
 
-    if (!colorExists) {
-        ini::DoubleTuple ambientReflectionTuple = section["ambientReflection"].as_double_tuple_or_die();
-        obj.ambientReflection = img::Color(ambientReflectionTuple[0]*255, ambientReflectionTuple[1]*255, ambientReflectionTuple[2]*255);
-    } else {
+    if (section["color"].as_double_tuple_if_exists(colorTuple)) {
         obj.color = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+    } else {
+        obj.ambientReflection = section["ambientReflection"].as_double_tuple_or_die();
+        obj.diffuseReflection = section["diffuseReflection"].as_double_tuple_or_default({1,1,1});
     }
 
     obj.applyTransformation(Calculator::superMatrix(scale, rotateX, rotateY, rotateZ, obj.center));
@@ -184,12 +183,38 @@ Scene IniLoader::loadSceneWLights(const ini::Configuration &configuration, const
     Scene s = loadScene(configuration, clipping_, viewDirection_, dNear_, dFar_, hfov_, aspectRatio_);
     int nrLights = configuration["General"]["nrLights"].as_int_or_die();
     for (int i = 0; i < nrLights; i++) {
-        Light l;
         ini::Section section = configuration["Light" + std::to_string(i)];
-        ini::DoubleTuple lightTuple = section["ambientLight"];
-        img::Color ambientLight = img::Color(lightTuple[0]*255, lightTuple[1]*255, lightTuple[2]*255);
-        l.ambientLight = ambientLight;
-        s.lights.push_back(l);
+
+        ini::DoubleTuple ambientLight = section["ambientLight"].as_double_tuple_or_die();
+
+        ini::DoubleTuple diffuseLight;
+        bool hasDiffuse = section["diffuseLight"].as_double_tuple_if_exists(diffuseLight);
+
+        bool infinity;
+        bool hasInfinity = section["infinity"].as_bool_if_exists(infinity);
+
+        ini::DoubleTuple directionTuple;
+        bool hasDirection = section["direction"].as_double_tuple_if_exists(directionTuple);
+
+        if (hasInfinity) {
+            if (infinity && hasDirection) {
+                InfLight *infL = new InfLight();
+                infL->ambientLight = ambientLight;
+                infL->diffuseLight = diffuseLight;
+
+                Vector3D dir;
+                dir.x = directionTuple[0];
+                dir.y = directionTuple[1];
+                dir.z = directionTuple[2];
+                infL->ldVector = Vector3D::normalise(dir);
+
+                s.lights.push_back(infL);
+            }
+        } else {
+            AmbientLight *l = new AmbientLight();
+            l->ambientLight = ambientLight;
+            s.lights.push_back(l);
+        }
     }
     return s;
 }

@@ -11,9 +11,9 @@ public:
     Vector3D B;
     Vector3D C;
 
-    img::Color ambientReflection;
-    img::Color diffuseReflection;
-    img::Color specularReflection;
+    ini::DoubleTuple ambientReflection;
+    ini::DoubleTuple diffuseReflection;
+    ini::DoubleTuple specularReflection;
     double reflectionCoefficient;
 };
 

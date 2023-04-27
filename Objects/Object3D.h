@@ -46,9 +46,9 @@ public:
     Vector3D center;
     img::Color color;
 
-    img::Color ambientReflection;
-    img::Color diffuseReflection;
-    img::Color specularReflection;
+    ini::DoubleTuple ambientReflection;
+    ini::DoubleTuple diffuseReflection;
+    ini::DoubleTuple specularReflection;
     double reflectionCoefficient;
 };
 
