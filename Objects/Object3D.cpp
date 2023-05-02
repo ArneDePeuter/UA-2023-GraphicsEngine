@@ -4,7 +4,7 @@
 #define _USE_MATH_DEFINES
 #include "cmath"
 #include "../Include/obj_parser.h"
-
+#include "algorithm"
 
 Object3D::Object3D() {}
 
@@ -371,31 +371,62 @@ Object3D Object3D::createMenger(const int &nrIterations) {
     return fractalize(3, nrIterations, mengerCube);
 }
 
+
+Object3D Object3D::createFractalBuckyBall(const int &fractalScale, const int &nrIterations) {
+    return fractalize(fractalScale, nrIterations, createBuckyBall());
+}
+
+
+
 Object3D Object3D::createBuckyBall() {
     Object3D temp = createIcosahedron();
     Object3D ball;
 
+    //create hexagons
     for (Face f:temp.faces) {
         Vector3D A = temp.vertexes[f.point_indexes[0]];
         Vector3D B = temp.vertexes[f.point_indexes[1]];
         Vector3D C = temp.vertexes[f.point_indexes[2]];
-        //ceate hexagons
         int offset = ball.vertexes.size();
-        ball.vertexes.push_back(A+Vector3D::normalise(B)*(1/3));
-        ball.vertexes.push_back(A+Vector3D::normalise(B)*(2/3));
-        ball.vertexes.push_back(B+Vector3D::normalise(C)*(1/3));
-        ball.vertexes.push_back(B+Vector3D::normalise(C)*(2/3));
-        ball.vertexes.push_back(A+Vector3D::normalise(C)*(1/3));
-        ball.vertexes.push_back(A+Vector3D::normalise(C)*(2/3));
+        ball.vertexes.push_back(A + (C-A) * ((double)1/3) );
+        ball.vertexes.push_back(A + (C-A) * ((double)2/3) );
+        ball.vertexes.push_back(C + (B-C) * ((double)1/3) );
+        ball.vertexes.push_back(C + (B-C) * ((double)2/3) );
+        ball.vertexes.push_back(B + (A-B) * ((double)1/3) );
+        ball.vertexes.push_back(B + (A-B) * ((double)2/3) );
         std::vector<int> indexes;
         for (int i = 0; i < 6; i++) {
             indexes.push_back(offset+i);
         }
         ball.faces.push_back(Face(indexes));
     }
+
+    //create pentagons
+    for (int i = 0; i < temp.vertexes.size(); i++) {
+        std::vector<Face> qualifiers;
+        int offset = ball.vertexes.size();
+        for (Face f:temp.faces) {
+            int otherId;
+            if (f.point_indexes[0]==i) {
+                otherId = f.point_indexes[1];
+            } else if (f.point_indexes[1]==i) {
+                otherId = f.point_indexes[2];
+            } else if (f.point_indexes[2]==i) {
+                otherId = f.point_indexes[0];
+            } else continue;
+
+            Vector3D A = temp.vertexes[i];
+            Vector3D B = temp.vertexes[otherId];
+            ball.vertexes.push_back(A + (B-A) * ((double)1/3) );
+        }
+        std::vector<int> indexes;
+        for (int j = 0; j < 5; j++) {
+            indexes.push_back(offset+j);
+        }
+        ball.faces.push_back(Face(indexes));
+    }
     return ball;
 }
-
 
 
 

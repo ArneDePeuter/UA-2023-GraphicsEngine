@@ -156,6 +156,9 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
             else if (type == "FractalOctahedron") {
                 obj = Object3D::createFractalOctahedron(fractalScale, nrIterations);
             }
+            else if (type == "FractalBuckyBall") {
+                obj = Object3D::createFractalBuckyBall(fractalScale, nrIterations);
+            }
         }
     }
 
