@@ -36,6 +36,9 @@ img::EasyImage IniLoader::parse(const ini::Configuration &configuration) {
         return Renderer::draw2DLines(backgroundcolor, wf.project(1), size, zBuf);
     } else if (type == "ZBuffering") {
         Scene s = IniLoader::loadScene(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
+        AmbientLight *superLight = new AmbientLight();
+        superLight->ambientLight = {1,1,1};
+        s.lights.push_back(superLight);
         return Renderer::drawZBufTriangles(backgroundcolor, s.getTriangles(), s.project(1), size, s.lights);
     } else if (type == "LightedZBuffering") {
         Scene s = IniLoader::loadSceneWLights(configuration,clipping, viewDirection, dNear, dFar,hfov,aspectRatio);
@@ -168,6 +171,7 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
 
     if (section["color"].as_double_tuple_if_exists(colorTuple)) {
         obj.color = img::Color(colorTuple[0]*255, colorTuple[1]*255, colorTuple[2]*255);
+        obj.ambientReflection = colorTuple;
     } else {
         obj.ambientReflection = section["ambientReflection"].as_double_tuple_or_die();
         obj.diffuseReflection = section["diffuseReflection"].as_double_tuple_or_default({1,1,1});
