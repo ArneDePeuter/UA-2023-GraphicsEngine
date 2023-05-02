@@ -35,14 +35,14 @@ public:
     static Object3D createBuckyBall();
     static Object3D loadObj(const std::string &filename);
 
-    static Object3D fractalize(const int &fractalScale, const int &nrIterations, Object3D fractalObject);
-    static Object3D createFractalCube(const int &fractalScale, const int &nrIterations);
-    static Object3D createFractalDodecahedron(const int &fractalScale, const int &nrIterations);
-    static Object3D createFractalIcosahedron(const int &fractalScale, const int &nrIterations);
-    static Object3D createFractalOctahedron(const int &fractalScale, const int &nrIterations);
-    static Object3D createFractalTetrahedron(const int &fractalScale, const int &nrIterations);
+    static Object3D fractalize(const double &fractalScale, const int &nrIterations, Object3D fractalObject);
+    static Object3D createFractalCube(const double &fractalScale, const int &nrIterations);
+    static Object3D createFractalDodecahedron(const double &fractalScale, const int &nrIterations);
+    static Object3D createFractalIcosahedron(const double &fractalScale, const int &nrIterations);
+    static Object3D createFractalOctahedron(const double &fractalScale, const int &nrIterations);
+    static Object3D createFractalTetrahedron(const double &fractalScale, const int &nrIterations);
     static Object3D createMenger(const int &nrIterations);
-    static Object3D createFractalBuckyBall(const int &fractalScale, const int &nrIterations);
+    static Object3D createFractalBuckyBall(const double &fractalScale, const int &nrIterations);
 
     Vector3D center;
     img::Color color;

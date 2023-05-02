@@ -140,7 +140,7 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
         }
         else
         {
-            int fractalScale = section["fractalScale"].as_int_or_die();
+            double fractalScale = section["fractalScale"].as_double_or_die();
             if (type == "FractalCube") {
                 obj = Object3D::createFractalCube(fractalScale, nrIterations);
             }
@@ -216,6 +216,15 @@ Scene IniLoader::loadSceneWLights(const ini::Configuration &configuration, const
                 infL->ldVector = Vector3D::normalise(dir);
 
                 s.lights.push_back(infL);
+            } else {
+                PointLight *pointl = new PointLight();
+                pointl->ambientLight = ambientLight;
+                pointl->diffuseLight = diffuseLight;
+                section["direction"].as_double_if_exists(pointl->spotAngle);
+                ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
+                pointl->location.x = loc[0];
+                pointl->location.y = loc[1];
+                pointl->location.z = loc[2];
             }
         } else {
             AmbientLight *l = new AmbientLight();

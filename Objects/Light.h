@@ -32,6 +32,10 @@ class InfLight : public Light {
 public:
     Vector3D ldVector;
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D w) const override {
+        rVal += ambientReflection[0] * ambientLight[0];
+        gVal += ambientReflection[1] * ambientLight[1];
+        bVal += ambientReflection[2] * ambientLight[2];
+
         Vector3D n = Vector3D::normalise(w);
         Vector3D l = Vector3D::normalise(-ldVector);
         double alpha = Vector3D::dot(n,l);
@@ -50,6 +54,14 @@ public:
         rVal += ambientReflection[0] * ambientLight[0];
         gVal += ambientReflection[1] * ambientLight[1];
         bVal += ambientReflection[2] * ambientLight[2];
+
+        Vector3D n = Vector3D::normalise(w);
+        Vector3D l = Vector3D::normalise(-location);
+        double alpha = Vector3D::dot(n,l);
+
+        rVal += diffuseReflection[0] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
+        gVal += diffuseReflection[1] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
+        bVal += diffuseReflection[2] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
     }
 };
 

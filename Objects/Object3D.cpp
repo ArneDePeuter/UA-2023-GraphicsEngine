@@ -294,7 +294,7 @@ void Object3D::triangulate() {
     faces = newFaces;
 }
 
-Object3D Object3D::fractalize(const int &fractalScale, const int &nrIterations, Object3D fractalObject) {
+Object3D Object3D::fractalize(const double &fractalScale, const int &nrIterations, Object3D fractalObject) {
     Objects3D objects = {fractalObject};
 
     double currentScale = 1;
@@ -330,23 +330,23 @@ Object3D Object3D::fractalize(const int &fractalScale, const int &nrIterations, 
     return fractal;
 }
 
-Object3D Object3D::createFractalCube(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalCube(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createCube());
 }
 
-Object3D Object3D::createFractalDodecahedron(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalDodecahedron(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createDodecahedron());
 }
 
-Object3D Object3D::createFractalIcosahedron(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalIcosahedron(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createIcosahedron());
 }
 
-Object3D Object3D::createFractalOctahedron(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalOctahedron(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createOctahedron());
 }
 
-Object3D Object3D::createFractalTetrahedron(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalTetrahedron(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createTetrahedron());
 }
 
@@ -372,7 +372,7 @@ Object3D Object3D::createMenger(const int &nrIterations) {
 }
 
 
-Object3D Object3D::createFractalBuckyBall(const int &fractalScale, const int &nrIterations) {
+Object3D Object3D::createFractalBuckyBall(const double &fractalScale, const int &nrIterations) {
     return fractalize(fractalScale, nrIterations, createBuckyBall());
 }
 
