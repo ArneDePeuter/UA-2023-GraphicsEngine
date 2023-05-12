@@ -163,4 +163,5 @@ CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Camera.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects\Calculator.h
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\Calculator.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h

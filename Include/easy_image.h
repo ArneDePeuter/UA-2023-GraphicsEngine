@@ -42,7 +42,9 @@ namespace img
 		//them to be in *this* order
 		//if you alter the arrangement, the generated BMP files will contain garbage
 		public:
-			/**
+        Color(ini::DoubleTuple vector1);
+
+/**
 			 * \brief The intensity of the blue color component
 			 */
 			uint8_t blue;

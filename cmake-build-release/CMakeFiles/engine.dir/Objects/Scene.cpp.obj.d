@@ -136,6 +136,8 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
+ C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
+ C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
  C:/Users/Arne/Desktop/3dengineeeee/Include/ini_configuration.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/map \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_tree.h \
@@ -159,8 +161,7 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
- C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
- C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Triangle.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Line2D.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Point2D.h \

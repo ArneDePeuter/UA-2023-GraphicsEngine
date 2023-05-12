@@ -54,3 +54,8 @@ Scene::~Scene() {
         delete l;
     }
 }
+
+Scene::Scene(const Objects3D &objects3D, const Camera &camera, const lights3D &lights, const bool &doTriangulate) : objects3D(objects3D), camera(camera), lights(lights) {
+    if (doTriangulate) triangulate();
+    camera.eyePointTransform(this->objects3D);
+}

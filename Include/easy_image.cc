@@ -127,6 +127,12 @@ img::Color::~Color()
 {
 }
 
+img::Color::Color(ini::DoubleTuple vector1) {
+    red = vector1[0] * 255;
+    green = vector1[1] * 255;
+    blue = vector1[2] * 255;
+}
+
 img::UnsupportedFileTypeException::UnsupportedFileTypeException(std::string const& msg) :
 	message(msg)
 {

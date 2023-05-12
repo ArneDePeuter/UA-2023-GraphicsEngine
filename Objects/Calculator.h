@@ -2,6 +2,8 @@
 #define ENGINE_CALCULATOR_H
 
 #include "../Include/vector3d.h"
+#define _USE_MATH_DEFINES
+#include <cmath>
 
 class Calculator {
 public:

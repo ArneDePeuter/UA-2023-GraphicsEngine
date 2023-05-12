@@ -170,24 +170,24 @@ CMakeFiles/engine.dir/engine.cc.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/Wireframe.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/Line2D.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/Point2D.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/ZBuffer.h \
- C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
- C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/Camera.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects/Calculator.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects/LSystem2D.h \
  C:/Users/Arne/Desktop/3dengineeeee/Include/l_parser.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/set \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_set.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multiset.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/Line2D.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/Point2D.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/ZBuffer.h \
+ C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
+ C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/stack \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/deque \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_deque.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/deque.tcc \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_stack.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/Camera.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/Calculator.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects/ClippingSettings.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects/LSystem3D.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects/Scene.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects/Triangle.h \

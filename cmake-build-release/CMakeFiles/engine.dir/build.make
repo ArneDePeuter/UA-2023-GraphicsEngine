@@ -166,24 +166,10 @@ CMakeFiles/engine.dir/Objects/Object3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Object3D.cpp.s"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3D.cpp -o CMakeFiles\engine.dir\Objects\Object3D.cpp.s
 
-CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Wireframe.cpp
-CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj -MF CMakeFiles\engine.dir\Objects\Wireframe.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Wireframe.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Wireframe.cpp
-
-CMakeFiles/engine.dir/Objects/Wireframe.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Wireframe.cpp.i"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arne\Desktop\3dengineeeee\Objects\Wireframe.cpp > CMakeFiles\engine.dir\Objects\Wireframe.cpp.i
-
-CMakeFiles/engine.dir/Objects/Wireframe.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Wireframe.cpp.s"
-	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengineeeee\Objects\Wireframe.cpp -o CMakeFiles\engine.dir\Objects\Wireframe.cpp.s
-
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem2D.cpp
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj -MF CMakeFiles\engine.dir\Objects\LSystem2D.cpp.obj.d -o CMakeFiles\engine.dir\Objects\LSystem2D.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\LSystem2D.cpp
 
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.i: cmake_force
@@ -197,7 +183,7 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Calculator.cpp
 CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/Objects/Calculator.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Calculator.cpp.obj -MF CMakeFiles\engine.dir\Objects\Calculator.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Calculator.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Calculator.cpp
 
 CMakeFiles/engine.dir/Objects/Calculator.cpp.i: cmake_force
@@ -211,7 +197,7 @@ CMakeFiles/engine.dir/Objects/Calculator.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Face.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Face.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Face.cpp
 CMakeFiles/engine.dir/Objects/Face.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/engine.dir/Objects/Face.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/engine.dir/Objects/Face.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Face.cpp.obj -MF CMakeFiles\engine.dir\Objects\Face.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Face.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Face.cpp
 
 CMakeFiles/engine.dir/Objects/Face.cpp.i: cmake_force
@@ -225,7 +211,7 @@ CMakeFiles/engine.dir/Objects/Face.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/IniLoader.cpp
 CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj -MF CMakeFiles\engine.dir\Objects\IniLoader.cpp.obj.d -o CMakeFiles\engine.dir\Objects\IniLoader.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\IniLoader.cpp
 
 CMakeFiles/engine.dir/Objects/IniLoader.cpp.i: cmake_force
@@ -239,7 +225,7 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.cpp
 CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj -MF CMakeFiles\engine.dir\Objects\LSystem3D.cpp.obj.d -o CMakeFiles\engine.dir\Objects\LSystem3D.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\LSystem3D.cpp
 
 CMakeFiles/engine.dir/Objects/LSystem3D.cpp.i: cmake_force
@@ -253,7 +239,7 @@ CMakeFiles/engine.dir/Objects/LSystem3D.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.cpp
 CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj -MF CMakeFiles\engine.dir\Objects\ZBuffer.cpp.obj.d -o CMakeFiles\engine.dir\Objects\ZBuffer.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\ZBuffer.cpp
 
 CMakeFiles/engine.dir/Objects/ZBuffer.cpp.i: cmake_force
@@ -267,7 +253,7 @@ CMakeFiles/engine.dir/Objects/ZBuffer.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Scene.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Scene.cpp
 CMakeFiles/engine.dir/Objects/Scene.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Scene.cpp.obj -MF CMakeFiles\engine.dir\Objects\Scene.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Scene.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Scene.cpp
 
 CMakeFiles/engine.dir/Objects/Scene.cpp.i: cmake_force
@@ -281,7 +267,7 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Renderer.cpp
 CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/engine.dir/Objects/Renderer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/engine.dir/Objects/Renderer.cpp.obj"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Renderer.cpp.obj -MF CMakeFiles\engine.dir\Objects\Renderer.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Renderer.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Renderer.cpp
 
 CMakeFiles/engine.dir/Objects/Renderer.cpp.i: cmake_force
@@ -292,6 +278,20 @@ CMakeFiles/engine.dir/Objects/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Renderer.cpp.s"
 	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengineeeee\Objects\Renderer.cpp -o CMakeFiles\engine.dir\Objects\Renderer.cpp.s
 
+CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/Object3DFactory.cpp
+CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj -MF CMakeFiles\engine.dir\Objects\Object3DFactory.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Object3DFactory.cpp.obj -c C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3DFactory.cpp
+
+CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.i"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3DFactory.cpp > CMakeFiles\engine.dir\Objects\Object3DFactory.cpp.i
+
+CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s"
+	C:\Qt\Tools\mingw810_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3DFactory.cpp -o CMakeFiles\engine.dir\Objects\Object3DFactory.cpp.s
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/engine.cc.obj" \
@@ -301,7 +301,6 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/Include/l_parser.cc.obj" \
 "CMakeFiles/engine.dir/Include/obj_parser.cc.obj" \
 "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Face.cpp.obj" \
@@ -309,7 +308,8 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Scene.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/Renderer.cpp.obj"
+"CMakeFiles/engine.dir/Objects/Renderer.cpp.obj" \
+"CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -321,7 +321,6 @@ engine.exe: CMakeFiles/engine.dir/Include/vector3d.cc.obj
 engine.exe: CMakeFiles/engine.dir/Include/l_parser.cc.obj
 engine.exe: CMakeFiles/engine.dir/Include/obj_parser.cc.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Object3D.cpp.obj
-engine.exe: CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Calculator.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Face.cpp.obj
@@ -330,6 +329,7 @@ engine.exe: CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Scene.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Renderer.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj
 engine.exe: CMakeFiles/engine.dir/build.make
 engine.exe: CMakeFiles/engine.dir/linklibs.rsp
 engine.exe: CMakeFiles/engine.dir/objects1.rsp

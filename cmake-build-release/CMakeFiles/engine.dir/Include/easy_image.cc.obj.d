@@ -170,4 +170,5 @@ CMakeFiles/engine.dir/Include/easy_image.cc.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/sstream.tcc \
  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
  C:/Users/Arne/Desktop/3dengineeeee/Include/vector3d.h \
- C:/Users/Arne/Desktop/3dengineeeee/Include/ini_configuration.h
+ C:/Users/Arne/Desktop/3dengineeeee/Include/ini_configuration.h \
+ C:/Users/Arne/Desktop/3dengineeeee/Objects/Calculator.h

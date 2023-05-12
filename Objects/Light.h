@@ -4,6 +4,7 @@
 #include "../Include/vector3d.h"
 #include "../Include/easy_image.h"
 #include "../Include/ini_configuration.h"
+#include "Calculator.h"
 
 class Light {
 public:
@@ -38,11 +39,11 @@ public:
 
         Vector3D n = Vector3D::normalise(w);
         Vector3D l = Vector3D::normalise(-ldVector);
-        double alpha = Vector3D::dot(n,l);
+        double cosAlpha = Vector3D::dot(n,l);
 
-        rVal += diffuseReflection[0] * cos(alpha);
-        gVal += diffuseReflection[1] * cos(alpha);
-        bVal += diffuseReflection[2] * cos(alpha);
+        rVal += diffuseReflection[0] * cosAlpha;
+        gVal += diffuseReflection[1] * cosAlpha;
+        bVal += diffuseReflection[2] * cosAlpha;
     }
 };
 
@@ -57,11 +58,17 @@ public:
 
         Vector3D n = Vector3D::normalise(w);
         Vector3D l = Vector3D::normalise(-location);
-        double alpha = Vector3D::dot(n,l);
+        double cosAlpha = Vector3D::dot(n,l);
 
-        rVal += diffuseReflection[0] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
-        gVal += diffuseReflection[1] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
-        bVal += diffuseReflection[2] * (1-(1-cos(alpha)/(1-cos(spotAngle))));
+        if (spotAngle!=-1) {
+            rVal += diffuseReflection[0] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
+            gVal += diffuseReflection[1] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
+            bVal += diffuseReflection[2] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
+        } else {
+            rVal += diffuseReflection[0] * cosAlpha;
+            gVal += diffuseReflection[1] * cosAlpha;
+            bVal += diffuseReflection[2] * cosAlpha;
+        }
     }
 };
 

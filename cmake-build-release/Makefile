@@ -392,6 +392,30 @@ Objects/Object3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3D.cpp.s
 .PHONY : Objects/Object3D.cpp.s
 
+Objects/Object3DFactory.obj: Objects/Object3DFactory.cpp.obj
+.PHONY : Objects/Object3DFactory.obj
+
+# target to build an object file
+Objects/Object3DFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj
+.PHONY : Objects/Object3DFactory.cpp.obj
+
+Objects/Object3DFactory.i: Objects/Object3DFactory.cpp.i
+.PHONY : Objects/Object3DFactory.i
+
+# target to preprocess a source file
+Objects/Object3DFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.i
+.PHONY : Objects/Object3DFactory.cpp.i
+
+Objects/Object3DFactory.s: Objects/Object3DFactory.cpp.s
+.PHONY : Objects/Object3DFactory.s
+
+# target to generate assembly for a file
+Objects/Object3DFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s
+.PHONY : Objects/Object3DFactory.cpp.s
+
 Objects/Renderer.obj: Objects/Renderer.cpp.obj
 .PHONY : Objects/Renderer.obj
 
@@ -439,30 +463,6 @@ Objects/Scene.s: Objects/Scene.cpp.s
 Objects/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.s
 .PHONY : Objects/Scene.cpp.s
-
-Objects/Wireframe.obj: Objects/Wireframe.cpp.obj
-.PHONY : Objects/Wireframe.obj
-
-# target to build an object file
-Objects/Wireframe.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj
-.PHONY : Objects/Wireframe.cpp.obj
-
-Objects/Wireframe.i: Objects/Wireframe.cpp.i
-.PHONY : Objects/Wireframe.i
-
-# target to preprocess a source file
-Objects/Wireframe.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.i
-.PHONY : Objects/Wireframe.cpp.i
-
-Objects/Wireframe.s: Objects/Wireframe.cpp.s
-.PHONY : Objects/Wireframe.s
-
-# target to generate assembly for a file
-Objects/Wireframe.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.s
-.PHONY : Objects/Wireframe.cpp.s
 
 Objects/ZBuffer.obj: Objects/ZBuffer.cpp.obj
 .PHONY : Objects/ZBuffer.obj
@@ -554,15 +554,15 @@ help:
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s
+	@echo ... Objects/Object3DFactory.obj
+	@echo ... Objects/Object3DFactory.i
+	@echo ... Objects/Object3DFactory.s
 	@echo ... Objects/Renderer.obj
 	@echo ... Objects/Renderer.i
 	@echo ... Objects/Renderer.s
 	@echo ... Objects/Scene.obj
 	@echo ... Objects/Scene.i
 	@echo ... Objects/Scene.s
-	@echo ... Objects/Wireframe.obj
-	@echo ... Objects/Wireframe.i
-	@echo ... Objects/Wireframe.s
 	@echo ... Objects/ZBuffer.obj
 	@echo ... Objects/ZBuffer.i
 	@echo ... Objects/ZBuffer.s
