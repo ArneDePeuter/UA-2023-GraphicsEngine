@@ -17,6 +17,8 @@ public:
     virtual void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection,
                                 ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection,
                                 double reflectionCoeff, Vector3D w) const = 0;
+
+    virtual void applyTransformation(Matrix m)=0;
 };
 
 class AmbientLight : public Light {
@@ -26,6 +28,7 @@ public:
         gVal += ambientReflection[1] * ambientLight[1];
         bVal += ambientReflection[2] * ambientLight[2];
     }
+    void applyTransformation(Matrix m) override{};
 };
 
 
@@ -41,10 +44,13 @@ public:
         Vector3D l = Vector3D::normalise(-ldVector);
         double cosAlpha = Vector3D::dot(n,l);
 
-        rVal += diffuseReflection[0] * cosAlpha;
-        gVal += diffuseReflection[1] * cosAlpha;
-        bVal += diffuseReflection[2] * cosAlpha;
+        rVal += diffuseReflection[0] * cosAlpha * diffuseLight[0];
+        gVal += diffuseReflection[1] * cosAlpha * diffuseLight[1];
+        bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
     }
+    void applyTransformation(Matrix m) override{
+        ldVector *= m;
+    };
 };
 
 class PointLight : public Light {
@@ -60,16 +66,15 @@ public:
         Vector3D l = Vector3D::normalise(-location);
         double cosAlpha = Vector3D::dot(n,l);
 
-        if (spotAngle!=-1) {
-            rVal += diffuseReflection[0] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
-            gVal += diffuseReflection[1] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
-            bVal += diffuseReflection[2] * (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
-        } else {
-            rVal += diffuseReflection[0] * cosAlpha;
-            gVal += diffuseReflection[1] * cosAlpha;
-            bVal += diffuseReflection[2] * cosAlpha;
-        }
+        double factor = (spotAngle==-1) ? cosAlpha : (1-(1-cosAlpha/(1-cos(Calculator::degToRad(spotAngle)))));
+
+        rVal += diffuseReflection[0] * factor * diffuseLight[0];
+        gVal += diffuseReflection[1] * factor * diffuseLight[1];
+        bVal += diffuseReflection[2] * factor * diffuseLight[2];
     }
+    void applyTransformation(Matrix m) override{
+        location *= m;
+    };
 };
 
 typedef std::vector<Light*> lights3D;

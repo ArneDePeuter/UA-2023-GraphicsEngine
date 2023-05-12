@@ -175,8 +175,8 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Camera.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Calculator.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\Light.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\LSystem3D.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Scene.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Triangle.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects\Light.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Renderer.h

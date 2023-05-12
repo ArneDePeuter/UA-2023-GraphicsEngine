@@ -7,12 +7,8 @@
 #include "Objects/IniLoader.h"
 #include "Objects/ZBuffer.h"
 
-int count = 0;
-
-// const removed for pass reference
-img::EasyImage generate_image(ini::Configuration &configuration)
+img::EasyImage generate_image(const ini::Configuration &configuration)
 {
-    std::cout << "processing : "<< count++ << std::endl;
     return IniLoader::createImage(configuration);
 }
 

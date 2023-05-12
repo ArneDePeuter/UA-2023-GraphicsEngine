@@ -123,9 +123,7 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             l->ambientLight = ambientLight;
             l->diffuseLight = diffuseLight;
             ini::DoubleTuple dir = section["direction"].as_double_tuple_or_die();
-            l->ldVector.x = dir[0];
-            l->ldVector.y = dir[1];
-            l->ldVector.z = dir[2];
+            l->ldVector = Vector3D::vector(dir[0], dir[1], dir[2]);
             lights.push_back(l);
             continue;
         } else {

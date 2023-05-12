@@ -522,7 +522,6 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
 
     double dzdx, dzdy;
     calculateDZs(newA, newB, newC, d, dzdx, dzdy);
-
     double xL, xR;
     for (int y = yMin; y <= yMax; y++) {
         xL = std::numeric_limits<double>::infinity();
@@ -547,7 +546,6 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                     Vector3D v = C-A;
 
                     Vector3D w = Vector3D::cross(u,v);
-
                     light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, w);
                 }
                 Color color(lround(rVal*255),lround(gVal*255),lround(bVal*255));

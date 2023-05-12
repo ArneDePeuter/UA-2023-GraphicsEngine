@@ -1324,10 +1324,10 @@ CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj: C:/Users/Arne/Desktop/3denginee
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Camera.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Calculator.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/ClippingSettings.h \
+  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Scene.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Triangle.h \
-  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Renderer.h
 
 CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem2D.cpp \
@@ -2356,11 +2356,11 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/ClippingSettings.h \
+  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Triangle.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Line2D.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Point2D.h \
-  C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.h \
-  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h
+  C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.h
 
 CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj: C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.cpp \
   C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
@@ -2687,10 +2687,10 @@ CMakeFiles/engine.dir/engine.cc.obj: C:/Users/Arne/Desktop/3dengineeeee/engine.c
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Camera.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Calculator.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/ClippingSettings.h \
+  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Scene.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/Triangle.h \
-  C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h \
   C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.h
 
 
