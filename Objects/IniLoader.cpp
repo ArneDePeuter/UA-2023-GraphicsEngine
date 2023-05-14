@@ -110,13 +110,23 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
         bool hasInfinity = section["infinity"].as_bool_if_exists(infinity);
 
         if (!hasInfinity) {
-            AmbientLight *l = new AmbientLight();
-            l->ambientLight = ambientLight;
-            lights.push_back(l);
-            continue;
+            ini::DoubleTuple specularLight;
+            bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
+            if (!hasSpecular) {
+                AmbientLight *l = new AmbientLight();
+                l->ambientLight = ambientLight;
+                lights.push_back(l);
+                continue;
+            } else {
+                SpecularLight *l = new SpecularLight();
+                l->ambientLight = ambientLight;
+                l->diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
+                l->specularLight = specularLight;
+                continue;
+            }
         }
 
-        ini::DoubleTuple diffuseLight = section["ambientLight"].as_double_tuple_or_die();
+        ini::DoubleTuple diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
 
         if (infinity) {
             InfLight *l = new InfLight();
@@ -132,9 +142,7 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             l->diffuseLight = diffuseLight;
             l->spotAngle = section["spotAngle"].as_double_or_default(-1);
             ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
-            l->location.x = loc[0];
-            l->location.y = loc[1];
-            l->location.z = loc[2];
+            l->location = Vector3D::point(loc[0], loc[1], loc[2]);
             lights.push_back(l);
             continue;
         }

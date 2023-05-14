@@ -163,7 +163,7 @@ Object3D Object3D::Object3DFactory::createTorus(const double &r, const double &R
             y = (R + r * cos(v)) * sin(u);
             z = r * sin(v);
             torus.vertexes.push_back(Vector3D::point(x, y, z));
-            torus.faces.push_back(Face({i*m+j, ((i+1)%n)*m+j, ((i+1)%n)*m+(j+1)%m, i*m+(j+1)%m}));
+            torus.faces.push_back(Face({i*m+(j+1)%m, ((i+1)%n)*m+(j+1)%m, ((i+1)%n)*m+j, i*m+j}));
         }
     }
     return torus;
@@ -201,10 +201,11 @@ Object3D Object3D::Object3DFactory::createCone(const int &n, const double &h) {
         cone.vertexes.push_back(Vector3D::point(cos((M_PI*2*i)/n), sin((M_PI*2*i)/n),0));
     }
     cone.vertexes.push_back(pn);
-
+    //connections to the top
     for (int i = 0; i <= n; i++) {
         cone.faces.push_back(Face({i,(i+1)%n,n+1}));
     }
+    //bottom connections
     std::vector<int> pointIndexes;
     for (int i = n-1; i >= 0; i--) {
         pointIndexes.push_back(i);

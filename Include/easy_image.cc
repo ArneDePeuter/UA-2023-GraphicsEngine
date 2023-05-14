@@ -542,11 +542,7 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                 double gVal = 0;
                 double bVal = 0;
                 for (const Light *light : lights) {
-                    Vector3D u = B-A;
-                    Vector3D v = C-A;
-
-                    Vector3D w = Vector3D::cross(u,v);
-                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, w);
+                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C);
                 }
                 Color color(lround(rVal*255),lround(gVal*255),lround(bVal*255));
                 (*this)(x,y) = color;
