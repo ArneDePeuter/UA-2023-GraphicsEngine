@@ -92,6 +92,8 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     } else {
         obj.ambientReflection = section["ambientReflection"].as_double_tuple_or_die();
         obj.diffuseReflection = section["diffuseReflection"].as_double_tuple_or_default({1,1,1});
+        obj.specularReflection = section["specularReflection"].as_double_tuple_or_default({0,0,0});
+        obj.reflectionCoefficient = section["reflectionCoefficient"].as_double_or_default(0);
     }
 
     obj.applyTransformation(Calculator::superMatrix(scale, rotateX, rotateY, rotateZ, obj.center));
@@ -110,20 +112,10 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
         bool hasInfinity = section["infinity"].as_bool_if_exists(infinity);
 
         if (!hasInfinity) {
-            ini::DoubleTuple specularLight;
-            bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
-            if (!hasSpecular) {
-                AmbientLight *l = new AmbientLight();
-                l->ambientLight = ambientLight;
-                lights.push_back(l);
-                continue;
-            } else {
-                SpecularLight *l = new SpecularLight();
-                l->ambientLight = ambientLight;
-                l->diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
-                l->specularLight = specularLight;
-                continue;
-            }
+            AmbientLight *l = new AmbientLight();
+            l->ambientLight = ambientLight;
+            lights.push_back(l);
+            continue;
         }
 
         ini::DoubleTuple diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
@@ -137,14 +129,27 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             lights.push_back(l);
             continue;
         } else {
-            PointLight *l = new PointLight();
-            l->ambientLight = ambientLight;
-            l->diffuseLight = diffuseLight;
-            l->spotAngle = section["spotAngle"].as_double_or_default(-1);
             ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
-            l->location = Vector3D::point(loc[0], loc[1], loc[2]);
-            lights.push_back(l);
-            continue;
+            ini::DoubleTuple specularLight;
+            bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
+            if (!hasSpecular) {
+                PointLight *l = new PointLight();
+                l->ambientLight = ambientLight;
+                l->diffuseLight = diffuseLight;
+                l->spotAngle = section["spotAngle"].as_double_or_default(-1);
+                l->location = Vector3D::point(loc[0], loc[1], loc[2]);
+                lights.push_back(l);
+                continue;
+            }
+            else {
+                SpecularLight *l = new SpecularLight();
+                l->ambientLight = ambientLight;
+                l->diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
+                l->specularLight = specularLight;
+                l->location = Vector3D::point(loc[0], loc[1], loc[2]);
+                lights.push_back(l);
+                continue;
+            }
         }
     }
     return lights;

@@ -79,8 +79,29 @@ public:
 
 class SpecularLight : public Light {
 public:
+    Vector3D location;
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override {
+        rVal += ambientReflection[0] * ambientLight[0];
+        gVal += ambientReflection[1] * ambientLight[1];
+        bVal += ambientReflection[2] * ambientLight[2];
 
+        Vector3D n = Vector3D::normalise(Vector3D::cross(B - A, C - A));
+        Vector3D trianglePosition = (A + B + C) / 3;
+        Vector3D l = Vector3D::normalise(location-trianglePosition);
+        double cosAlpha = Vector3D::dot(n,l);
+
+        rVal += diffuseReflection[0] * cosAlpha * diffuseLight[0];
+        gVal += diffuseReflection[1] * cosAlpha * diffuseLight[1];
+        bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
+
+        Vector3D r = 2*cosAlpha*n-l;
+        double cosBeta = Vector3D::dot(r,-l);
+
+        double specularFactor = pow(cosBeta,reflectionCoeff);
+
+        rVal += specularReflection[0] * specularFactor * specularLight[0];
+        gVal += specularReflection[1] * specularFactor * specularLight[1];
+        bVal += specularReflection[2] * specularFactor * specularLight[2];
     }
 
     void applyTransformation(Matrix m) override {
