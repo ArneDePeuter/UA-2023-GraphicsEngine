@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj"
   "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/Light.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/Light.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj"
   "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj"

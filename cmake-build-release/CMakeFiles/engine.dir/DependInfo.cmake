@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/IniLoader.cpp" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem2D.cpp" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.cpp" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"
+  "C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.cpp" "CMakeFiles/engine.dir/Objects/Light.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Light.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Object3D.cpp" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3D.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Object3DFactory.cpp" "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Renderer.cpp" "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj.d"

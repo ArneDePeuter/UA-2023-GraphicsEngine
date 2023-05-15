@@ -5,125 +5,60 @@
 #include "../Include/easy_image.h"
 #include "../Include/ini_configuration.h"
 #include "Calculator.h"
+#include "ZBuffer.h"
 
 class Light {
 public:
     virtual ~Light() = default;
-
-    ini::DoubleTuple ambientLight;
-    ini::DoubleTuple diffuseLight;
-    ini::DoubleTuple specularLight;
-
-    virtual void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection,
-                                ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection,
-                                double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const = 0;
+    virtual void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const = 0;
     virtual void applyTransformation(Matrix m)=0;
 };
 
 class AmbientLight : public Light {
 public:
-    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override {
-        rVal += ambientReflection[0] * ambientLight[0];
-        gVal += ambientReflection[1] * ambientLight[1];
-        bVal += ambientReflection[2] * ambientLight[2];
+    explicit AmbientLight(const ini::DoubleTuple &ambientLight);
 
-        rVal = std::min(std::max(rVal, 0.0), 1.0);
-        gVal = std::min(std::max(gVal, 0.0), 1.0);
-        bVal = std::min(std::max(bVal, 0.0), 1.0);
-    }
-    void applyTransformation(Matrix m) override{};
+    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
+    void applyTransformation(Matrix m) override;
+    static void applyAmbientLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &ambientLight, const ini::DoubleTuple ambientReflection);
+
+    ini::DoubleTuple ambientLight;
 };
 
 
-class InfLight : public Light {
+class InfLight : public AmbientLight {
 public:
+    InfLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const Vector3D &ldVector);
+
+    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
+    void applyTransformation(Matrix m) override;
+    static void applyDiffuseLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &diffuseReflection, Vector3D A, Vector3D B, Vector3D C, Vector3D ldVector);
+
+    ini::DoubleTuple diffuseLight;
     Vector3D ldVector;
-    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override {
-        rVal += ambientReflection[0] * ambientLight[0];
-        gVal += ambientReflection[1] * ambientLight[1];
-        bVal += ambientReflection[2] * ambientLight[2];
-
-        Vector3D n = Vector3D::normalise(Vector3D::cross(B - A, C - A));
-        Vector3D l = Vector3D::normalise(-ldVector);
-        double cosAlpha = Vector3D::dot(n,l);
-
-        rVal += diffuseReflection[0] * cosAlpha * diffuseLight[0];
-        gVal += diffuseReflection[1] * cosAlpha * diffuseLight[1];
-        bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
-
-        rVal = std::min(std::max(rVal, 0.0), 1.0);
-        gVal = std::min(std::max(gVal, 0.0), 1.0);
-        bVal = std::min(std::max(bVal, 0.0), 1.0);
-    }
-    void applyTransformation(Matrix m) override{
-        ldVector *= m;
-    };
 };
 
-class PointLight : public Light {
+class PointLight : public AmbientLight {
 public:
+    PointLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle=-1);
+
+    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
+    void applyTransformation(Matrix m) override;
+    static void applyDiffuseLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &diffuseReflection, Vector3D A, Vector3D B, Vector3D C, Vector3D location, double spotAngle);
+
     Vector3D location;
+    ini::DoubleTuple diffuseLight;
     double spotAngle;
-    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override {
-        rVal += ambientReflection[0] * ambientLight[0];
-        gVal += ambientReflection[1] * ambientLight[1];
-        bVal += ambientReflection[2] * ambientLight[2];
-
-        Vector3D n = Vector3D::normalise(Vector3D::cross(B - A, C - A));
-        Vector3D trianglePosition = (A + B + C) / 3;
-        Vector3D l = Vector3D::normalise(location-trianglePosition);
-        double cosAlpha = Vector3D::dot(n,l);
-
-        double factor = (spotAngle==-1) ? cosAlpha : (1-(1-cosAlpha)/(1-cos(Calculator::degToRad(spotAngle))));
-
-        rVal += diffuseReflection[0] * factor * diffuseLight[0];
-        gVal += diffuseReflection[1] * factor * diffuseLight[1];
-        bVal += diffuseReflection[2] * factor * diffuseLight[2];
-
-        rVal = std::min(std::max(rVal, 0.0), 1.0);
-        gVal = std::min(std::max(gVal, 0.0), 1.0);
-        bVal = std::min(std::max(bVal, 0.0), 1.0);
-    }
-    void applyTransformation(Matrix m) override {
-        location *= m;
-    };
 };
 
-class SpecularLight : public Light {
+class SpecularLight : public PointLight {
 public:
-    Vector3D location;
-    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override {
-        rVal += ambientReflection[0] * ambientLight[0];
-        gVal += ambientReflection[1] * ambientLight[1];
-        bVal += ambientReflection[2] * ambientLight[2];
+    SpecularLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle, const ini::DoubleTuple &specularLight);
 
-        Vector3D n = Vector3D::normalise(Vector3D::cross(B - A, C - A));
-        Vector3D trianglePosition = (A + B + C) / 3;
-        Vector3D l = Vector3D::normalise(location-trianglePosition);
-        double cosAlpha = Vector3D::dot(n,l);
+    void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
+    static void applySpecularLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &specularLight, const ini::DoubleTuple &specularReflection, const double &reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D location);
 
-        rVal += diffuseReflection[0] * cosAlpha * diffuseLight[0];
-        gVal += diffuseReflection[1] * cosAlpha * diffuseLight[1];
-        bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
-
-        Vector3D r = 2*cosAlpha*n-l;
-        Vector3D camVec = Vector3D::normalise(Vector3D::point(0,0,0)-trianglePosition);
-        double cosBeta = std::max((double)0, Vector3D::dot(r,camVec));
-
-        double specularIntensity = std::pow(cosBeta,reflectionCoeff);
-
-        rVal += specularReflection[0] * specularIntensity * specularLight[0];
-        gVal += specularReflection[1] * specularIntensity * specularLight[1];
-        bVal += specularReflection[2] * specularIntensity * specularLight[2];
-
-        rVal = std::min(std::max(rVal, 0.0), 1.0);
-        gVal = std::min(std::max(gVal, 0.0), 1.0);
-        bVal = std::min(std::max(bVal, 0.0), 1.0);
-    }
-
-    void applyTransformation(Matrix m) override {
-        location *= m;
-    }
+    ini::DoubleTuple specularLight;
 };
 
 typedef std::vector<Light*> lights3D;

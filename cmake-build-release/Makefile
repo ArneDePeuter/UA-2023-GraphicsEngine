@@ -368,6 +368,30 @@ Objects/LSystem3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.s
 .PHONY : Objects/LSystem3D.cpp.s
 
+Objects/Light.obj: Objects/Light.cpp.obj
+.PHONY : Objects/Light.obj
+
+# target to build an object file
+Objects/Light.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.obj
+.PHONY : Objects/Light.cpp.obj
+
+Objects/Light.i: Objects/Light.cpp.i
+.PHONY : Objects/Light.i
+
+# target to preprocess a source file
+Objects/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.i
+.PHONY : Objects/Light.cpp.i
+
+Objects/Light.s: Objects/Light.cpp.s
+.PHONY : Objects/Light.s
+
+# target to generate assembly for a file
+Objects/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.s
+.PHONY : Objects/Light.cpp.s
+
 Objects/Object3D.obj: Objects/Object3D.cpp.obj
 .PHONY : Objects/Object3D.obj
 
@@ -551,6 +575,9 @@ help:
 	@echo ... Objects/LSystem3D.obj
 	@echo ... Objects/LSystem3D.i
 	@echo ... Objects/LSystem3D.s
+	@echo ... Objects/Light.obj
+	@echo ... Objects/Light.i
+	@echo ... Objects/Light.s
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s

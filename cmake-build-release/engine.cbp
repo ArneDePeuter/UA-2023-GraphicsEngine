@@ -146,6 +146,9 @@
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.cpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Light.h">
 			<Option target="engine"/>
 		</Unit>
