@@ -26,6 +26,10 @@ public:
         rVal += ambientReflection[0] * ambientLight[0];
         gVal += ambientReflection[1] * ambientLight[1];
         bVal += ambientReflection[2] * ambientLight[2];
+
+        rVal = std::min(std::max(rVal, 0.0), 1.0);
+        gVal = std::min(std::max(gVal, 0.0), 1.0);
+        bVal = std::min(std::max(bVal, 0.0), 1.0);
     }
     void applyTransformation(Matrix m) override{};
 };
@@ -46,6 +50,10 @@ public:
         rVal += diffuseReflection[0] * cosAlpha * diffuseLight[0];
         gVal += diffuseReflection[1] * cosAlpha * diffuseLight[1];
         bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
+
+        rVal = std::min(std::max(rVal, 0.0), 1.0);
+        gVal = std::min(std::max(gVal, 0.0), 1.0);
+        bVal = std::min(std::max(bVal, 0.0), 1.0);
     }
     void applyTransformation(Matrix m) override{
         ldVector *= m;
@@ -71,6 +79,10 @@ public:
         rVal += diffuseReflection[0] * factor * diffuseLight[0];
         gVal += diffuseReflection[1] * factor * diffuseLight[1];
         bVal += diffuseReflection[2] * factor * diffuseLight[2];
+
+        rVal = std::min(std::max(rVal, 0.0), 1.0);
+        gVal = std::min(std::max(gVal, 0.0), 1.0);
+        bVal = std::min(std::max(bVal, 0.0), 1.0);
     }
     void applyTransformation(Matrix m) override {
         location *= m;
@@ -95,17 +107,22 @@ public:
         bVal += diffuseReflection[2] * cosAlpha * diffuseLight[2];
 
         Vector3D r = 2*cosAlpha*n-l;
-        double cosBeta = Vector3D::dot(r,-l);
+        Vector3D camVec = Vector3D::normalise(Vector3D::point(0,0,0)-trianglePosition);
+        double cosBeta = std::max((double)0, Vector3D::dot(r,camVec));
 
-        double specularFactor = pow(cosBeta,reflectionCoeff);
+        double specularIntensity = std::pow(cosBeta,reflectionCoeff);
 
-        rVal += specularReflection[0] * specularFactor * specularLight[0];
-        gVal += specularReflection[1] * specularFactor * specularLight[1];
-        bVal += specularReflection[2] * specularFactor * specularLight[2];
+        rVal += specularReflection[0] * specularIntensity * specularLight[0];
+        gVal += specularReflection[1] * specularIntensity * specularLight[1];
+        bVal += specularReflection[2] * specularIntensity * specularLight[2];
+
+        rVal = std::min(std::max(rVal, 0.0), 1.0);
+        gVal = std::min(std::max(gVal, 0.0), 1.0);
+        bVal = std::min(std::max(bVal, 0.0), 1.0);
     }
 
     void applyTransformation(Matrix m) override {
-
+        location *= m;
     }
 };
 

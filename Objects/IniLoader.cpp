@@ -144,7 +144,7 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             else {
                 SpecularLight *l = new SpecularLight();
                 l->ambientLight = ambientLight;
-                l->diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
+                l->diffuseLight = diffuseLight;
                 l->specularLight = specularLight;
                 l->location = Vector3D::point(loc[0], loc[1], loc[2]);
                 lights.push_back(l);
