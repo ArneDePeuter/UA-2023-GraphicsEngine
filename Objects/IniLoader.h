@@ -17,7 +17,7 @@ public:
     static ClippingSettings loadClippingSettings(const ini::Configuration &configuration);
     static Object3D loadObject3D(const ini::Section &section);
     static Scene loadScene(const ini::Configuration &configuration, const ClippingSettings &settings, const bool &doTriangulate, const bool &lights);
-    static std::vector<Light*> loadLights(const ini::Configuration &configuration);
+    static std::vector<Light*> loadLights(const ini::Configuration &configuration, const Camera &cam, const int &shadowMask=0);
 };
 
 #endif //ENGINE_INILOADER_H

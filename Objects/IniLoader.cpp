@@ -63,11 +63,9 @@ Scene IniLoader::loadScene(const ini::Configuration &configuration, const Clippi
 
     std::vector<Light*> lightsVec;
     if (lights) {
-        lightsVec = loadLights(configuration);
+        lightsVec = loadLights(configuration, camera);
     } else {
-        AmbientLight *superLight = new AmbientLight();
-        superLight->ambientLight = {1,1,1};
-        lightsVec.push_back(superLight);
+        lightsVec.push_back(new AmbientLight({1,1,1}));
     }
     return Scene(objects, camera,lightsVec, doTriangulate);
 }
@@ -100,7 +98,7 @@ Object3D IniLoader::loadObject3D(const ini::Section &section) {
     return obj;
 }
 
-std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configuration) {
+std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configuration, const Camera &cam,  const int &shadowMask) {
     std::vector<Light *> lights;
     int nrLights = configuration["General"]["nrLights"].as_int_or_die();
     for (int i = 0; i < nrLights; i++) {
@@ -122,19 +120,21 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             ini::DoubleTuple dir = section["direction"].as_double_tuple_or_die();
             Vector3D ldVector = Vector3D::vector(dir[0], dir[1], dir[2]);
             lights.push_back(new InfLight(ambientLight, diffuseLight, ldVector));
-            continue;
-        } else {
+        }
+        else {
             ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
             Vector3D location = Vector3D::point(loc[0], loc[1], loc[2]);
             ini::DoubleTuple specularLight;
             bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
             if (!hasSpecular) {
-                lights.push_back(new PointLight(ambientLight, diffuseLight, location, section["spotAngle"].as_double_or_default(-1)));
-                continue;
+                if (shadowMask!=0) {
+                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, location, ZBuffer(shadowMask, shadowMask), cam.eyeMatrix));
+                } else {
+                    lights.push_back(new PointLight(ambientLight, diffuseLight, location, section["spotAngle"].as_double_or_default(-1)));
+                }
             }
             else {
                 lights.push_back(new SpecularLight(ambientLight, diffuseLight, specularLight, location));
-                continue;
             }
         }
     }

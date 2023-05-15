@@ -76,6 +76,10 @@ Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Trian
     Point2D DC(d * ((xMin+xMax)/2), d * ((yMin+yMax)/2));
     double dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
 
+    for (Light *l:lights) {
+        l->initFully(d, dx, dy);
+    }
+
     ZBuffer buffer(lround(imageX),lround(imageY));
     for (const Triangle &triangle : triangles) {
         image.draw_zbuf_triag(buffer, triangle.A, triangle.B, triangle.C, d, dx, dy,
