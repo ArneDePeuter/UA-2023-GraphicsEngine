@@ -20,7 +20,7 @@ public:
 
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
     void applyTransformation(Matrix m) override;
-    static void applyAmbientLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &ambientLight, const ini::DoubleTuple ambientReflection);
+    static void applyAmbientLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &ambientReflection);
 
     ini::DoubleTuple ambientLight;
 };
@@ -40,20 +40,20 @@ public:
 
 class PointLight : public AmbientLight {
 public:
-    PointLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle=-1);
+    PointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const Vector3D &location, double spotAngle);
 
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
     void applyTransformation(Matrix m) override;
     static void applyDiffuseLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &diffuseReflection, Vector3D A, Vector3D B, Vector3D C, Vector3D location, double spotAngle);
 
-    Vector3D location;
     ini::DoubleTuple diffuseLight;
+    Vector3D location;
     double spotAngle;
 };
 
 class SpecularLight : public PointLight {
 public:
-    SpecularLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle, const ini::DoubleTuple &specularLight);
+    SpecularLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLightconst, Vector3D &location);
 
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const override;
     static void applySpecularLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &specularLight, const ini::DoubleTuple &specularReflection, const double &reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D location);

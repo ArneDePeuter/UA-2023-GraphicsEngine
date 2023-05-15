@@ -112,42 +112,28 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
         bool hasInfinity = section["infinity"].as_bool_if_exists(infinity);
 
         if (!hasInfinity) {
-            AmbientLight *l = new AmbientLight();
-            l->ambientLight = ambientLight;
-            lights.push_back(l);
+            lights.push_back(new AmbientLight(ambientLight));
             continue;
         }
 
         ini::DoubleTuple diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
 
         if (infinity) {
-            InfLight *l = new InfLight();
-            l->ambientLight = ambientLight;
-            l->diffuseLight = diffuseLight;
             ini::DoubleTuple dir = section["direction"].as_double_tuple_or_die();
-            l->ldVector = Vector3D::vector(dir[0], dir[1], dir[2]);
-            lights.push_back(l);
+            Vector3D ldVector = Vector3D::vector(dir[0], dir[1], dir[2]);
+            lights.push_back(new InfLight(ambientLight, diffuseLight, ldVector));
             continue;
         } else {
             ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
+            Vector3D location = Vector3D::point(loc[0], loc[1], loc[2]);
             ini::DoubleTuple specularLight;
             bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
             if (!hasSpecular) {
-                PointLight *l = new PointLight();
-                l->ambientLight = ambientLight;
-                l->diffuseLight = diffuseLight;
-                l->spotAngle = section["spotAngle"].as_double_or_default(-1);
-                l->location = Vector3D::point(loc[0], loc[1], loc[2]);
-                lights.push_back(l);
+                lights.push_back(new PointLight(ambientLight, diffuseLight, location, section["spotAngle"].as_double_or_default(-1)));
                 continue;
             }
             else {
-                SpecularLight *l = new SpecularLight();
-                l->ambientLight = ambientLight;
-                l->diffuseLight = diffuseLight;
-                l->specularLight = specularLight;
-                l->location = Vector3D::point(loc[0], loc[1], loc[2]);
-                lights.push_back(l);
+                lights.push_back(new SpecularLight(ambientLight, diffuseLight, specularLight, location));
                 continue;
             }
         }

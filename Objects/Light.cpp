@@ -1,6 +1,6 @@
 #include "Light.h"
 
-void AmbientLight::applyAmbientLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &ambientLight, const ini::DoubleTuple ambientReflection) {
+void AmbientLight::applyAmbientLight(double &rVal, double &gVal, double &bVal, const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &ambientReflection) {
     rVal += ambientReflection[0] * ambientLight[0];
     gVal += ambientReflection[1] * ambientLight[1];
     bVal += ambientReflection[2] * ambientLight[2];
@@ -69,7 +69,7 @@ void PointLight::applyDiffuseLight(double &rVal, double &gVal, double &bVal, con
     bVal = std::min(std::max(bVal, 0.0), 1.0);
 }
 
-PointLight::PointLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle) : AmbientLight(ambientLight), location(location), diffuseLight(diffuseLight), spotAngle(spotAngle) {}
+PointLight::PointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const Vector3D &location, double spotAngle) : AmbientLight(ambientLight), diffuseLight(diffuseLight), location(location), spotAngle(spotAngle) {}
 
 void SpecularLight::calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C) const {
     applyAmbientLight(rVal, gVal, bVal, ambientLight, ambientReflection);
@@ -98,4 +98,5 @@ void SpecularLight::applySpecularLight(double &rVal, double &gVal, double &bVal,
     bVal = std::min(std::max(bVal, 0.0), 1.0);
 }
 
-SpecularLight::SpecularLight(const ini::DoubleTuple &ambientLight, const Vector3D &location, const ini::DoubleTuple &diffuseLight, double spotAngle, const ini::DoubleTuple &specularLight) : PointLight(ambientLight, location, diffuseLight, spotAngle), specularLight(specularLight) {}
+SpecularLight::SpecularLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLightconst, Vector3D &location) : PointLight(ambientLight, diffuseLight, location, -1), specularLight(specularLight) {}
+
