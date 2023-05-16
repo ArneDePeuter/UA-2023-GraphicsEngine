@@ -17,6 +17,7 @@ public:
     static Matrix eyePointMatrix(const double &theta, const double &phi, const double &r);
     static Matrix eyePointMatrix(const Vector3D &eye);
     static void calcPolar(const Vector3D &point, double &theta, double &phi, double &r);
+    static Vector3D calcNormal(const Vector3D &A, const Vector3D &B, const Vector3D &C);
 };
 
 

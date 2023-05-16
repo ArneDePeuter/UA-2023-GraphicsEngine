@@ -541,9 +541,15 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                 double rVal = 0;
                 double gVal = 0;
                 double bVal = 0;
+
+                double xEye = (x - dx) * (-1/bufVal) / (d * xG);
+                double yEye = (y - dy) * (-1/bufVal) / (d * yG);
+                double zEye = 1/bufVal;
+
                 for (const Light *light : lights) {
-                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C);
+                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C, Vector3D::point(xEye,yEye,zEye));
                 }
+
                 Color color(lround(rVal*255),lround(gVal*255),lround(bVal*255));
                 (*this)(x,y) = color;
             }

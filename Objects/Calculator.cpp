@@ -91,3 +91,7 @@ Matrix Calculator::eyePointMatrix(const Vector3D &eye) {
     m(4,3) = -r;
     return m;
 }
+
+Vector3D Calculator::calcNormal(const Vector3D &A, const Vector3D &B, const Vector3D &C) {
+    return Vector3D::normalise(Vector3D::cross(B - A, C - A));
+}

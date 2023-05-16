@@ -7,8 +7,11 @@
 #include "Objects/IniLoader.h"
 #include "Objects/ZBuffer.h"
 
+int counter=0;
+
 img::EasyImage generate_image(const ini::Configuration &configuration)
 {
+    std::cout << "rendering: " << counter++ <<std::endl;
     return IniLoader::createImage(configuration);
 }
 
