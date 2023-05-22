@@ -478,40 +478,81 @@ std::istream& img::operator>>(std::istream& in, EasyImage & image)
 	return in;
 }
 
-void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const double &d, const double &dx, const double &dy,
-                                     const ini::DoubleTuple& ambientReflection, const ini::DoubleTuple& diffuseReflection, const ini::DoubleTuple& specularReflection, double reflectionCoeff, lights3D &lights) {
-    const Vector3D &A = t.A;
-    const Vector3D &B = t.B;
-    const Vector3D &C = t.C;
+void findBounds(const Vector3D &P, const Vector3D &Q, const double &y, double& xL, double& xR, bool &foundL, bool &foundR) {
+    if ((y < P.y && y < Q.y) || (y > P.y && y > Q.y)) { return; }
+    if (P.x == Q.x) {return;}
 
+    double slope = (P.x - Q.x) / (P.y - Q.y);
+    double x = Q.x + slope * (y - Q.y);
+
+    if (x < xL) {
+        foundL = true;
+        xL = x;
+    }
+    if (x > xR) {
+        foundR = true;
+        xR = x;
+    }
+}
+
+void calculateDZs(const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, double &dzdx, double &dzdy) {
+    Vector3D u = B-A;
+    Vector3D v = C-A;
+
+    Vector3D normaalVector = Vector3D::cross(u,v);
+
+    double k = Vector3D::dot(normaalVector, A);
+
+    dzdx = normaalVector.x/(-d*k);
+    dzdy = normaalVector.y/(-d*k);
+}
+
+void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, const double &dx, const double &dy,
+                                     ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, lights3D &lights) {
     Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
     Vector3D newB = Vector3D::point(((d*B.x)/-B.z)+dx, ((d*B.y)/-B.z)+dy, B.z);
     Vector3D newC = Vector3D::point(((d*C.x)/-C.z)+dx, ((d*C.y)/-C.z)+dy, C.z);
 
+    std::vector<double> yVals = {newA.y, newB.y, newC.y};
+    int yMin = lround(*std::min_element(yVals.begin(), yVals.end())), yMax = lround(*std::max_element(yVals.begin(), yVals.end()));
+
     double xG = (newA.x+newB.x+newC.x)/3;
     double yG = (newA.y+newB.y+newC.y)/3;
+    double oneOverzG = (1/(3*newA.z)) + (1/(3*newB.z)) + (1/(3*newC.z));
 
-    std::vector<std::vector<double>> pixels = Calculator::getPixels(t, d, dx, dy);
+    double dzdx, dzdy;
+    calculateDZs(newA, newB, newC, d, dzdx, dzdy);
+    double xL, xR;
+    for (int y = yMin; y <= yMax; y++) {
+        xL = std::numeric_limits<double>::infinity();
+        xR = -std::numeric_limits<double>::infinity();
 
-    for (const std::vector<double> &vals: pixels) {
-        int x = (int) vals[0];
-        int y = (int) vals[1];
-        double bufVal = vals[2];
-        if (buffer.apply(x, y, bufVal)) {
-            double rVal = 0;
-            double gVal = 0;
-            double bVal = 0;
+        bool foundR = false, foundL = false;
+        findBounds(newA, newB, y, xL, xR, foundL, foundR);
+        findBounds(newA, newC, y, xL, xR, foundL, foundR);
+        findBounds(newB, newC, y, xL, xR, foundL, foundR);
+        if (!foundL || !foundR) continue;
 
-            double xEye = (x - dx) * (-1/bufVal) / (d * xG);
-            double yEye = (y - dy) * (-1/bufVal) / (d * yG);
-            double zEye = 1/bufVal;
+        int xLint = lround(xL+0.5);
+        int xRint = lround(xR+0.5);
+        for (int x = xLint; x <= xRint; x++) {
+            double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
+            if (buffer.apply(x,y,bufVal)) {
+                double rVal = 0;
+                double gVal = 0;
+                double bVal = 0;
 
-            for (Light *light: lights) {
-                light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C, Vector3D::point(xEye, yEye, zEye));
+                double xEye = (x - dx) * (-1/bufVal) / (d * xG);
+                double yEye = (y - dy) * (-1/bufVal) / (d * yG);
+                double zEye = 1/bufVal;
+
+                for (const Light *light : lights) {
+                    light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C, Vector3D::point(xEye,yEye,zEye));
+                }
+
+                Color color(lround(rVal*255),lround(gVal*255),lround(bVal*255));
+                (*this)(x,y) = color;
             }
-
-            Color color(lround(rVal * 255), lround(gVal * 255), lround(bVal * 255));
-            (*this)(x, y) = color;
         }
     }
 }
