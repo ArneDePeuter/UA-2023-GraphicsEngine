@@ -63,7 +63,14 @@ Scene IniLoader::loadScene(const ini::Configuration &configuration, const Clippi
 
     std::vector<Light*> lightsVec;
     if (lights) {
-        lightsVec = loadLights(configuration, camera);
+        bool shadows;
+        bool hasShadowBool = general["shadowEnabled"].as_bool_if_exists(shadows);
+        if (!hasShadowBool || !shadows) {
+            lightsVec = loadLights(configuration, camera);
+        } else {
+            int shadowMask = general["shadowMask"].as_int_or_die();
+            lightsVec = loadLights(configuration, camera, shadowMask);
+        }
     } else {
         lightsVec.push_back(new AmbientLight({1,1,1}));
     }

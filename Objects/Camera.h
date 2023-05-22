@@ -17,28 +17,25 @@ public:
     }
 
     void eyePointTransformObjects(Objects3D &objects) const {
-        if (settings.clipping) {
-            return;
-//            Vector3D sphereCoordinates;
-//            double r = viewDirection.length();
-//            double theta = atan2(position.y,position.x);
-//            double phi = acos(position.z/r);
-//
-//            Matrix eyeMatrix = Calculator::eyePointMatrix(theta, phi, r);
-//            for (Object3D &obj : objects) {
-//                obj.applyTransformation(eyeMatrix);
-//            }
-//            return;
-        }
-
         for (Object3D &obj : objects) {
             obj.applyTransformation(eyeMatrix);
+            clipObject(obj);
         }
     };
 
     void eyePointTransformLights(std::vector<Light*> &lights) const {
         for (Light *light : lights) {
             light->applyTransformation(eyeMatrix);
+        }
+    }
+
+    void clipObject(Object3D &object) const {
+        if (!settings.clipping) return;
+
+        for (Face &f : object.faces) {
+            Vector3D A = object.vertexes[f.point_indexes[0]];
+            Vector3D B = object.vertexes[f.point_indexes[1]];
+            Vector3D C = object.vertexes[f.point_indexes[2]];
         }
     }
 

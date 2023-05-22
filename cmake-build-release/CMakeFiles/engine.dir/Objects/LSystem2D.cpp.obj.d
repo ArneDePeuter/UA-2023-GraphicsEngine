@@ -174,4 +174,5 @@ CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/deque.tcc \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_stack.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Calculator.h \
- C:/Users/Arne/Desktop/3dengineeeee/Include/vector3d.h
+ C:/Users/Arne/Desktop/3dengineeeee/Include/vector3d.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\Triangle.h
