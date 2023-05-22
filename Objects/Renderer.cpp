@@ -77,7 +77,7 @@ Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Trian
     double dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
 
     for (Light *l:lights) {
-        l->initFully(d, dx, dy);
+        l->initFully(triangles);
     }
 
     ZBuffer buffer(lround(imageX),lround(imageY));

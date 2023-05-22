@@ -488,6 +488,30 @@ Objects/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.s
 .PHONY : Objects/Scene.cpp.s
 
+Objects/ShadowLight.obj: Objects/ShadowLight.cpp.obj
+.PHONY : Objects/ShadowLight.obj
+
+# target to build an object file
+Objects/ShadowLight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj
+.PHONY : Objects/ShadowLight.cpp.obj
+
+Objects/ShadowLight.i: Objects/ShadowLight.cpp.i
+.PHONY : Objects/ShadowLight.i
+
+# target to preprocess a source file
+Objects/ShadowLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.i
+.PHONY : Objects/ShadowLight.cpp.i
+
+Objects/ShadowLight.s: Objects/ShadowLight.cpp.s
+.PHONY : Objects/ShadowLight.s
+
+# target to generate assembly for a file
+Objects/ShadowLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.s
+.PHONY : Objects/ShadowLight.cpp.s
+
 Objects/ZBuffer.obj: Objects/ZBuffer.cpp.obj
 .PHONY : Objects/ZBuffer.obj
 
@@ -590,6 +614,9 @@ help:
 	@echo ... Objects/Scene.obj
 	@echo ... Objects/Scene.i
 	@echo ... Objects/Scene.s
+	@echo ... Objects/ShadowLight.obj
+	@echo ... Objects/ShadowLight.i
+	@echo ... Objects/ShadowLight.s
 	@echo ... Objects/ZBuffer.obj
 	@echo ... Objects/ZBuffer.i
 	@echo ... Objects/ZBuffer.s

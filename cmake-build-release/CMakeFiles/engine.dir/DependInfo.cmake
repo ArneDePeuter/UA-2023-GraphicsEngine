@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Object3DFactory.cpp" "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Renderer.cpp" "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Scene.cpp" "CMakeFiles/engine.dir/Objects/Scene.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Scene.cpp.obj.d"
+  "C:/Users/Arne/Desktop/3dengineeeee/Objects/ShadowLight.cpp" "CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/ZBuffer.cpp" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/engine.cc" "CMakeFiles/engine.dir/engine.cc.obj" "gcc" "CMakeFiles/engine.dir/engine.cc.obj.d"
   )

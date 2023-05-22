@@ -179,6 +179,9 @@
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Scene.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/ShadowLight.cpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Triangle.h">
 			<Option target="engine"/>
 		</Unit>

@@ -17,7 +17,7 @@ public:
     void eyePointTransform();
     Lines2D project(const double &d);
     std::vector<Triangle> getTriangles();
-    Point2D point3dto2d(Vector3D &point, const double d);
+    static Point2D point3dto2d(Vector3D &point, double d);
 
     lights3D lights;
     Objects3D objects3D;

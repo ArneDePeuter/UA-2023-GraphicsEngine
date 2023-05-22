@@ -478,35 +478,6 @@ std::istream& img::operator>>(std::istream& in, EasyImage & image)
 	return in;
 }
 
-void findBounds(const Vector3D &P, const Vector3D &Q, const double &y, double& xL, double& xR, bool &foundL, bool &foundR) {
-    if ((y < P.y && y < Q.y) || (y > P.y && y > Q.y)) { return; }
-    if (P.x == Q.x) {return;}
-
-    double slope = (P.x - Q.x) / (P.y - Q.y);
-    double x = Q.x + slope * (y - Q.y);
-
-    if (x < xL) {
-        foundL = true;
-        xL = x;
-    }
-    if (x > xR) {
-        foundR = true;
-        xR = x;
-    }
-}
-
-void calculateDZs(const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, double &dzdx, double &dzdy) {
-    Vector3D u = B-A;
-    Vector3D v = C-A;
-
-    Vector3D normaalVector = Vector3D::cross(u,v);
-
-    double k = Vector3D::dot(normaalVector, A);
-
-    dzdx = normaalVector.x/(-d*k);
-    dzdy = normaalVector.y/(-d*k);
-}
-
 void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, const double &dx, const double &dy,
                                      ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, lights3D &lights) {
     Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
@@ -521,16 +492,16 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
     double oneOverzG = (1/(3*newA.z)) + (1/(3*newB.z)) + (1/(3*newC.z));
 
     double dzdx, dzdy;
-    calculateDZs(newA, newB, newC, d, dzdx, dzdy);
+    Calculator::calculateDZs(newA, newB, newC, d, dzdx, dzdy);
     double xL, xR;
     for (int y = yMin; y <= yMax; y++) {
         xL = std::numeric_limits<double>::infinity();
         xR = -std::numeric_limits<double>::infinity();
 
         bool foundR = false, foundL = false;
-        findBounds(newA, newB, y, xL, xR, foundL, foundR);
-        findBounds(newA, newC, y, xL, xR, foundL, foundR);
-        findBounds(newB, newC, y, xL, xR, foundL, foundR);
+        Calculator::findBounds(newA, newB, y, xL, xR, foundL, foundR);
+        Calculator::findBounds(newA, newC, y, xL, xR, foundL, foundR);
+        Calculator::findBounds(newB, newC, y, xL, xR, foundL, foundR);
         if (!foundL || !foundR) continue;
 
         int xLint = lround(xL+0.5);
@@ -542,9 +513,9 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                 double gVal = 0;
                 double bVal = 0;
 
-                double xEye = (x - dx) * (-1/bufVal) / (d * xG);
-                double yEye = (y - dy) * (-1/bufVal) / (d * yG);
                 double zEye = 1/bufVal;
+                double xEye = (-zEye*x)/d;
+                double yEye = (-zEye*y)/d;
 
                 for (const Light *light : lights) {
                     light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C, Vector3D::point(xEye,yEye,zEye));

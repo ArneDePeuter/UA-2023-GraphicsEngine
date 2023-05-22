@@ -140,6 +140,7 @@ CMakeFiles/engine.dir/Objects/Calculator.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/math.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\ZBuffer.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \

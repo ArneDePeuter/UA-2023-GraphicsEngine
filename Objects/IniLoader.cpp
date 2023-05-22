@@ -74,7 +74,7 @@ Scene IniLoader::loadScene(const ini::Configuration &configuration, const Clippi
     } else {
         lightsVec.push_back(new AmbientLight({1,1,1}));
     }
-    return Scene(objects, camera,lightsVec, doTriangulate);
+    return Scene(objects, camera, lightsVec, doTriangulate);
 }
 
 Object3D IniLoader::loadObject3D(const ini::Section &section) {
@@ -135,13 +135,17 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
             bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
             if (!hasSpecular) {
                 if (shadowMask!=0) {
-                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, location, ZBuffer(shadowMask, shadowMask), cam.eyeMatrix));
+                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, {0,0,0},location, shadowMask, cam.eyeMatrix));
                 } else {
                     lights.push_back(new PointLight(ambientLight, diffuseLight, location, section["spotAngle"].as_double_or_default(-1)));
                 }
             }
             else {
-                lights.push_back(new SpecularLight(ambientLight, diffuseLight, specularLight, location));
+                if (shadowMask!=0) {
+                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, specularLight,location, shadowMask, cam.eyeMatrix));
+                } else {
+                    lights.push_back(new SpecularLight(ambientLight, diffuseLight, specularLight, location));
+                }
             }
         }
     }

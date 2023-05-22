@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine
+CMAKE_SOURCE_DIR = C:\Users\Arne\Desktop\3dengineeeee
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Arne\Desktop\3dengineeeee\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngin
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arne\Desktop\3dengineeeee\cmake-build-debug\CMakeFiles C:\Users\Arne\Desktop\3dengineeeee\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arne\Desktop\3dengineeeee\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -368,6 +368,30 @@ Objects/LSystem3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.s
 .PHONY : Objects/LSystem3D.cpp.s
 
+Objects/Light.obj: Objects/Light.cpp.obj
+.PHONY : Objects/Light.obj
+
+# target to build an object file
+Objects/Light.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.obj
+.PHONY : Objects/Light.cpp.obj
+
+Objects/Light.i: Objects/Light.cpp.i
+.PHONY : Objects/Light.i
+
+# target to preprocess a source file
+Objects/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.i
+.PHONY : Objects/Light.cpp.i
+
+Objects/Light.s: Objects/Light.cpp.s
+.PHONY : Objects/Light.s
+
+# target to generate assembly for a file
+Objects/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.s
+.PHONY : Objects/Light.cpp.s
+
 Objects/Object3D.obj: Objects/Object3D.cpp.obj
 .PHONY : Objects/Object3D.obj
 
@@ -391,6 +415,30 @@ Objects/Object3D.s: Objects/Object3D.cpp.s
 Objects/Object3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3D.cpp.s
 .PHONY : Objects/Object3D.cpp.s
+
+Objects/Object3DFactory.obj: Objects/Object3DFactory.cpp.obj
+.PHONY : Objects/Object3DFactory.obj
+
+# target to build an object file
+Objects/Object3DFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj
+.PHONY : Objects/Object3DFactory.cpp.obj
+
+Objects/Object3DFactory.i: Objects/Object3DFactory.cpp.i
+.PHONY : Objects/Object3DFactory.i
+
+# target to preprocess a source file
+Objects/Object3DFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.i
+.PHONY : Objects/Object3DFactory.cpp.i
+
+Objects/Object3DFactory.s: Objects/Object3DFactory.cpp.s
+.PHONY : Objects/Object3DFactory.s
+
+# target to generate assembly for a file
+Objects/Object3DFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s
+.PHONY : Objects/Object3DFactory.cpp.s
 
 Objects/Renderer.obj: Objects/Renderer.cpp.obj
 .PHONY : Objects/Renderer.obj
@@ -440,29 +488,29 @@ Objects/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Scene.cpp.s
 .PHONY : Objects/Scene.cpp.s
 
-Objects/Wireframe.obj: Objects/Wireframe.cpp.obj
-.PHONY : Objects/Wireframe.obj
+Objects/ShadowLight.obj: Objects/ShadowLight.cpp.obj
+.PHONY : Objects/ShadowLight.obj
 
 # target to build an object file
-Objects/Wireframe.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.obj
-.PHONY : Objects/Wireframe.cpp.obj
+Objects/ShadowLight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj
+.PHONY : Objects/ShadowLight.cpp.obj
 
-Objects/Wireframe.i: Objects/Wireframe.cpp.i
-.PHONY : Objects/Wireframe.i
+Objects/ShadowLight.i: Objects/ShadowLight.cpp.i
+.PHONY : Objects/ShadowLight.i
 
 # target to preprocess a source file
-Objects/Wireframe.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.i
-.PHONY : Objects/Wireframe.cpp.i
+Objects/ShadowLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.i
+.PHONY : Objects/ShadowLight.cpp.i
 
-Objects/Wireframe.s: Objects/Wireframe.cpp.s
-.PHONY : Objects/Wireframe.s
+Objects/ShadowLight.s: Objects/ShadowLight.cpp.s
+.PHONY : Objects/ShadowLight.s
 
 # target to generate assembly for a file
-Objects/Wireframe.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Wireframe.cpp.s
-.PHONY : Objects/Wireframe.cpp.s
+Objects/ShadowLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ShadowLight.cpp.s
+.PHONY : Objects/ShadowLight.cpp.s
 
 Objects/ZBuffer.obj: Objects/ZBuffer.cpp.obj
 .PHONY : Objects/ZBuffer.obj
@@ -551,18 +599,24 @@ help:
 	@echo ... Objects/LSystem3D.obj
 	@echo ... Objects/LSystem3D.i
 	@echo ... Objects/LSystem3D.s
+	@echo ... Objects/Light.obj
+	@echo ... Objects/Light.i
+	@echo ... Objects/Light.s
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s
+	@echo ... Objects/Object3DFactory.obj
+	@echo ... Objects/Object3DFactory.i
+	@echo ... Objects/Object3DFactory.s
 	@echo ... Objects/Renderer.obj
 	@echo ... Objects/Renderer.i
 	@echo ... Objects/Renderer.s
 	@echo ... Objects/Scene.obj
 	@echo ... Objects/Scene.i
 	@echo ... Objects/Scene.s
-	@echo ... Objects/Wireframe.obj
-	@echo ... Objects/Wireframe.i
-	@echo ... Objects/Wireframe.s
+	@echo ... Objects/ShadowLight.obj
+	@echo ... Objects/ShadowLight.i
+	@echo ... Objects/ShadowLight.s
 	@echo ... Objects/ZBuffer.obj
 	@echo ... Objects/ZBuffer.i
 	@echo ... Objects/ZBuffer.s

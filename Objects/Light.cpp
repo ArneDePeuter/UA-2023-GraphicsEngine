@@ -90,5 +90,3 @@ void SpecularLight::applySpecularLight(double &rVal, double &gVal, double &bVal,
 }
 
 SpecularLight::SpecularLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location) : PointLight(ambientLight, diffuseLight, location, -1), specularLight(specularLight) {}
-
-ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const Vector3D &location, const ZBuffer &shadowMask, const Matrix &eye) : PointLight(ambientLight, diffuseLight, location, -1), shadowMask(shadowMask), eye(eye), d(0), dx(0), dy(0) {}

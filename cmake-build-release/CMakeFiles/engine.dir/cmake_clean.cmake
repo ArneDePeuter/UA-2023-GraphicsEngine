@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Scene.cpp.obj"
   "CMakeFiles/engine.dir/Objects/Scene.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj"
   "CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj.d"
   "CMakeFiles/engine.dir/engine.cc.obj"
