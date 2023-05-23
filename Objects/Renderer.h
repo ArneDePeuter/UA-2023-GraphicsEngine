@@ -6,10 +6,12 @@
 #include "Triangle.h"
 #include "Light.h"
 
+class Scene;
+
 class Renderer {
 public:
     static img::EasyImage draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, const int &size, const bool &zbuf);
-    static img::EasyImage drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Triangle> triangles, const Lines2D &projectedLines, const int &size,lights3D &lights);
+    static img::EasyImage drawZBufTriangles(const Scene &s, const img::Color &backgroundcolor, const int &size);
 };
 
 

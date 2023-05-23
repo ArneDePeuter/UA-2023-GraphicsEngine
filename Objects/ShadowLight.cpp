@@ -1,5 +1,6 @@
 #include "Light.h"
 #include "Line2D.h"
+#include "Scene.h"
 
 ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location, const int &bufferSize, const Matrix &eye) : SpecularLight(ambientLight, diffuseLight, specularLight, location), bufferSize(bufferSize) {
     inverseEye = Matrix::inv(eye);
@@ -15,13 +16,13 @@ void ShadowPointLight::calculateColor(double &rVal, double &gVal, double &bVal, 
 }
 
 bool ShadowPointLight::applyLight(const Vector3D& pixelEye) const {
-    Vector3D lightPixel = pixelEye;
-    lightPixel *= inverseEye;
-    lightPixel *= lightEye;
+    Vector3D pixelLight = pixelEye;
+    pixelLight *= inverseEye;
+    pixelLight *= lightEye;
 
-    int plx = lround(((lightPixel.x*d)/-lightPixel.z) + dx);
-    int ply = lround(((lightPixel.y*d)/-lightPixel.z) + dy);
-    double invZl = 1/lightPixel.z;
+    int plx = lround(((pixelLight.x*d)/-pixelLight.z)+dx);
+    int ply = lround(((pixelLight.y*d)/-pixelLight.z)+dy);
+    double invZl = 1/pixelLight.z;
 
     return shadowMask[ply][plx]==invZl;
 }
@@ -32,18 +33,31 @@ void ShadowPointLight::fillBuffer(const std::vector<Triangle> &triangles) {
     }
 }
 
-void ShadowPointLight::initFully(const std::vector<Triangle> &triangles) {
-    std::vector<Triangle> lightTriangles = triangles;
-    //transform to lightCoordinateSystem
-    for (Triangle &t : lightTriangles) {
-        t.applyMatrix(inverseEye);
-        t.applyMatrix(lightEye);
+
+void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
+    //put objects in normal space coords
+    Objects3D normalObjects = objects;
+    for (Object3D &obj:normalObjects) {
+        obj.applyTransformation(inverseEye);
     }
 
-    //init buffer and offset values
-    double xMin = std::numeric_limits<double>::max(), xMax = std::numeric_limits<double>::min(), yMin = std::numeric_limits<double>::max(), yMax = std::numeric_limits<double>::min();
-    Calculator::findBounds(triangles, xMin, xMax, yMin, yMax);
+    //create scene
+    ini::DoubleTuple loc = {location.x, location.y, location.z};
+    Camera cam = Camera(loc,ClippingSettings(false,{0,0,0},0,0,0,0));
+    Scene s = Scene(objects, cam, {}, false);
 
+    Lines2D lines = s.project(1);
+
+    //determine offset/scaling values
+    double xMin = std::numeric_limits<double>::max(), xMax = std::numeric_limits<double>::min(), yMin = std::numeric_limits<double>::max(), yMax = std::numeric_limits<double>::min();
+    for (const Line2D& l : lines) {
+        double lMinX = std::min(l.p1.x, l.p2.x), lMaxX = std::max(l.p1.x, l.p2.x);
+        double lMinY = std::min(l.p1.y, l.p2.y), lMaxY = std::max(l.p1.y, l.p2.y);
+        xMin = std::min(xMin, lMinX);
+        xMax = std::max(xMax, lMaxX);
+        yMin = std::min(yMin, lMinY);
+        yMax = std::max(yMax, lMaxY);
+    }
     double xRange = xMax - xMin, yRange = yMax - yMin;
 
     double imageX = bufferSize * (xRange / std::max(xRange, yRange));
@@ -54,9 +68,9 @@ void ShadowPointLight::initFully(const std::vector<Triangle> &triangles) {
     Point2D DC(d * ((xMin+xMax)/2), d * ((yMin+yMax)/2));
     dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
 
+    //create buffer
     shadowMask = ZBuffer(lround(imageX),lround(imageY));
 
-    //fill the buffer!
-    fillBuffer(lightTriangles);
+    //fill buffer
+    fillBuffer(s.getTriangles());
 }
-

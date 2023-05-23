@@ -22,10 +22,10 @@ img::EasyImage IniLoader::parse(const ini::Configuration &configuration) {
         return Renderer::draw2DLines(backgroundcolor, s.project(1), size, (type == "ZBufferedWireframe"));
     } else if (type == "ZBuffering") {
         Scene s = IniLoader::loadScene(configuration, settings, true, false);
-        return Renderer::drawZBufTriangles(backgroundcolor, s.getTriangles(), s.project(1), size, s.lights);
+        return Renderer::drawZBufTriangles(s, backgroundcolor, size);
     } else if (type == "LightedZBuffering") {
         Scene s = IniLoader::loadScene(configuration, settings, true, true);
-        return Renderer::drawZBufTriangles(backgroundcolor, s.getTriangles(), s.project(1), size, s.lights);
+        return Renderer::drawZBufTriangles(s, backgroundcolor, size);
     }
     return img::EasyImage();
 }

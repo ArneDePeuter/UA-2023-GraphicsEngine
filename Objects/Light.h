@@ -1,18 +1,21 @@
 #ifndef ENGINE_LIGHT_H
 #define ENGINE_LIGHT_H
 
+#include <list>
 #include "../Include/vector3d.h"
 #include "../Include/easy_image.h"
 #include "../Include/ini_configuration.h"
 #include "Calculator.h"
 #include "ZBuffer.h"
 
+class Object3D;
+
 class Light {
 public:
     virtual ~Light() = default;
     virtual void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D pixelEye) const = 0;
     virtual void applyTransformation(Matrix m)=0;
-    virtual void initFully(const std::vector<Triangle> &triangles){};
+    virtual void initFully(const std::list<Object3D> &objects){};
 };
 
 class AmbientLight : public Light {
@@ -66,7 +69,7 @@ class ShadowPointLight : public SpecularLight {
 public:
     ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location, const int &bufferSize, const Matrix &eye);
 
-    void initFully(const std::vector<Triangle> &triangles) override;
+    void initFully(const std::list<Object3D> &objects) override;
     void calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D pixelEye) const override;
     bool applyLight(const Vector3D& pixel) const;
     void fillBuffer(const std::vector<Triangle> &triangles);

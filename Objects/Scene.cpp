@@ -6,7 +6,7 @@ void Scene::triangulate() {
     }
 }
 
-std::vector<Triangle> Scene::getTriangles() {
+std::vector<Triangle> Scene::getTriangles() const {
     std::vector<Triangle> triangles;
     for (const Object3D &obj:objects3D) {
         for (const Face &f:obj.faces) {
@@ -24,7 +24,7 @@ std::vector<Triangle> Scene::getTriangles() {
     return triangles;
 }
 
-Lines2D Scene::project(const double &d) {
+Lines2D Scene::project(const double &d) const {
     Lines2D lines;
     for (Object3D obj : objects3D) {
         for (Face f : obj.faces) {

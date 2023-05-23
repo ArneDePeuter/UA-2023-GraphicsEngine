@@ -1,6 +1,7 @@
 #include <cmath>
 #include "Renderer.h"
 #include <limits>
+#include "Scene.h"
 
 img::EasyImage
 Renderer::draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines, const int &size, const bool &zbuf) {
@@ -54,10 +55,10 @@ Renderer::draw2DLines(const img::Color &backgroundcolor, std::list<Line2D> lines
     return image;
 }
 
-img::EasyImage
-Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Triangle> triangles, const Lines2D &projectedLines, const int &size, lights3D &lights) {
+
+img::EasyImage Renderer::drawZBufTriangles(const Scene &s, const img::Color &backgroundcolor, const int &size) {
     double xMin = std::numeric_limits<double>::max(), xMax = std::numeric_limits<double>::min(), yMin = std::numeric_limits<double>::max(), yMax = std::numeric_limits<double>::min();
-    for (const Line2D& l : projectedLines) {
+    for (const Line2D& l : s.project(1)) {
         double lMinX = std::min(l.p1.x, l.p2.x), lMaxX = std::max(l.p1.x, l.p2.x);
         double lMinY = std::min(l.p1.y, l.p2.y), lMaxY = std::max(l.p1.y, l.p2.y);
         xMin = std::min(xMin, lMinX);
@@ -76,14 +77,14 @@ Renderer::drawZBufTriangles(const img::Color &backgroundcolor, std::vector<Trian
     Point2D DC(d * ((xMin+xMax)/2), d * ((yMin+yMax)/2));
     double dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
 
-    for (Light *l:lights) {
-        l->initFully(triangles);
+    for (Light *l:s.lights) {
+        l->initFully(s.objects3D);
     }
 
     ZBuffer buffer(lround(imageX),lround(imageY));
-    for (const Triangle &triangle : triangles) {
+    for (const Triangle &triangle : s.getTriangles()) {
         image.draw_zbuf_triag(buffer, triangle.A, triangle.B, triangle.C, d, dx, dy,
-                              triangle.ambientReflection, triangle.diffuseReflection, triangle.specularReflection, triangle.reflectionCoefficient, lights);
+                              triangle.ambientReflection, triangle.diffuseReflection, triangle.specularReflection, triangle.reflectionCoefficient, s.lights);
     }
     return image;
 }

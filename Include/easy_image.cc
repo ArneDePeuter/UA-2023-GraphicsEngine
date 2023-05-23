@@ -479,7 +479,7 @@ std::istream& img::operator>>(std::istream& in, EasyImage & image)
 }
 
 void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, const double &dx, const double &dy,
-                                     ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, lights3D &lights) {
+                                     ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, const lights3D &lights) {
     Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
     Vector3D newB = Vector3D::point(((d*B.x)/-B.z)+dx, ((d*B.y)/-B.z)+dy, B.z);
     Vector3D newC = Vector3D::point(((d*C.x)/-C.z)+dx, ((d*C.y)/-C.z)+dy, C.z);
@@ -514,8 +514,8 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Vector3D &A, const V
                 double bVal = 0;
 
                 double zEye = 1/bufVal;
-                double xEye = (-zEye*x)/d;
-                double yEye = (-zEye*y)/d;
+                double xEye = -zEye * (x - dx) / d;
+                double yEye = -zEye * (y - dy) / d;
 
                 for (const Light *light : lights) {
                     light->calculateColor(rVal, gVal, bVal, ambientReflection, diffuseReflection, specularReflection, reflectionCoeff, A, B, C, Vector3D::point(xEye,yEye,zEye));
