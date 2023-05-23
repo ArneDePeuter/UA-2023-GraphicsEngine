@@ -1,6 +1,8 @@
+#include <fstream>
 #include "Light.h"
 #include "Line2D.h"
 #include "Scene.h"
+#include "Renderer.h"
 
 ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location, const int &bufferSize, const Matrix &eye) : SpecularLight(ambientLight, diffuseLight, specularLight, location), bufferSize(bufferSize) {
     inverseEye = Matrix::inv(eye);
@@ -44,7 +46,12 @@ void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
     //create scene
     ini::DoubleTuple loc = {location.x, location.y, location.z};
     Camera cam = Camera(loc,ClippingSettings(false,{0,0,0},0,0,0,0));
-    Scene s = Scene(objects, cam, {}, false);
+    Scene s = Scene(normalObjects, cam, {}, false);
+
+    //render test
+    img::EasyImage img = Renderer::drawZBufTriangles(s, img::Color(125,125,125), 1000);
+    std::ofstream f_out("lightTest.bmp",std::ios::trunc | std::ios::out | std::ios::binary);
+    f_out << img;
 
     Lines2D lines = s.project(1);
 
