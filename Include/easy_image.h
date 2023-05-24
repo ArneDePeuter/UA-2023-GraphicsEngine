@@ -26,6 +26,7 @@
 
 class Light;
 class Line2D;
+class Triangle;
 
 /**
  * \brief The namespace of the EasyImage class
@@ -246,8 +247,7 @@ namespace img
             */
             void draw_zbuf_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int z0, unsigned int z1, Color color, ZBuffer &buffer);
 
-            void draw_zbuf_triag(ZBuffer &buffer, Vector3D const &A, Vector3D const &B, Vector3D const &C, const double &d, const double &dx, const double &dy,
-                                 ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, const std::vector<Light*> &lights);
+            void draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const double &d, const double &dx, const double &dy, const std::vector<Light*> &lights);
 
     private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);

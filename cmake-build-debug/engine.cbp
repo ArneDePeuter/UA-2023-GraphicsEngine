@@ -122,6 +122,9 @@
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/ClippingSettings.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Details.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/Arne/Desktop/3dengineeeee/Objects/Face.cpp">
 			<Option target="engine"/>
 		</Unit>

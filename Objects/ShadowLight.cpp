@@ -3,6 +3,7 @@
 #include "Line2D.h"
 #include "Scene.h"
 #include "Renderer.h"
+#include "ImageDetails.h"
 
 ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location, const int &bufferSize, const Matrix &eye) : SpecularLight(ambientLight, diffuseLight, specularLight, location), bufferSize(bufferSize) {
     inverseEye = Matrix::inv(eye);
@@ -53,30 +54,13 @@ void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
     std::ofstream f_out("lightTest.bmp",std::ios::trunc | std::ios::out | std::ios::binary);
     f_out << img;
 
-    Lines2D lines = s.project(1);
-
     //determine offset/scaling values
-    double xMin = std::numeric_limits<double>::max(), xMax = std::numeric_limits<double>::min(), yMin = std::numeric_limits<double>::max(), yMax = std::numeric_limits<double>::min();
-    for (const Line2D& l : lines) {
-        double lMinX = std::min(l.p1.x, l.p2.x), lMaxX = std::max(l.p1.x, l.p2.x);
-        double lMinY = std::min(l.p1.y, l.p2.y), lMaxY = std::max(l.p1.y, l.p2.y);
-        xMin = std::min(xMin, lMinX);
-        xMax = std::max(xMax, lMaxX);
-        yMin = std::min(yMin, lMinY);
-        yMax = std::max(yMax, lMaxY);
-    }
-    double xRange = xMax - xMin, yRange = yMax - yMin;
-
-    double imageX = bufferSize * (xRange / std::max(xRange, yRange));
-    double imageY = bufferSize * (yRange / std::max(xRange, yRange));
-
-    d = 0.95 * (imageX / xRange);
-
-    Point2D DC(d * ((xMin+xMax)/2), d * ((yMin+yMax)/2));
-    dx = imageX / 2 - DC.x, dy = imageY / 2 - DC.y;
+    Lines2D lines = s.project(1);
+    ImageDetails details = ImageDetails::calculateDetails(s.project(1), bufferSize);
+    d = details.d; dx = details.dx; dy = details.dy;
 
     //create buffer
-    shadowMask = ZBuffer(lround(imageX),lround(imageY));
+    shadowMask = ZBuffer(lround(details.imageX),lround(details.imageY));
 
     //fill buffer
     fillBuffer(s.getTriangles());
