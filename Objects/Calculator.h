@@ -6,6 +6,7 @@
 #include <cmath>
 #include "ZBuffer.h"
 #include "Triangle.h"
+#include "Point2D.h"
 
 class Calculator {
 public:
@@ -33,11 +34,11 @@ public:
 
     static void calculateDZs(const Vector3D &A, const Vector3D &B, const Vector3D &C, const double &d, double &dzdx, double &dzdy);
 
-    static void findBounds(const Vector3D &P, const Vector3D &Q, const double &y, double &xL, double &xR, bool &foundL, bool &foundR);
+    static void findBounds(const Point2D &P, const Point2D &Q, const double &y, double &xL, double &xR, bool &foundL, bool &foundR);
 
     static void fill_zbuf_triag(ZBuffer &buffer, const Triangle &t, const double &d, const double &dx, const double &dy);
 
-    static void findBounds(const std::vector<Triangle> &triangles, double &xMin, double &xMax, double &yMin, double &yMax);
+    static Point2D projectPoint(const Vector3D &point, const double &d, const double &dx, const double &dy);
 };
 
 #endif //ENGINE_CALCULATOR_H

@@ -19,15 +19,12 @@ void ShadowPointLight::calculateColor(double &rVal, double &gVal, double &bVal, 
 }
 
 bool ShadowPointLight::applyLight(const Vector3D& pixelEye) const {
-    Vector3D pixelLight = pixelEye;
-    pixelLight *= inverseEye;
-    pixelLight *= lightEye;
+    Vector3D lightPixel = pixelEye*inverseEye*lightEye;
+    Point2D projectedPixel = Calculator::projectPoint(lightPixel, d, dx, dy);
+    double invZl = 1/projectedPixel.z;
+    int plx = lround(projectedPixel.x), ply = lround(projectedPixel.y);
 
-    int plx = lround(((pixelLight.x*d)/-pixelLight.z)+dx);
-    int ply = lround(((pixelLight.y*d)/-pixelLight.z)+dy);
-    double invZl = 1/pixelLight.z;
-
-    return shadowMask[ply][plx]==invZl;
+    return (std::abs(shadowMask[ply][plx] - invZl) < 1e-9);
 }
 
 void ShadowPointLight::fillBuffer(const std::vector<Triangle> &triangles) {
@@ -48,11 +45,6 @@ void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
     ini::DoubleTuple loc = {location.x, location.y, location.z};
     Camera cam = Camera(loc,ClippingSettings(false,{0,0,0},0,0,0,0));
     Scene s = Scene(normalObjects, cam, {}, false);
-
-    //render test
-    img::EasyImage img = Renderer::drawZBufTriangles(s, img::Color(125,125,125), 1000);
-    std::ofstream f_out("lightTest.bmp",std::ios::trunc | std::ios::out | std::ios::binary);
-    f_out << img;
 
     //determine offset/scaling values
     Lines2D lines = s.project(1);

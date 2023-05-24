@@ -156,6 +156,7 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uses_allocator.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_multimap.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\Point2D.h \
  C:/Users/Arne/Desktop/3dengineeeee/Include/ini_configuration.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3D.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Face.h \
@@ -165,5 +166,4 @@ CMakeFiles/engine.dir/Objects/Scene.cpp.obj: \
  C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Light.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects\Line2D.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects\Point2D.h
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\Line2D.h

@@ -296,6 +296,30 @@ Objects/Face.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.s
 .PHONY : Objects/Face.cpp.s
 
+Objects/ImageDetails.obj: Objects/ImageDetails.cpp.obj
+.PHONY : Objects/ImageDetails.obj
+
+# target to build an object file
+Objects/ImageDetails.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj
+.PHONY : Objects/ImageDetails.cpp.obj
+
+Objects/ImageDetails.i: Objects/ImageDetails.cpp.i
+.PHONY : Objects/ImageDetails.i
+
+# target to preprocess a source file
+Objects/ImageDetails.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.i
+.PHONY : Objects/ImageDetails.cpp.i
+
+Objects/ImageDetails.s: Objects/ImageDetails.cpp.s
+.PHONY : Objects/ImageDetails.s
+
+# target to generate assembly for a file
+Objects/ImageDetails.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.s
+.PHONY : Objects/ImageDetails.cpp.s
+
 Objects/IniLoader.obj: Objects/IniLoader.cpp.obj
 .PHONY : Objects/IniLoader.obj
 
@@ -590,6 +614,9 @@ help:
 	@echo ... Objects/Face.obj
 	@echo ... Objects/Face.i
 	@echo ... Objects/Face.s
+	@echo ... Objects/ImageDetails.obj
+	@echo ... Objects/ImageDetails.i
+	@echo ... Objects/ImageDetails.s
 	@echo ... Objects/IniLoader.obj
 	@echo ... Objects/IniLoader.i
 	@echo ... Objects/IniLoader.s

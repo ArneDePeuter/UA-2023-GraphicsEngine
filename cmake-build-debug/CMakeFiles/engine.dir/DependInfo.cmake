@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Arne/Desktop/3dengineeeee/Include/vector3d.cc" "CMakeFiles/engine.dir/Include/vector3d.cc.obj" "gcc" "CMakeFiles/engine.dir/Include/vector3d.cc.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Calculator.cpp" "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/Face.cpp" "CMakeFiles/engine.dir/Objects/Face.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/Face.cpp.obj.d"
+  "C:/Users/Arne/Desktop/3dengineeeee/Objects/ImageDetails.cpp" "CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/IniLoader.cpp" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem2D.cpp" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj.d"
   "C:/Users/Arne/Desktop/3dengineeeee/Objects/LSystem3D.cpp" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj" "gcc" "CMakeFiles/engine.dir/Objects/LSystem3D.cpp.obj.d"

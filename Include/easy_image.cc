@@ -484,9 +484,9 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const d
     const Vector3D &B = t.B;
     const Vector3D &C = t.C;
 
-    Vector3D newA = Vector3D::point(((d*A.x)/-A.z)+dx, ((d*A.y)/-A.z)+dy, A.z);
-    Vector3D newB = Vector3D::point(((d*B.x)/-B.z)+dx, ((d*B.y)/-B.z)+dy, B.z);
-    Vector3D newC = Vector3D::point(((d*C.x)/-C.z)+dx, ((d*C.y)/-C.z)+dy, C.z);
+    Point2D newA = Calculator::projectPoint(A,d, dx, dy);
+    Point2D newB = Calculator::projectPoint(B,d, dx, dy);
+    Point2D newC = Calculator::projectPoint(C,d, dx, dy);
 
     std::vector<double> yVals = {newA.y, newB.y, newC.y};
     int yMin = lround(*std::min_element(yVals.begin(), yVals.end())), yMax = lround(*std::max_element(yVals.begin(), yVals.end()));
@@ -496,7 +496,7 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const d
     double oneOverzG = (1/(3*newA.z)) + (1/(3*newB.z)) + (1/(3*newC.z));
 
     double dzdx, dzdy;
-    Calculator::calculateDZs(newA, newB, newC, d, dzdx, dzdy);
+    Calculator::calculateDZs(A, B, C, d, dzdx, dzdy);
     double xL, xR;
     for (int y = yMin; y <= yMax; y++) {
         xL = std::numeric_limits<double>::infinity();

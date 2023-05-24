@@ -1,5 +1,7 @@
 #include <iostream>
 #include "ZBuffer.h"
+#include "../Include/easy_image.h"
+#include "fstream"
 
 ZBuffer::ZBuffer(const int &width, const int &heigth) {
     for (int i = 0; i < heigth; i++) {
@@ -33,4 +35,28 @@ bool ZBuffer::apply(const unsigned int &x, const unsigned int &y, const double &
         return true;
     }
     return false;
+}
+
+void ZBuffer::render(const std::string &filename) {
+    img::EasyImage img((*this)[0].size(), size());
+    for (int y = 0; y < size(); y++) {
+        for (int x = 0; x < (*this)[0].size(); x++) {
+            double val = (*this)[y][x];
+            double absVal = 1/std::abs(val);
+            img::Color c = (val==std::numeric_limits<double>::infinity()) ? img::Color(0,0,0) : img::Color(255*absVal,255*absVal,255*absVal);
+            img(x,y) = c;
+        }
+    }
+    std::ofstream f_out(filename.c_str(),std::ios::trunc | std::ios::out | std::ios::binary);
+    f_out << img;
+}
+
+void ZBuffer::print() {
+    for (int y = 0; y < size(); y++) {
+        for (int x = 0; x < (*this)[0].size(); x++) {
+            double val = (*this)[y][x];
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+    }
 }

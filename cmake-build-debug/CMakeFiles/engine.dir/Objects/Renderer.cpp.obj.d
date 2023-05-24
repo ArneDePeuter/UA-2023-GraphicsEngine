@@ -167,4 +167,5 @@ CMakeFiles/engine.dir/Objects/Renderer.cpp.obj: \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Camera.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Object3D.h \
  C:\Users\Arne\Desktop\3dengineeeee\Objects\Face.h \
- C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\ClippingSettings.h \
+ C:\Users\Arne\Desktop\3dengineeeee\Objects\ImageDetails.h
