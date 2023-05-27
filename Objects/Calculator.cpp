@@ -157,7 +157,7 @@ void Calculator::fill_zbuf_triag(ZBuffer &buffer, const Triangle &t, const doubl
         int xLint = lround(xL+0.5);
         int xRint = lround(xR-0.5);
         for (int x = xLint; x <= xRint; x++) {
-            double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
+            double bufVal  = oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
             buffer.apply(x,y,bufVal);
         }
     }

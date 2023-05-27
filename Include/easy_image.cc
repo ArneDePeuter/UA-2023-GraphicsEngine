@@ -512,7 +512,7 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const d
         int xLint = lround(xL+0.5);
         int xRint = lround(xR-0.5);
         for (int x = xLint; x <= xRint; x++) {
-            double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
+            double bufVal  = oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
             if (buffer.apply(x,y,bufVal)) {
                 double rVal = 0;
                 double gVal = 0;

@@ -13,40 +13,41 @@ ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const i
 void ShadowPointLight::calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D pixel) const {
     AmbientLight::applyAmbientLight(rVal, gVal, bVal, ambientLight, ambientReflection);
     if (applyLight(pixel)) {
-        applyDiffuseLight(rVal, gVal, bVal, diffuseLight, diffuseReflection, pixel, Calculator::calcNormal(A, B, C), location, spotAngle);
-        applySpecularLight(rVal, gVal, bVal, specularLight, specularReflection, reflectionCoeff, pixel, Calculator::calcNormal(A, B, C), location);
+        applyDiffuseLight(rVal, gVal, bVal, diffuseLight, diffuseReflection, pixel, Calculator::calcNormal(A, B, C), location*Matrix::inv(inverseEye), spotAngle);
+        applySpecularLight(rVal, gVal, bVal, specularLight, specularReflection, reflectionCoeff, pixel, Calculator::calcNormal(A, B, C), location*Matrix::inv(inverseEye));
     }
 }
 
-bool ShadowPointLight::applyLight(const Vector3D& pixelEye) const {
-    Vector3D lightPixel = pixelEye*inverseEye*lightEye;
+bool ShadowPointLight::applyLight(const Vector3D &pixel) const {
+    Vector3D lightPixel = pixel*inverseEye*lightEye;
     Point2D projectedPixel = Calculator::projectPoint(lightPixel, d, dx, dy);
-    Point2D A = projectedPixel;
-    A.x -= 1; A.y -= 1;
-
-    Point2D B = projectedPixel;
-    B.x += 1; B.y -= 1;
-
-    Point2D C = projectedPixel;
-    C.x -= 1; C.y += 1;
-
-    Point2D D = projectedPixel;
-    D.x += 1; D.y += 1;
 
     double ax = projectedPixel.x - std::floor(projectedPixel.x);
     double ay = projectedPixel.y - std::floor(projectedPixel.y);
 
-    double zA = 1/shadowMask[lround(A.y)][lround(A.x)];
-    double zB = 1/shadowMask[lround(B.y)][lround(B.x)];
-    double zC = 1/shadowMask[lround(C.y)][lround(C.x)];
-    double zD = 1/shadowMask[lround(D.y)][lround(D.x)];
+    Point2D A = projectedPixel;
+    A.x -= ax; A.y += (1-ay);
 
-    double oneOverZe = (1-ax)/zA + ax/zB;
-    double oneOverZf = (1-ax)/zC + ax/zD;
+    Point2D B = projectedPixel;
+    B.x += (1-ax); B.y += (1-ay);
 
-    double invZl = ay*oneOverZe + (1-ay)*oneOverZf;
+    Point2D C = projectedPixel;
+    C.x -= ax; C.y -= ay;
 
-    return (std::abs(shadowMask[lround(projectedPixel.y)][lround(projectedPixel.x)] - invZl) < 1e-5);;
+    Point2D D = projectedPixel;
+    D.x += (1-ax); D.y -= ay;
+
+    double invZA = shadowMask[lround(A.y)][lround(A.x)];
+    double invZB = shadowMask[lround(B.y)][lround(B.x)];
+    double invZC = shadowMask[lround(C.y)][lround(C.x)];
+    double invZD = shadowMask[lround(D.y)][lround(D.x)];
+
+    double invZE = (1-ax)*invZA + ax*invZB;
+    double invZF = (1-ax)*invZC + ax*invZD;
+
+    double invZl = ay*invZE + (1-ay)*invZF;
+
+    return (std::abs(1/lightPixel.z - invZl) < 1e-5);
 }
 
 void ShadowPointLight::fillBuffer(const std::vector<Triangle> &triangles) {
