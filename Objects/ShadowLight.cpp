@@ -21,10 +21,32 @@ void ShadowPointLight::calculateColor(double &rVal, double &gVal, double &bVal, 
 bool ShadowPointLight::applyLight(const Vector3D& pixelEye) const {
     Vector3D lightPixel = pixelEye*inverseEye*lightEye;
     Point2D projectedPixel = Calculator::projectPoint(lightPixel, d, dx, dy);
-    double invZl = 1/projectedPixel.z;
-    int plx = lround(projectedPixel.x), ply = lround(projectedPixel.y);
+    Point2D A = projectedPixel;
+    A.x -= 1; A.y -= 1;
 
-    return (std::abs(shadowMask[ply][plx] - invZl) < 1e-9);
+    Point2D B = projectedPixel;
+    B.x += 1; B.y -= 1;
+
+    Point2D C = projectedPixel;
+    C.x -= 1; C.y += 1;
+
+    Point2D D = projectedPixel;
+    D.x += 1; D.y += 1;
+
+    double ax = projectedPixel.x - std::floor(projectedPixel.x);
+    double ay = projectedPixel.y - std::floor(projectedPixel.y);
+
+    double zA = 1/shadowMask[lround(A.y)][lround(A.x)];
+    double zB = 1/shadowMask[lround(B.y)][lround(B.x)];
+    double zC = 1/shadowMask[lround(C.y)][lround(C.x)];
+    double zD = 1/shadowMask[lround(D.y)][lround(D.x)];
+
+    double oneOverZe = (1-ax)/zA + ax/zB;
+    double oneOverZf = (1-ax)/zC + ax/zD;
+
+    double invZl = ay*oneOverZe + (1-ay)*oneOverZf;
+
+    return (std::abs(shadowMask[lround(projectedPixel.y)][lround(projectedPixel.x)] - invZl) < 1e-5);;
 }
 
 void ShadowPointLight::fillBuffer(const std::vector<Triangle> &triangles) {

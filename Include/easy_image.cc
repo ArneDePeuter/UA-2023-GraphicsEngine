@@ -489,7 +489,8 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const d
     Point2D newC = Calculator::projectPoint(C,d, dx, dy);
 
     std::vector<double> yVals = {newA.y, newB.y, newC.y};
-    int yMin = lround(*std::min_element(yVals.begin(), yVals.end())), yMax = lround(*std::max_element(yVals.begin(), yVals.end()));
+    double yMind = *std::min_element(yVals.begin(), yVals.end()), yMaxd = *std::max_element(yVals.begin(), yVals.end());
+    int yMin = lround(yMind+0.5), yMax = lround(yMaxd-0.5);
 
     double xG = (newA.x+newB.x+newC.x)/3;
     double yG = (newA.y+newB.y+newC.y)/3;
@@ -509,7 +510,7 @@ void img::EasyImage::draw_zbuf_triag(ZBuffer &buffer, const Triangle &t, const d
         if (!foundL || !foundR) continue;
 
         int xLint = lround(xL+0.5);
-        int xRint = lround(xR+0.5);
+        int xRint = lround(xR-0.5);
         for (int x = xLint; x <= xRint; x++) {
             double bufVal  = 1.0001*oneOverzG + (x-xG)*dzdx + (y-yG)*dzdy;
             if (buffer.apply(x,y,bufVal)) {
