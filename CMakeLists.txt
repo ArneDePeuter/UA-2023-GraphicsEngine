@@ -30,7 +30,7 @@ set(engine_sources
         ./Objects/Calculator.cpp ./Objects/Calculator.h
 
         ./Objects/Face.cpp ./Objects/IniLoader.cpp ./Objects/IniLoader.h ./Objects/LSystem3D.cpp ./Objects/LSystem3D.h
-        ./Objects/ZBuffer.cpp ./Objects/Scene.cpp ./Objects/Triangle.h Objects/Renderer.h Objects/Renderer.cpp Objects/Light.h Objects/Object3DFactory.cpp Objects/ClippingSettings.h Objects/Light.cpp Objects/ShadowLight.cpp Objects/ImageDetails.h Objects/ImageDetails.cpp)
+        ./Objects/ZBuffer.cpp ./Objects/Scene.cpp ./Objects/Triangle.h Objects/Renderer.h Objects/Renderer.cpp Objects/Light.h Objects/Object3DFactory.cpp Objects/Light.cpp Objects/ShadowLight.cpp Objects/ImageDetails.h Objects/ImageDetails.cpp)
 
 ############################################################
 # Create an executable

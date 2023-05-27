@@ -9,17 +9,8 @@ void Scene::triangulate() {
 std::vector<Triangle> Scene::getTriangles() const {
     std::vector<Triangle> triangles;
     for (const Object3D &obj:objects3D) {
-        for (const Face &f:obj.faces) {
-            Triangle t;
-            t.A = obj.vertexes[f.point_indexes[0]];
-            t.B = obj.vertexes[f.point_indexes[1]];
-            t.C = obj.vertexes[f.point_indexes[2]];
-            t.ambientReflection = obj.ambientReflection;
-            t.reflectionCoefficient = obj.reflectionCoefficient;
-            t.specularReflection = obj.specularReflection;
-            t.diffuseReflection = obj.diffuseReflection;
-            triangles.push_back(t);
-        }
+        std::vector<Triangle> objTriangles = obj.getTriangles();
+        triangles.insert(triangles.end(), objTriangles.begin(), objTriangles.end());
     }
     return triangles;
 }

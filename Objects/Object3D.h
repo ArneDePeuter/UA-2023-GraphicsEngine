@@ -20,6 +20,8 @@ public:
     void applyFaces(const std::vector<int> &v, const int &faces, const int &points);
     void triangulate();
 
+    std::vector<Triangle> getTriangles() const;
+
     Vector3D center;
     img::Color color;
 

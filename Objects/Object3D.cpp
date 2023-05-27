@@ -1,4 +1,5 @@
 #include "Object3D.h"
+#include "Triangle.h"
 
 Object3D::Object3D() {}
 
@@ -24,4 +25,20 @@ void Object3D::applyFaces(const std::vector<int> &v, const int &facesAmount, con
         }
         faces.push_back(Face(pointIndexes));
     }
+}
+
+std::vector<Triangle> Object3D::getTriangles() const {
+    std::vector<Triangle> triangles;
+    for (const Face &f:faces) {
+        Triangle t;
+        t.A = vertexes[f.point_indexes[0]];
+        t.B = vertexes[f.point_indexes[1]];
+        t.C = vertexes[f.point_indexes[2]];
+        t.ambientReflection = ambientReflection;
+        t.reflectionCoefficient = reflectionCoefficient;
+        t.specularReflection = specularReflection;
+        t.diffuseReflection = diffuseReflection;
+        triangles.push_back(t);
+    }
+    return triangles;
 }
