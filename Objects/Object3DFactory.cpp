@@ -355,7 +355,6 @@ Object3D Object3D::Object3DFactory::createBuckyBall() {
     Object3D ball;
 
     Vector3D middle = Object3D::getMiddlePoint(temp);
-    std::cout << middle << std::endl;
 
     //create hexagons
     for (Face f:temp.faces) {
