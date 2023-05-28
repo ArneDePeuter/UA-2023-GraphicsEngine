@@ -350,11 +350,12 @@ Object3D Object3D::Object3DFactory::createFractalBuckyBall(const double &fractal
     return fractalize(fractalScale, nrIterations, createBuckyBall());
 }
 
-
-
 Object3D Object3D::Object3DFactory::createBuckyBall() {
     Object3D temp = createIcosahedron();
     Object3D ball;
+
+    Vector3D middle = Object3D::getMiddlePoint(temp);
+    std::cout << middle << std::endl;
 
     //create hexagons
     for (Face f:temp.faces) {
@@ -362,12 +363,12 @@ Object3D Object3D::Object3DFactory::createBuckyBall() {
         Vector3D B = temp.vertexes[f.point_indexes[1]];
         Vector3D C = temp.vertexes[f.point_indexes[2]];
         int offset = ball.vertexes.size();
-        ball.vertexes.push_back(A + (C-A) * ((double)1/3) );
-        ball.vertexes.push_back(A + (C-A) * ((double)2/3) );
-        ball.vertexes.push_back(C + (B-C) * ((double)1/3) );
-        ball.vertexes.push_back(C + (B-C) * ((double)2/3) );
-        ball.vertexes.push_back(B + (A-B) * ((double)1/3) );
-        ball.vertexes.push_back(B + (A-B) * ((double)2/3) );
+        ball.vertexes.push_back(A + (B-A) * ((double)1/3) );
+        ball.vertexes.push_back(A + (B-A) * ((double)2/3) );
+        ball.vertexes.push_back(B + (C-B) * ((double)1/3) );
+        ball.vertexes.push_back(B + (C-B) * ((double)2/3) );
+        ball.vertexes.push_back(C + (A-C) * ((double)1/3) );
+        ball.vertexes.push_back(C + (A-C) * ((double)2/3) );
         std::vector<int> indexes;
         for (int i = 0; i < 6; i++) {
             indexes.push_back(offset+i);
@@ -377,7 +378,7 @@ Object3D Object3D::Object3DFactory::createBuckyBall() {
 
     //create pentagons
     for (int i = 0; i < temp.vertexes.size(); i++) {
-        std::vector<Face> qualifiers;
+        std::vector<Vector3D> newPoints;
         int offset = ball.vertexes.size();
         for (Face f:temp.faces) {
             int otherId;
@@ -391,8 +392,35 @@ Object3D Object3D::Object3DFactory::createBuckyBall() {
 
             Vector3D A = temp.vertexes[i];
             Vector3D B = temp.vertexes[otherId];
-            ball.vertexes.push_back(A + (B-A) * ((double)1/3) );
+            newPoints.push_back(A + (B-A) * ((double)1/3) );
         }
+
+        Vector3D prevPoint = newPoints[0];
+        newPoints.erase(newPoints.begin());
+        std::vector<Vector3D> sortedPoints = {prevPoint};
+        for (int j = 0; j < 4; j++) {
+            std::vector<Vector3D>::iterator it = newPoints.begin();
+            std::vector<Vector3D>::iterator closest; double closestDist=10;
+            while (it!=newPoints.end()) {
+                Vector3D newPoint = *it;
+                double dist = Vector3D::distance(prevPoint, newPoint);
+                if (dist<closestDist) {
+                    closestDist = dist;
+                    closest = it;
+                }
+                it++;
+            }
+            prevPoint = *closest;
+            sortedPoints.push_back(*closest);
+            newPoints.erase(closest);
+        }
+        Vector3D normal = Calculator::calcNormal(sortedPoints[0], sortedPoints[1], sortedPoints[2]);
+        double dotprod = normal.dot(sortedPoints[0]-middle);
+        if (dotprod<0) {
+            std::reverse(sortedPoints.begin(), sortedPoints.end());
+        }
+        ball.vertexes.insert(ball.vertexes.end(), sortedPoints.begin(), sortedPoints.end());
+
         std::vector<int> indexes;
         for (int j = 0; j < 5; j++) {
             indexes.push_back(offset+j);

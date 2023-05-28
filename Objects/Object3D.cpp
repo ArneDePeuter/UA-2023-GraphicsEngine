@@ -42,3 +42,17 @@ std::vector<Triangle> Object3D::getTriangles() const {
     }
     return triangles;
 }
+
+Vector3D Object3D::getMiddlePoint(const Object3D &object) {
+    Vector3D mid;
+    for (const Vector3D &vertex:object.vertexes) {
+        mid.x += vertex.x;
+        mid.y += vertex.y;
+        mid.z += vertex.z;
+    }
+    mid.x /= object.vertexes.size();
+    mid.y /= object.vertexes.size();
+    mid.z /= object.vertexes.size();
+
+    return mid;
+}

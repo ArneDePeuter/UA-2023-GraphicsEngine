@@ -539,6 +539,10 @@ Vector3D Vector3D::normalise(Vector3D arg)
         return arg;
 }
 
+double Vector3D::distance(const Vector3D &lhs, const Vector3D &rhs) {
+    return std::pow(std::pow(lhs.x-rhs.x, 2) + std::pow(lhs.y-rhs.y, 2) + std::pow(lhs.z-rhs.z, 2), 0.5);
+}
+
 std::ostream &operator<<(std::ostream   &output_stream,
                          const Vector3D &vector)
 {

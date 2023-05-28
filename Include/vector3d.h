@@ -178,7 +178,7 @@ class Vector3D
 {
         private:
 
-                static double Vector3D::*const elts[];
+    static double Vector3D::*const elts[];
 
                 /**
                  * \brief A flag that indicates whether this vector is a point (\c false) or a
@@ -434,6 +434,8 @@ class Vector3D
                  */
                 static double dot(const Vector3D &lhs,
                                   const Vector3D &rhs);
+
+                static double distance(const Vector3D &lhs, const Vector3D&rhs);
 
                 /**
                  * \brief Calculates the cross-product of two vectors.

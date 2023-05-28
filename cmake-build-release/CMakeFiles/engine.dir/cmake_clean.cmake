@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/Objects/Calculator.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/Face.cpp.obj"
   "CMakeFiles/engine.dir/Objects/Face.cpp.obj.d"
+  "CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj"
+  "CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj"
   "CMakeFiles/engine.dir/Objects/IniLoader.cpp.obj.d"
   "CMakeFiles/engine.dir/Objects/LSystem2D.cpp.obj"

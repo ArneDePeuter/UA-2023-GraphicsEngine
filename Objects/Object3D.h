@@ -30,6 +30,8 @@ public:
     ini::DoubleTuple specularReflection;
     double reflectionCoefficient;
 
+    static Vector3D getMiddlePoint(const Object3D &object);
+
     class Object3DFactory {
     public:
         static Object3D load(const std::string &name, const ini::Section &section);

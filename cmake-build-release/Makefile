@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Arne\Desktop\3dengineeeee
+CMAKE_SOURCE_DIR = C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release
+CMAKE_BINARY_DIR = C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Arne\Desktop\3dengineeeee\cmake-build-release\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -295,6 +295,30 @@ Objects/Face.s: Objects/Face.cpp.s
 Objects/Face.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Face.cpp.s
 .PHONY : Objects/Face.cpp.s
+
+Objects/ImageDetails.obj: Objects/ImageDetails.cpp.obj
+.PHONY : Objects/ImageDetails.obj
+
+# target to build an object file
+Objects/ImageDetails.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj
+.PHONY : Objects/ImageDetails.cpp.obj
+
+Objects/ImageDetails.i: Objects/ImageDetails.cpp.i
+.PHONY : Objects/ImageDetails.i
+
+# target to preprocess a source file
+Objects/ImageDetails.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.i
+.PHONY : Objects/ImageDetails.cpp.i
+
+Objects/ImageDetails.s: Objects/ImageDetails.cpp.s
+.PHONY : Objects/ImageDetails.s
+
+# target to generate assembly for a file
+Objects/ImageDetails.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.s
+.PHONY : Objects/ImageDetails.cpp.s
 
 Objects/IniLoader.obj: Objects/IniLoader.cpp.obj
 .PHONY : Objects/IniLoader.obj
@@ -590,6 +614,9 @@ help:
 	@echo ... Objects/Face.obj
 	@echo ... Objects/Face.i
 	@echo ... Objects/Face.s
+	@echo ... Objects/ImageDetails.obj
+	@echo ... Objects/ImageDetails.i
+	@echo ... Objects/ImageDetails.s
 	@echo ... Objects/IniLoader.obj
 	@echo ... Objects/IniLoader.i
 	@echo ... Objects/IniLoader.s
