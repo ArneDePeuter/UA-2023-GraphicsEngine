@@ -1,3 +1,0 @@
-C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/engine.dir
-C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/edit_cache.dir
-C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/cmake-build-release/CMakeFiles/rebuild_cache.dir
