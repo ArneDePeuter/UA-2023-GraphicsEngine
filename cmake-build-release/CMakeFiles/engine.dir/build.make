@@ -292,24 +292,10 @@ CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Object3DFactory.cpp -o CMakeFiles\engine.dir\Objects\Object3DFactory.cpp.s
 
-CMakeFiles/engine.dir/Objects/Light.cpp.obj: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/Objects/Light.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.cpp
-CMakeFiles/engine.dir/Objects/Light.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/engine.dir/Objects/Light.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/Light.cpp.obj -MF CMakeFiles\engine.dir\Objects\Light.cpp.obj.d -o CMakeFiles\engine.dir\Objects\Light.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Light.cpp
-
-CMakeFiles/engine.dir/Objects/Light.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/Light.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Light.cpp > CMakeFiles\engine.dir\Objects\Light.cpp.i
-
-CMakeFiles/engine.dir/Objects/Light.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/Light.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\Light.cpp -o CMakeFiles\engine.dir\Objects\Light.cpp.s
-
 CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ShadowLight.cpp
 CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj -MF CMakeFiles\engine.dir\Objects\ShadowLight.cpp.obj.d -o CMakeFiles\engine.dir\Objects\ShadowLight.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ShadowLight.cpp
 
 CMakeFiles/engine.dir/Objects/ShadowLight.cpp.i: cmake_force
@@ -323,7 +309,7 @@ CMakeFiles/engine.dir/Objects/ShadowLight.cpp.s: cmake_force
 CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ImageDetails.cpp
 CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj -MF CMakeFiles\engine.dir\Objects\ImageDetails.cpp.obj.d -o CMakeFiles\engine.dir\Objects\ImageDetails.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ImageDetails.cpp
 
 CMakeFiles/engine.dir/Objects/ImageDetails.cpp.i: cmake_force
@@ -333,6 +319,48 @@ CMakeFiles/engine.dir/Objects/ImageDetails.cpp.i: cmake_force
 CMakeFiles/engine.dir/Objects/ImageDetails.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/ImageDetails.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\ImageDetails.cpp -o CMakeFiles\engine.dir\Objects\ImageDetails.cpp.s
+
+CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/AmbientLight.cpp
+CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj -MF CMakeFiles\engine.dir\Objects\AmbientLight.cpp.obj.d -o CMakeFiles\engine.dir\Objects\AmbientLight.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\AmbientLight.cpp
+
+CMakeFiles/engine.dir/Objects/AmbientLight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/AmbientLight.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\AmbientLight.cpp > CMakeFiles\engine.dir\Objects\AmbientLight.cpp.i
+
+CMakeFiles/engine.dir/Objects/AmbientLight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/AmbientLight.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\AmbientLight.cpp -o CMakeFiles\engine.dir\Objects\AmbientLight.cpp.s
+
+CMakeFiles/engine.dir/Objects/PointLight.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/PointLight.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/PointLight.cpp
+CMakeFiles/engine.dir/Objects/PointLight.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/engine.dir/Objects/PointLight.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/PointLight.cpp.obj -MF CMakeFiles\engine.dir\Objects\PointLight.cpp.obj.d -o CMakeFiles\engine.dir\Objects\PointLight.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\PointLight.cpp
+
+CMakeFiles/engine.dir/Objects/PointLight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/PointLight.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\PointLight.cpp > CMakeFiles\engine.dir\Objects\PointLight.cpp.i
+
+CMakeFiles/engine.dir/Objects/PointLight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/PointLight.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\PointLight.cpp -o CMakeFiles\engine.dir\Objects\PointLight.cpp.s
+
+CMakeFiles/engine.dir/Objects/InfLight.cpp.obj: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Objects/InfLight.cpp.obj: C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/InfLight.cpp
+CMakeFiles/engine.dir/Objects/InfLight.cpp.obj: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/engine.dir/Objects/InfLight.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/Objects/InfLight.cpp.obj -MF CMakeFiles\engine.dir\Objects\InfLight.cpp.obj.d -o CMakeFiles\engine.dir\Objects\InfLight.cpp.obj -c C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\InfLight.cpp
+
+CMakeFiles/engine.dir/Objects/InfLight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/Objects/InfLight.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\InfLight.cpp > CMakeFiles\engine.dir\Objects\InfLight.cpp.i
+
+CMakeFiles/engine.dir/Objects/InfLight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Objects/InfLight.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\Objects\InfLight.cpp -o CMakeFiles\engine.dir\Objects\InfLight.cpp.s
 
 # Object files for target engine
 engine_OBJECTS = \
@@ -352,9 +380,11 @@ engine_OBJECTS = \
 "CMakeFiles/engine.dir/Objects/Scene.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Renderer.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/Light.cpp.obj" \
 "CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj" \
-"CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj"
+"CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj" \
+"CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj" \
+"CMakeFiles/engine.dir/Objects/PointLight.cpp.obj" \
+"CMakeFiles/engine.dir/Objects/InfLight.cpp.obj"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -375,14 +405,16 @@ engine.exe: CMakeFiles/engine.dir/Objects/ZBuffer.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Scene.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Renderer.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.obj
-engine.exe: CMakeFiles/engine.dir/Objects/Light.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/ShadowLight.cpp.obj
 engine.exe: CMakeFiles/engine.dir/Objects/ImageDetails.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/PointLight.cpp.obj
+engine.exe: CMakeFiles/engine.dir/Objects/InfLight.cpp.obj
 engine.exe: CMakeFiles/engine.dir/build.make
 engine.exe: CMakeFiles/engine.dir/linklibs.rsp
 engine.exe: CMakeFiles/engine.dir/objects1.rsp
 engine.exe: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable engine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\arne\Documents\2022-2023\s2\ComputerGraphics\myEngine\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable engine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\engine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

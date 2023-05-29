@@ -1,21 +1,32 @@
-#include <fstream>
 #include "Light.h"
 #include "Line2D.h"
 #include "Scene.h"
-#include "Renderer.h"
 #include "ImageDetails.h"
 
-ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight, const ini::DoubleTuple &specularLight, const Vector3D &location, const int &bufferSize, const Matrix &eye) : SpecularLight(ambientLight, diffuseLight, specularLight, location), bufferSize(bufferSize) {
+ShadowPointLight::ShadowPointLight(const ini::DoubleTuple &ambientLight, const ini::DoubleTuple &diffuseLight,
+                                   const ini::DoubleTuple &specularLight, const Vector3D &location, double spotAngle,
+                                   int bufferSize, const Matrix &eye) : worldLocation(location), PointLight(ambientLight,
+                                                                                                        diffuseLight,
+                                                                                                        specularLight,
+                                                                                                        location,
+                                                                                                        spotAngle),
+                                                                                             bufferSize(bufferSize),
+                                                                                             shadowMask(ZBuffer(0,0)), d(0),
+                                                                                             dx(0), dy(0) {
     inverseEye = Matrix::inv(eye);
     lightEye = Calculator::eyePointMatrix(location);
 }
 
 void ShadowPointLight::calculateColor(double &rVal, double &gVal, double &bVal, ini::DoubleTuple ambientReflection, ini::DoubleTuple diffuseReflection, ini::DoubleTuple specularReflection, double reflectionCoeff, Vector3D A, Vector3D B, Vector3D C, Vector3D pixel) const {
-    AmbientLight::applyAmbientLight(rVal, gVal, bVal, ambientLight, ambientReflection);
+    AmbientLight::applyAmbientLight(rVal, gVal, bVal, ambientReflection);
     if (applyLight(pixel)) {
-        applyDiffuseLight(rVal, gVal, bVal, diffuseLight, diffuseReflection, pixel, Calculator::calcNormal(A, B, C), location*Matrix::inv(inverseEye), spotAngle);
-        applySpecularLight(rVal, gVal, bVal, specularLight, specularReflection, reflectionCoeff, pixel, Calculator::calcNormal(A, B, C), location*Matrix::inv(inverseEye));
+        applyDiffuseLight(rVal, gVal, bVal, diffuseReflection, pixel, Calculator::calcNormal(A, B, C));
+        applySpecularLight(rVal, gVal, bVal, specularReflection, reflectionCoeff, pixel, Calculator::calcNormal(A, B, C));
     }
+
+    rVal = std::min(std::max(rVal, 0.0), 1.0);
+    gVal = std::min(std::max(gVal, 0.0), 1.0);
+    bVal = std::min(std::max(bVal, 0.0), 1.0);
 }
 
 bool ShadowPointLight::applyLight(const Vector3D &pixel) const {
@@ -56,7 +67,6 @@ void ShadowPointLight::fillBuffer(const std::vector<Triangle> &triangles) {
     }
 }
 
-
 void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
     //put objects in normal space coords
     Objects3D normalObjects = objects;
@@ -65,7 +75,7 @@ void ShadowPointLight::initFully(const std::list<Object3D> &objects) {
     }
 
     //create scene
-    ini::DoubleTuple loc = {location.x, location.y, location.z};
+    ini::DoubleTuple loc = {worldLocation.x, worldLocation.y, worldLocation.z};
     Camera cam = Camera(loc,ClippingSettings(false,{0,0,0},0,0,0,0));
     Scene s = Scene(normalObjects, cam, {}, false);
 

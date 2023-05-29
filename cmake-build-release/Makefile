@@ -248,6 +248,30 @@ Include/vector3d.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Include/vector3d.cc.s
 .PHONY : Include/vector3d.cc.s
 
+Objects/AmbientLight.obj: Objects/AmbientLight.cpp.obj
+.PHONY : Objects/AmbientLight.obj
+
+# target to build an object file
+Objects/AmbientLight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/AmbientLight.cpp.obj
+.PHONY : Objects/AmbientLight.cpp.obj
+
+Objects/AmbientLight.i: Objects/AmbientLight.cpp.i
+.PHONY : Objects/AmbientLight.i
+
+# target to preprocess a source file
+Objects/AmbientLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/AmbientLight.cpp.i
+.PHONY : Objects/AmbientLight.cpp.i
+
+Objects/AmbientLight.s: Objects/AmbientLight.cpp.s
+.PHONY : Objects/AmbientLight.s
+
+# target to generate assembly for a file
+Objects/AmbientLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/AmbientLight.cpp.s
+.PHONY : Objects/AmbientLight.cpp.s
+
 Objects/Calculator.obj: Objects/Calculator.cpp.obj
 .PHONY : Objects/Calculator.obj
 
@@ -319,6 +343,30 @@ Objects/ImageDetails.s: Objects/ImageDetails.cpp.s
 Objects/ImageDetails.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/ImageDetails.cpp.s
 .PHONY : Objects/ImageDetails.cpp.s
+
+Objects/InfLight.obj: Objects/InfLight.cpp.obj
+.PHONY : Objects/InfLight.obj
+
+# target to build an object file
+Objects/InfLight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/InfLight.cpp.obj
+.PHONY : Objects/InfLight.cpp.obj
+
+Objects/InfLight.i: Objects/InfLight.cpp.i
+.PHONY : Objects/InfLight.i
+
+# target to preprocess a source file
+Objects/InfLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/InfLight.cpp.i
+.PHONY : Objects/InfLight.cpp.i
+
+Objects/InfLight.s: Objects/InfLight.cpp.s
+.PHONY : Objects/InfLight.s
+
+# target to generate assembly for a file
+Objects/InfLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/InfLight.cpp.s
+.PHONY : Objects/InfLight.cpp.s
 
 Objects/IniLoader.obj: Objects/IniLoader.cpp.obj
 .PHONY : Objects/IniLoader.obj
@@ -392,30 +440,6 @@ Objects/LSystem3D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/LSystem3D.cpp.s
 .PHONY : Objects/LSystem3D.cpp.s
 
-Objects/Light.obj: Objects/Light.cpp.obj
-.PHONY : Objects/Light.obj
-
-# target to build an object file
-Objects/Light.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.obj
-.PHONY : Objects/Light.cpp.obj
-
-Objects/Light.i: Objects/Light.cpp.i
-.PHONY : Objects/Light.i
-
-# target to preprocess a source file
-Objects/Light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.i
-.PHONY : Objects/Light.cpp.i
-
-Objects/Light.s: Objects/Light.cpp.s
-.PHONY : Objects/Light.s
-
-# target to generate assembly for a file
-Objects/Light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Light.cpp.s
-.PHONY : Objects/Light.cpp.s
-
 Objects/Object3D.obj: Objects/Object3D.cpp.obj
 .PHONY : Objects/Object3D.obj
 
@@ -463,6 +487,30 @@ Objects/Object3DFactory.s: Objects/Object3DFactory.cpp.s
 Objects/Object3DFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/Object3DFactory.cpp.s
 .PHONY : Objects/Object3DFactory.cpp.s
+
+Objects/PointLight.obj: Objects/PointLight.cpp.obj
+.PHONY : Objects/PointLight.obj
+
+# target to build an object file
+Objects/PointLight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/PointLight.cpp.obj
+.PHONY : Objects/PointLight.cpp.obj
+
+Objects/PointLight.i: Objects/PointLight.cpp.i
+.PHONY : Objects/PointLight.i
+
+# target to preprocess a source file
+Objects/PointLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/PointLight.cpp.i
+.PHONY : Objects/PointLight.cpp.i
+
+Objects/PointLight.s: Objects/PointLight.cpp.s
+.PHONY : Objects/PointLight.s
+
+# target to generate assembly for a file
+Objects/PointLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\engine.dir\build.make CMakeFiles/engine.dir/Objects/PointLight.cpp.s
+.PHONY : Objects/PointLight.cpp.s
 
 Objects/Renderer.obj: Objects/Renderer.cpp.obj
 .PHONY : Objects/Renderer.obj
@@ -608,6 +656,9 @@ help:
 	@echo ... Include/vector3d.obj
 	@echo ... Include/vector3d.i
 	@echo ... Include/vector3d.s
+	@echo ... Objects/AmbientLight.obj
+	@echo ... Objects/AmbientLight.i
+	@echo ... Objects/AmbientLight.s
 	@echo ... Objects/Calculator.obj
 	@echo ... Objects/Calculator.i
 	@echo ... Objects/Calculator.s
@@ -617,6 +668,9 @@ help:
 	@echo ... Objects/ImageDetails.obj
 	@echo ... Objects/ImageDetails.i
 	@echo ... Objects/ImageDetails.s
+	@echo ... Objects/InfLight.obj
+	@echo ... Objects/InfLight.i
+	@echo ... Objects/InfLight.s
 	@echo ... Objects/IniLoader.obj
 	@echo ... Objects/IniLoader.i
 	@echo ... Objects/IniLoader.s
@@ -626,15 +680,15 @@ help:
 	@echo ... Objects/LSystem3D.obj
 	@echo ... Objects/LSystem3D.i
 	@echo ... Objects/LSystem3D.s
-	@echo ... Objects/Light.obj
-	@echo ... Objects/Light.i
-	@echo ... Objects/Light.s
 	@echo ... Objects/Object3D.obj
 	@echo ... Objects/Object3D.i
 	@echo ... Objects/Object3D.s
 	@echo ... Objects/Object3DFactory.obj
 	@echo ... Objects/Object3DFactory.i
 	@echo ... Objects/Object3DFactory.s
+	@echo ... Objects/PointLight.obj
+	@echo ... Objects/PointLight.i
+	@echo ... Objects/PointLight.s
 	@echo ... Objects/Renderer.obj
 	@echo ... Objects/Renderer.i
 	@echo ... Objects/Renderer.s

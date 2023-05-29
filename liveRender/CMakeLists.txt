@@ -42,7 +42,6 @@ set(engine_sources
         ../Objects/Light.h
         ../Objects/Object3DFactory.cpp
         ../Objects/ClippingSettings.h
-        ../Objects/Light.cpp
         ../Objects/ShadowLight.cpp
         ../Objects/ImageDetails.h
         ../Objects/ImageDetails.cpp

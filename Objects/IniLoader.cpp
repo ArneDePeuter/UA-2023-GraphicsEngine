@@ -122,30 +122,21 @@ std::vector<Light *> IniLoader::loadLights(const ini::Configuration &configurati
         }
 
         ini::DoubleTuple diffuseLight = section["diffuseLight"].as_double_tuple_or_die();
+        ini::DoubleTuple specularLight = section["specularLight"].as_double_tuple_or_default({0,0,0});
 
         if (infinity) {
             ini::DoubleTuple dir = section["direction"].as_double_tuple_or_die();
             Vector3D ldVector = Vector3D::vector(dir[0], dir[1], dir[2]);
-            lights.push_back(new InfLight(ambientLight, diffuseLight, ldVector));
+            lights.push_back(new InfLight(ambientLight, diffuseLight, specularLight, ldVector));
         }
         else {
             ini::DoubleTuple loc = section["location"].as_double_tuple_or_die();
             Vector3D location = Vector3D::point(loc[0], loc[1], loc[2]);
-            ini::DoubleTuple specularLight;
-            bool hasSpecular = section["specularLight"].as_double_tuple_if_exists(specularLight);
-            if (!hasSpecular) {
-                if (shadowMask!=0) {
-                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, {0,0,0},location, shadowMask, cam.eyeMatrix));
-                } else {
-                    lights.push_back(new PointLight(ambientLight, diffuseLight, location, section["spotAngle"].as_double_or_default(-1)));
-                }
-            }
-            else {
-                if (shadowMask!=0) {
-                    lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, specularLight,location, shadowMask, cam.eyeMatrix));
-                } else {
-                    lights.push_back(new SpecularLight(ambientLight, diffuseLight, specularLight, location));
-                }
+            double spotAngle = section["spotAngle"].as_double_or_default(-1);
+            if (shadowMask!=0) {
+                lights.push_back(new ShadowPointLight(ambientLight, diffuseLight, specularLight,location, spotAngle, shadowMask, cam.eyeMatrix));
+            } else {
+                lights.push_back(new PointLight(ambientLight, diffuseLight, specularLight, location, spotAngle));
             }
         }
     }

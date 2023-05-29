@@ -114,6 +114,9 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Include/vector3d.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/AmbientLight.cpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Calculator.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -135,6 +138,9 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/ImageDetails.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/InfLight.cpp">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/IniLoader.cpp">
 			<Option target="engine"/>
 		</Unit>
@@ -153,9 +159,6 @@
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/LSystem3D.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.cpp">
-			<Option target="engine"/>
-		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Light.h">
 			<Option target="engine"/>
 		</Unit>
@@ -172,6 +175,9 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Point2D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/PointLight.cpp">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="C:/Users/arne/Documents/2022-2023/s2/ComputerGraphics/myEngine/Objects/Renderer.cpp">
